@@ -14,7 +14,7 @@ The Documentation is organized in the following sections:
 - [Reuse, Copy and Paste](#copy-and-paste)
 - [Import and Export](#import-and-export)
 - [Collaboration](#collaboration)
-- [Detailed authoring - by artifact type](../../master/docs/enterprise/Artifact-Details-ITAA.md) 
+- [Detailed authoring - by artifact type](./Artifact-Details-ITAA.md) 
 
 
 ## Terminology

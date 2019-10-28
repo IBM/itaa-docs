@@ -12,7 +12,7 @@ The Documentation is organized in the following sections:
 - [Basic authoring of architecture artifacts](#authoring)
 - [Reuse, Copy and Paste](#copy-and-paste)
 - [Import and Export](#import-and-export)
-- [Detailed authoring - by artifact type](../../master/docs/community-edition/Artifact-Details-ITAA-CE.md) 
+- [Detailed authoring - by artifact type](./Artifact-Details-ITAA-CE.md) 
 
 
 ## Terminology
