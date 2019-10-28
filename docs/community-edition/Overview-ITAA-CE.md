@@ -1,7 +1,7 @@
-# IBM IT Architect Assistant, Community Edition User Guide
-**IBM IT Architect Assistant, Community Edition** is a simple browser-based tool to assist an Architect in designing and customizing a solution.
+# IBM IArchitect Assistant, Community Edition User Guide
+**IBM IArchitect Assistant, Community Edition** is a simple browser-based tool to assist an Architect in designing and customizing a solution.
 
-The hosted, **IBM IT Architect Assistant** is both a solution model authoring tool as well as a searchable repository of authored solution architectures/models. The Community Edition is a single-user version of this tool.
+The hosted, **IBM IArchitect Assistant** is both a solution model authoring tool as well as a searchable repository of authored solution architectures/models. The Community Edition is a single-user version of this tool.
 
 The Documentation is organized in the following sections:
 - [Terminology](#terminology)  
@@ -16,13 +16,13 @@ The Documentation is organized in the following sections:
 
 
 ## Terminology
-Before diving into details about IBM IT Architect Assistant, Community Edition it is important to understand some key terminology used throughout the documentation.  
+Before diving into details about IBM IArchitect Assistant, Community Edition it is important to understand some key terminology used throughout the documentation.  
 
 **Artifact** -- An architecture (asset) is comprised of a set of artifacts that are typed. The standard set of artifacts are displayed in the architecture's Table of Contents (**TOC**). Many of the artifact types can have 0 to n **artifact instances**.  Examples of artifacts include Business Challenge, System Context, Functional Requirement, etc.  Most of the artifacts correspond to a technical work product.
 
 **Shared Elements** -- The building blocks of an architecture are a set of architectural elements. Each of these elements have a specific type along with a set of attributes. Many of the architecture elements contribute to and are referenced within multiple artifacts and artifact instances. As such it is important that these elements are shared (i.e., by reference). The implication is that each shared element must have a unique name within the architecture. To enforce this constraint the tool will flag as an error anytime a new element is created and given a name already in use in the architecture.  This error forces the user to either bind to (reference) the currently existing shared element or if the user needs to reference a different architecture element, supply the new element with a unique name. For example, adding a new Logical Node to an AOD IT System View instance and giving it the name **Security Services** when a Logical Node with that name already exists (perhaps on a different diagram instance) results in an error (duplicate name error). To resolve this the user can click on the **Select from existing** button and point to the existing Logical Node, indicating you are reusing the same element. Alternatively a different (unique) name can be assigned. Either approach will remove the error.
 
-([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-iarchitect-assistant-community-edition-user-guide)) 
 
 
 ## Getting Started
@@ -50,7 +50,7 @@ Here you can see the architectures you have loaded/authored on your local enviro
 
 In all contexts an Architecture card has many of the same elements displayed. The architecture name is prominent on the top left with an "additional menu" identified via the ellipses **...** in the upper right corner. The color of the top half of the card along with the text and icon at the bottom of the colored section identify the type of asset. In the bottom half of the card (when you are not hovering over it), you will see a set of optional tags.
 
-![Basic Architecture card - Search result](../../images/asset-card-search.png)
+![Basic Architecture card](../../images/asset-card.png)
 
 When you hover over an architecture card, the display changes.
 
