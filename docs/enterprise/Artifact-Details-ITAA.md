@@ -1,7 +1,7 @@
 # IBM IT Architect Assistant - Detailed Authoring by Artifact Type
 This section will present the details for each of the artifact types, including the purpose of the artifact/artifact instances, the underlying meta-model, and how to manipulate them.
 
-- [Back to Core User Guide](../../master/docs/enterprise/Overview-ITAA.md)
+- [Back to Core User Guide](./Overview-ITAA.md)
 - [Overview](#overview)
 - [Business Challenge](#business-challenge)
 - [System Context](#system-context)
