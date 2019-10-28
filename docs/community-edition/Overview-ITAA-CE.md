@@ -162,7 +162,7 @@ In addition to adding and associating steps to connectors, you can also select a
 
 Within an architecture there are two different navigation mechanisms. When you are not within an artifact instance, the TOC provides the way to select an artifact type to view or edit. In or out of an artifact instance, there is a "breadcrumb" that supports navigation to all levels of the tool. If a particular level of a breadcrumb represents multiple options at that level, there is a "down arrow" that will present you with the available elements at that level to select and navigate to.
 
-![Breadcrumb Navigation](../../images/breadcrumb-navigation.png)
+![Breadcrumb Navigation](../../images/breadcrumb-navigation-ce.png)
 
 ([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
 
