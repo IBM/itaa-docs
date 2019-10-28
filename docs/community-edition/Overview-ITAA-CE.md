@@ -1,7 +1,7 @@
-# IBM Architect Assistant, Community Edition User Guide
-**IBM Architect Assistant, Community Edition** is a simple browser-based tool to assist an Architect in designing and customizing a solution.
+# IBM IT Architect Assistant, Community Edition User Guide
+**IBM IT Architect Assistant, Community Edition** is a simple browser-based tool to assist an Architect in designing and customizing a solution.
 
-The hosted, **IBM Architect Assistant** is both a solution model authoring tool as well as a searchable repository of authored solution architectures/models. The Community Edition is a single-user version of this tool.
+The hosted, **IBM IT Architect Assistant** is both a solution model authoring tool as well as a searchable repository of authored solution architectures/models. The Community Edition is a single-user version of this tool.
 
 The Documentation is organized in the following sections:
 - [Terminology](#terminology)  
@@ -16,13 +16,13 @@ The Documentation is organized in the following sections:
 
 
 ## Terminology
-Before diving into details about IBM Architect Assistant, Community Edition it is important to understand some key terminology used throughout the documentation.  
+Before diving into details about IBM IT Architect Assistant, Community Edition it is important to understand some key terminology used throughout the documentation.  
 
 **Artifact** -- An architecture (asset) is comprised of a set of artifacts that are typed. The standard set of artifacts are displayed in the architecture's Table of Contents (**TOC**). Many of the artifact types can have 0 to n **artifact instances**.  Examples of artifacts include Business Challenge, System Context, Functional Requirement, etc.  Most of the artifacts correspond to a technical work product.
 
 **Shared Elements** -- The building blocks of an architecture are a set of architectural elements. Each of these elements have a specific type along with a set of attributes. Many of the architecture elements contribute to and are referenced within multiple artifacts and artifact instances. As such it is important that these elements are shared (i.e., by reference). The implication is that each shared element must have a unique name within the architecture. To enforce this constraint the tool will flag as an error anytime a new element is created and given a name already in use in the architecture.  This error forces the user to either bind to (reference) the currently existing shared element or if the user needs to reference a different architecture element, supply the new element with a unique name. For example, adding a new Logical Node to an AOD IT System View instance and giving it the name **Security Services** when a Logical Node with that name already exists (perhaps on a different diagram instance) results in an error (duplicate name error). To resolve this the user can click on the **Select from existing** button and point to the existing Logical Node, indicating you are reusing the same element. Alternatively a different (unique) name can be assigned. Either approach will remove the error.
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 
 ## Getting Started
@@ -60,7 +60,7 @@ The display will provide the architecture name and then two buttons, **Open** an
 
 Clicking on **Open** will then open the architecture, displaying the Table of Contents (TOC) on the left side and the details of the selected artifact (selected in the TOC) in the main section. By default, the asset opens to the **Overview** artifact. 
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ### Workspace - Local
 
@@ -156,7 +156,7 @@ In addition to adding and associating steps to connectors, you can also select a
 
 ![Usage scenario](../../images/sample-usage-scenario.png)
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Breadcrumbs and Navigation
 
@@ -248,7 +248,7 @@ In the future, expect to see additional functionality added to the existing impo
 
 
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Change Log
 
@@ -260,7 +260,7 @@ When collaborating with a team authoring an architecture, it is valuable to be a
 
 ![Show Change Log panel](../../images/change-log-panel.png)
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Co-Relationships
 
@@ -276,10 +276,10 @@ The Co-Relationship Table (panel) displays the architecture elements by type. Yo
 
 
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Accessibility
 
 IBM Architect Assistant, Community Edition is a single-page web application. Accessibility navigation is generally provided via the user's web browser controls. Other than screen zoom and similar accommodations, freeform diagram authoring will be challenging for visually impaired.
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
