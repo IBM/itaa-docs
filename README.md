@@ -6,4 +6,5 @@ IBM IT Architect Assistance is a modeling and authoring tool designed to assist 
 This repository provides the end-user documentation for each of these offerings.  To get started, see:
 
 - Full collaborative [IBM IT Architect Assistant](./docs/enterprise/Overview-ITAA.md)
-- SIngle-User [IBM IT Architect Assistant, Community Edition](./docs/community-edition/Overview-ITAA-CE.md)
+- SIngle-User [IBM IT Architect Assistant, Community Edition](./docs/community-edition/Overview-ITAA-CE.md) (available soon!)
+
