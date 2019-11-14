@@ -187,9 +187,19 @@ This allows you to select from architectures to copy from. The user experience i
 
 ![Target diagram with read-only source diagram tabs](../../images/source-target-diagrams.png)
 
-Note, it is critical that the paste succeeds. So the tool does not allow for name conflicts. So as the elements are copied from the source to the target, if an element's name matches an element in the target architecture, the "pasted" element will be renamed using a "Copy of" prefix. If these "copied and renamed" elements align with an element in the target architecture you can then use the "Select from existing" option to properly integrate the pasted content.  For example, you are copying a set of Logical Nodes and connections representing a ETL pattern, and one of those nodes is named "Product Data Warehouse" and a node representing that same content already exists in the target architecture, initially on paste you will have a new Logical Node named "Copy of Product Data Warehouse".  If that node didn't already appear on the target diagram you could select the "Copy of Product Data Warehouse", click the Select from existing button and locate and select "Product Data Warehouse". This now "connects" the new set of elements with the existing architecture.  It also produces an "orphaned" Logical Node (not in use) with the name Copy of Product Data Warehouse.  Note if the Product Data Warehouse node was already present on the target diagram, rather than use the Select from existing, you would move the connection endpoints from the Copy of Product Data Warehouse and connect them instead to the pre-existing Product Data Warehouse and then delete the extra "Copy of Product Data Warehouse" node from the diagram.
+Note, it is critical that the paste succeeds and there is a restriction that the **name** of any "sharable/reusable" architecture element within the architecture is **unique**! So how does the tool handle a paste operation that implies the addition of "new" elements with conflicting names? When the user triggers the paste action, a list of all the elements that result in a name conflict are presented to the end-user to determine how the conflict is to be resolved.  The user is given 3 choices which can be summarized: 1) keep both, 2) keep existing, or 3) replace target.   
 
-[In an upcoming release, you will be provided with an option of how to handle the paste operation for each element which has a name conflict with the target architecture.  This will allow you to have the current behavior (create new element with name "copy of …") or to define how the element is "merged" with the target architecture's element with the same name.]
+**Keep both (Make new)** - In this case the "source" element is renamed using a "Copy of" prefix, and added as a new element in the target architecture.
+
+**Keep existing** - In this case the source element is identified to be equivalent to the target element of the same name. The pre-existing target element will retain its current attributes
+
+**Replace (update)** - Like the previous option, the source and target elements are deemed to be equivalent however the desire is for the resulting element to retain the attributes of the source version.
+
+Note, the conflict element list may include "invisible" elements that are "reference" attributes of one or more of the visible elements being pasted!
+
+![Handle name conflict on past](/Users/glcraig/Documents/GitHub/Cognitive-Architect-Enablement/images/paste-conflict.png)
+
+As you can see, from the above image, you can select to apply the same conflict resolution approach to all conflicting elements or select individually. Note if you decide to create a copy (keep both) and later want to merge, you can always point to an existing element via the "Select from existing" option on the attributes panel (see Shared Elements discussion earlier)!
 
 In a mechanism very similar to the Resource menu, you can copy text-based artifact instances, e.g., an NFR or a Use Case, directly from one architecture to another. This is triggered on the "Add  <element>" dialog, in the case below, Add Non Functional Requirement.
 
