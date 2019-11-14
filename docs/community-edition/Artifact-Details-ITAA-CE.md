@@ -225,8 +225,8 @@ Architectural Decisions (ArchDs) are central to documenting a solution architect
 - **Issue or Problem Statement** - This text field describes the problem or issue being addressed.
 - **Assumptions** - this text field captures any assumptions in force and providing the context under which this architectural decision is being considered.
 - **Motivation** - this text field established the why is this decision is being considered.
-- **Alternatives** - this should be considered a **manditory** - attribute which lists 2 or more alternatives under decision. If there is only a single alternative then there is no decision to be made.
-- **Decision** - this attribute presents the selected alternative. What has been decided.
+- **Alternatives** - this should be considered a **manditory** - attribute.  An Alternative is actually a complex attribute with Name, Description and optional (when best applied and when contraindicated) guidance.  An Architectural Decision should have 2 or more alternatives defined.
+- **Decision** - this attribute is actually a selection (or the option selection not made) of 1 of the defined alternatives.
 - **Justification** - a text description explaining why the decided upon alternative was chosen over the others. 
 - **Implications** - text describing the notable implications that result from applying the decision to the solution architecture.
 - **Derived Requirements** - currently text used to reference or describe requirements generated as a result of the decision being made.
