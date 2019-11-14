@@ -68,7 +68,7 @@ The Workspace is an area in which a set of Architectures, referenced by the user
 
 On each architecture card there is a set of options available to you on the "more" **...** menu. Always available on all architectures everywhere is **Copy**.  This requests a new copy of the architecture to be created, owned by the invoker. Scenarios for copying include implicit versioning or starting a new project with an initial starting point. In addition, as an owner of an asset you will have the ability to select **Delete** off of the same menu. 
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Authoring
 
@@ -164,7 +164,7 @@ Within an architecture there are two different navigation mechanisms. When you a
 
 ![Breadcrumb Navigation](../../images/breadcrumb-navigation-ce.png)
 
-([Back to Top and TOC](#ibm-architect-assistant-community-edition-user-guide)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Copy and Paste
 With any documentation tool you want to be able to quickly reuse elements. This is logically a copy and paste operation. In some of our how-to videos, we describe both fine-grained and coarse-grained reuse support within IBM Architect Assistant, Community Edition.  
@@ -197,7 +197,7 @@ Note, it is critical that the paste succeeds and there is a restriction that the
 
 Note, the conflict element list may include "invisible" elements that are "reference" attributes of one or more of the visible elements being pasted!
 
-![Handle name conflict on past](/../../images/paste-conflict.png)
+![Handle name conflict on past](../../images/paste-conflict.png)
 
 As you can see, from the above image, you can select to apply the same conflict resolution approach to all conflicting elements or select individually. Note if you decide to create a copy (keep both) and later want to merge, you can always point to an existing element via the "Select from existing" option on the attributes panel (see Shared Elements discussion earlier)!
 
@@ -225,7 +225,10 @@ This will bring up the manage orphan elements panel.  Here you can select all, s
 
 ![Manage Orphan Element panel](../../images/manage-orphan-panel.png)
 
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
+
 ## Import and Export
+
 #### Export
 
 There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. IBM Architect Assistant, Community Edition provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
@@ -255,8 +258,6 @@ If you choose Import you are presented with a single choice:
 
 
 In the future, expect to see additional functionality added to the existing import/export utilities including support for other external formats.
-
-
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
