@@ -197,7 +197,7 @@ Note, it is critical that the paste succeeds and there is a restriction that the
 
 Note, the conflict element list may include "invisible" elements that are "reference" attributes of one or more of the visible elements being pasted!
 
-![Handle name conflict on past](/Users/glcraig/Documents/GitHub/Cognitive-Architect-Enablement/images/paste-conflict.png)
+![Handle name conflict on past](/../../images/paste-conflict.png)
 
 As you can see, from the above image, you can select to apply the same conflict resolution approach to all conflicting elements or select individually. Note if you decide to create a copy (keep both) and later want to merge, you can always point to an existing element via the "Select from existing" option on the attributes panel (see Shared Elements discussion earlier)!
 
