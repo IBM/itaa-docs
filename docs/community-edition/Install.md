@@ -9,7 +9,6 @@ The introduction is organized in the following sections:
 - [Running](#running)
 - [Guide](#guide)
 - [License](#license) 
-- [Adaptation](#adaptation) 
 - [How to create issues and contact us?](#how-to-create-issues-and-contact-us) 
 
 ### What is it?
@@ -47,7 +46,7 @@ The application currently supports **Chrome 32+** and **Firefox 38+**. Other bro
 
 First, unzip the downloaded zip file.
 
-1. Download tomcat & JRE manually  (you may find them in https://tomcat.apache.org/download-80.cgi, https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html or some search engines):
+1. Download tomcat & JRE manually  (you may find them in https://tomcat.apache.org/download-80.cgi, https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html or https://adoptopenjdk.net/ or some search engines):
    * MacOS:
      - apache-tomcat-8.5.45.tar.gz
      - jre-8u131-macosx-x64.tar.gz
