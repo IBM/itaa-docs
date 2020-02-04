@@ -58,7 +58,7 @@ The application currently supports **Chrome 32+** and **Firefox 38+**. Other bro
 
         2.1 open Terminal:
 
-        ![Open Terminal](./images/screenshot-terminal.png)
+        ![Open Terminal](../../images/screenshot-terminal.png)
 
         2.2 execute below scripts, the yourAppPath(tomcat/jre path) can be inputted by dragging like below picture:
         ```
@@ -66,16 +66,16 @@ The application currently supports **Chrome 32+** and **Firefox 38+**. Other bro
         ./install.sh
         ```
 
-        ![Drag Terminal](./images/screenshot-drag.png)
+        ![Drag Terminal](../../images/screenshot-drag.png)
 
         2.3 Input your tomcat and jre path by the prompts.
 
-        ![Install successfully](./images/screenshot-install.png)
+        ![Install successfully](../../images/screenshot-install.png)
 
     * If you use **Windows**, run **install.ps1** with PowerShell(e.g. by right clicking). Then input your tomcat and jre path. You may need to input 'Y' when running the shell, please refer to [Prerequisite 3](#prerequisite).
 
-        ![Use powershell](./images/screenshot-ms-ps.png)
-        ![Install windows successfully](./images/screenshot-ms-install.png)
+        ![Use powershell](../../images/screenshot-ms-ps.png)
+        ![Install windows successfully](../../images/screenshot-ms-install.png)
 
 If you see 'Installed the application successfully.' in the CLI window, then the installation is successful, you can close it and do the running process. If there are error messages, you need to confirm whether the folder path is right.
 
@@ -89,11 +89,11 @@ Launch the community edition application via CLI:
     ./run.sh
     ```
 
-      ![Run successfully](./images/screenshot-install.png)
+      ![Run successfully](../../images/screenshot-install.png)
   
   * If you use **Windows**, run **run.bat** directly(e.g. by double clicking the file).
 
-      ![Run windows successfully](./images/screenshot-ms-run.png)
+      ![Run windows successfully](../../images/screenshot-ms-run.png)
 
 After the popup windows don't have new outputs, you can access the application by inputting http://localhost:3300/workspace in your browser. You may need to confirm open new network access, please refer to [Prerequisite 3](#prerequisite).
 
@@ -110,17 +110,17 @@ Please see [LICENSE](LICENSE) for more information.
 There maybe some blocks when installing/running the application, here are some possible situations and solutions.
 1. the app is damaged like below:
 
-    ![Image damaged](../images/screenshot-damage.png)
+    ![Image damaged](../../images/screenshot-damage.png)
 
 Solution: try to execute "xattr -cr ./ca-offline-macos" in Terminal.
 
 2. the app can't be opened like below:
 
-    ![Image not open](../images/screenshot-open.png)
+    ![Image not open](../../images/screenshot-open.png)
 
 Solution: try to change the allowance in system config -> Security & Privacy, select the 2nd or 3rd allowance.
 
-  ![Change allowance](../images/screenshot-allowance.png)
+  ![Change allowance](../../images/screenshot-allowance.png)
 
 ### How to create issues and contact us?
 
