@@ -13,7 +13,7 @@ The introduction is organized in the following sections:
 
 ### What is it?
 
-**IBM IT Architect Assistant, Community Edition®** is a tool that supports the creation and documentation of IT  Solution Architectures. It is a simple tool to assist an Architect in designing a solution by finding the best/relevant/potential architectural solutions and/or patterns and customizing them for client specific needs.
+**IBM IT Architect Assistant, Community Edition®** is a tool that supports the creation and documentation of IT  Solution Architectures. It is a simple tool to assist an Architect in designing a solution by reusing high quality architectural solutions (e.g. those found in the IBM Cloud Architecture Center - https://www.ibm.com/cloud/garage/architectures) and/or patterns and customizing them for specific project or initiative.
 
 The key features of **IBM IT Architect Assistant, Community Edition®** are:
 * A personal workspace where users can manage the solution architectures they are working on. An architecture can be created from scratch or can be created by copying an existing architecture asset.
@@ -26,7 +26,7 @@ Key Benefits and savings from using **IBM IT Architect Assistant, Community Edit
 
 ### How to get it？
 
-Currently, the community edition is provided via a [zip file](https://github.ibm.com/CTOTools/ITAACommunity/raw/master/offline_pack.zip) in Github for downloading. After **downloading**, **unzipping** and **installing**, you can use it on your local system.
+Currently, the community edition is provided via a zip file in Github for downloading. After **downloading**, **unzipping** and **installing**, you can use it on your local system.
 
 ### Prerequisite
 
@@ -110,17 +110,17 @@ Please see [LICENSE](LICENSE) for more information.
 There maybe some blocks when installing/running the application, here are some possible situations and solutions.
 1. the app is damaged like below:
 
-    ![Image damaged](./images/screenshot-damage.png)
+    ![Image damaged](../images/screenshot-damage.png)
 
 Solution: try to execute "xattr -cr ./ca-offline-macos" in Terminal.
 
 2. the app can't be opened like below:
 
-    ![Image not open](./images/screenshot-open.png)
+    ![Image not open](../images/screenshot-open.png)
 
 Solution: try to change the allowance in system config -> Security & Privacy, select the 2nd or 3rd allowance.
 
-  ![Change allowance](./images/screenshot-allowance.png)
+  ![Change allowance](../images/screenshot-allowance.png)
 
 ### How to create issues and contact us?
 
