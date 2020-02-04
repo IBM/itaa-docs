@@ -58,7 +58,7 @@ The application currently supports **Chrome 32+** and **Firefox 38+**. Other bro
 
         2.1 open Terminal:
 
-        ![Open Terminal](../../images/screenshot-terminal.png)
+        ![Open Terminal](../images/screenshot-terminal.png)
 
         2.2 execute below scripts, the yourAppPath(tomcat/jre path) can be inputted by dragging like below picture:
         ```
