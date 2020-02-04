@@ -44,7 +44,7 @@ The application currently supports **Chrome 32+** and **Firefox 38+**. Other bro
 
 ### Installation
 
-1. Download and decompress tomcat 8.5 & JRE 8/9 into a local path(e.g. ~/Desktop) manually if you haven't installed them before (you may find them in https://tomcat.apache.org/download-80.cgi, https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html, https://jdk.java.net/archive or some search engines):
+1. Download and decompress tomcat 8.5 & JRE 8/9 into a local path(e.g. ~/Desktop) manually if you haven't installed them before (you may find them in https://tomcat.apache.org/download-80.cgi, https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html, https://jdk.java.net/archive, https://adoptopenjdk.net/ or some search engines):
     * MacOS:
       - apache-tomcat-8.5.*.tar.gz
       - jre-**8/9**u*-macosx-x64.tar.gz(it's Oracle version, while openjdk 9.\*.\* is also available)
@@ -58,7 +58,7 @@ The application currently supports **Chrome 32+** and **Firefox 38+**. Other bro
 
         2.1 open Terminal:
 
-        ![Open Terminal](../images/screenshot-terminal.png)
+        ![Open Terminal](../../images/screenshot-terminal.png)
 
         2.2 execute below scripts, the yourAppPath(tomcat/jre path) can be inputted by dragging like below picture:
         ```
