@@ -242,7 +242,11 @@ Above you see the toolbar button to access the import and export utilities. Firs
 
 #### GitHub
 
-**GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Note, like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)   ![Export to Github Toolbar button](../../images/export-to-github.png)  Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise GitHub repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any IBM Architect Assistant, Community Edition or IBM IT Architect Assistant hosted system.
+**GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Note, like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
+
+ ![Export to Github Toolbar button](../../images/export-to-github.png)  
+
+Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise GitHub repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any IBM Architect Assistant, Community Edition or IBM IT Architect Assistant hosted system.
 
 - When you select this Export format you will be prompted for a (SSH) URL to the repository, an access token, and a comment message.  
 - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the Clone/Download button for your repository and copying the ssh URL.
