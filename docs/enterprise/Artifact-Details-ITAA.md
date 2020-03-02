@@ -51,7 +51,7 @@ The current meta-model restricts an architecture having only one System Context 
 
 *System Context diagram with multiple phases or scenarios*
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ## Requirements
 It is important to document and **track** the definitive set of requirements on the solution. This is to make sure that all parties understand what will and won't be delivered (functionally) as well as the expected qualities of that solution. There are three artifacts in Architect Assistant used to communicate the solution's requirements: 1) Use Cases, 2) Functional Requirements, and 3) Non-Functional Requirements.
@@ -76,7 +76,7 @@ Note that an author can choose to select the Actors and Use Cases to be presente
 
 ![Existing Element palettes](../../images/ucd-existing-element-palettes.png)
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Functional Requirements
 Functional Requirements (FRs) are a complementary (or alternative) way to describe what the target system is expected to be able to do. Like the text based Use Cases, FRs can be edited via a "web form" style editor. Each FR has a set of attributes:
@@ -94,7 +94,7 @@ FRs are generally managed and reviewed as a table or spreadsheet. As such the Ex
 
 The relationship between an FR and a Logical Component is bi-directional and managed as such in the tool's graph database. However, currently the UI only shows this relationship from an FR. An FR is not presented as a relationship attribute when working with a Logical Component.
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Non-Functional Requirements
 Non-Functional Requirements (NFRs) provide a way to document the qualities and constraints of the system. Like FRs, NFRs are authored via a "web form" style editor.  Each NFR has a set of attributes:
@@ -118,7 +118,7 @@ Like FRs, NFRs are generally managed and reviewed as a table or spreadsheet. As 
 
 NFRs and Architectural Decisions generally apply to a particular part of the solution architecture and the applicable architecture elements provide some context for how to apply each. Therefore NFRs are relationship attributes for many of the core architecture elements within a Solution Architecture. 
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ## Data Model
 
@@ -128,7 +128,7 @@ The Logical Data Model artifact type provides the ability to create instances of
 
 ![Sample ERD](../../images/ERD-sample.png)
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ## Architecture Overview
 In Architectural Thinking, an Architecture Overview provides a high-level description of the solution. It is sometimes likened to the "back of the envelope" architecture used to create a common understanding and to elicit further conversation to drive out details. Often several different styles of Architecture Overview Diagram (AOD) will be employed to communicate different views of the architecture vision to different stakeholders.
@@ -171,14 +171,14 @@ In the above, you see three different implementations associated with this LC. Y
 
 Clicking on the **Add/Update Implementation** link will provide a list of all available Physical Components defined in this Solution Architecture (to select or deselect).  It also provides a link to **Create New** which allows you to define a new Physical Component to select.
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### AOD Enterprise View
 The AOD Enterprise View seeks to depict a solution through its Business Architecture.   The presents the architecture through 3 standard layers: Channels (a type of logical component that deliver services to a type of user/actor), Application Services (a type of logical component that deliver the core business functionality) and Resources (a type of logical component that represent current, dependent capabilities). In addition to Channels, Application Services and Resources, the diagram supports Actors (Human actors), SubSystem (used to group different set of components) and Logical Connectors.
 
 ![AOD Enterprise View](../../images/enterprise-view.png)
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### AOD IT System View
 Another common way to describe the system is to focus on a logical deployment view. The IT System View is comprised of Locations, Subsystems, Logical Nodes, and Logical Connections. In the more formal Operational Model, Nodes are containers into which functional behavior is deployed. In the more informal IT System View, the details of the deployment units are essentially ignored and instead a Logical Node embodies the net contribution of capabilities available to the solution in a logical packaging within a particular location.
@@ -202,7 +202,7 @@ As noted earlier, the details associated with deployment units are ignored in th
 
 Also available as attributes on Logical Nodes is associating Architectural Decisions and NFRs. Also, each Logical Connection can be associated with zero or more NFRs.
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Usage Scenarios
 The usage scenario provides a way to overlay a "story" or "flow" onto an existing Architecture Overview diagram. What is uniquely authored in a Usage Scenario instance, is this story. When a new instances is created, you must first specify the AOD diagram it is based upon (selected from a list) along with the scenario name.
@@ -238,7 +238,7 @@ In addition to documenting a decision, it is convenient to trace them to specifi
 - Logical Nodes
 - Deployment Units
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ## Component Model
 The Component Model is the most common modeling approach for representing the *Functional Viewpoint* of an architecture.  Within the component model, the system functional behavior is decomposed into a set of *Components*. A Component should deliver a cohesive set of services through well defined *Interface*(s) and will typically own or be responsible for some business data/objects.
@@ -265,7 +265,7 @@ The Logical Connector usually represents a communication channel (interaction de
 
 ![Static View of Component Model](../../images/CM-Static-View.png)
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Component Model - Dynamic View
 
@@ -282,7 +282,7 @@ Manipulating the messages in MxGraph does require a bit of practice.  The two mo
 
 ![Dynamic View of Component Model](../../images/CM-Dynamic-View.png)
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ## Operational Model
 The Operational Model is probably the most involved set of artifacts we create as architects. The focus of this model is to describe the placement of the workloads onto a operational environment insuring that the required service levels are met.
@@ -333,7 +333,7 @@ Currently, this is the only way to define/create a DU within Architect Assistant
 
 Here you will find listed all of the elements that exist in this solution architecture that can be placed on the LOM diagram. This allows for a much more efficient drag to reuse user experience. Note, once an element appears on the current diagram, it will be removed from this list of "existing elements (available for use in this diagram)" since that element is currently "in use on the diagram".  These existing element palettes are available in LOM views, POM views, and Use Case Diagram views at the moment.
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Operational Model - POM View
 There are 5 key modeling elements front and center in a LOM view: OMLocations, Actors, Physical Nodes, Logical Nodes, and Physical Connections (or Networks). In addition the diagram palette includes element representing different Border types.
@@ -364,7 +364,7 @@ As implied earlier, other than defining the topology of OMLocations, Physical No
 
 From a style perspective, Physical and Logical Nodes are simple rectangles that are containers. This is to make it easy to create the nesting (*hosting*) relationships via drag into. However, there will be times in which a simplified POM view may be desired (for certain with Logical Overlay disabled) where you may want more stylistic icons for the various nodes. Just like any other symbol in any of the views you can customize the style via the Style panel see the discussion in the basic Authoring section of the [Overview section of the User Guide](../../master/docs/Cognitive-Architect-Home.md).
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ## Viability Viewpoint
 
@@ -382,7 +382,7 @@ Risks are identified for a project and need to be addressed. Like other text bas
 
 Risks are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of Architect Assistant are extremely useful when working with Risks. 
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Viability - Assumptions
 Assumptions can be made at any level within Solutioning. The text based Assumptions can be edited via a "web form" style editor. Each Assumption has a set of attributes:
@@ -398,7 +398,7 @@ Assumptions can be made at any level within Solutioning. The text based Assumpti
 
 Assumptions are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of Architect Assistant are extremely useful when working with Assumptions. 
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Viability - Issues
 Functional Requirements (FRs) are a complementary (or alternative) way to describe what the target system is expected to be able to do. Like the text based Use Cases, FRs can be edited via a "web form" style editor. Each FR has a set of attributes:
@@ -414,7 +414,7 @@ Functional Requirements (FRs) are a complementary (or alternative) way to descri
 
 Issues are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of Architect Assistant are extremely useful when working with Issues. 
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Viability - Dependencies
 Dependencies document those items outside of the direct control of this solution project that impact this project. Dependencies can be edited via a "web form" style editor. Each FR has a set of attributes:
@@ -430,7 +430,7 @@ Dependencies document those items outside of the direct control of this solution
 
 Dependencies are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of Architect Assistant are extremely useful when working with Dependencies. 
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Architectural Principles
 Architectural Principles represent an external set of guidelines or constraints. They are used to deliver consistent design guidance across an organization, initiative or other scope. Architectural Principles can be edited via a "web form" style editor. Each Principle has a set of attributes:
@@ -444,7 +444,7 @@ Architectural Principles represent an external set of guidelines or constraints.
 
 Architectural Principles are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of Architect Assistant are extremely useful when working with Architectural Principles. 
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 ### Notes
 Notes are designed to provide flexibility for packaging all the elements you need to manage with a Solution Design / Architecture. You will frequently receive reference documents and content from the client that you want to manage. For these you can create a Note artifact instance and attach documents and/or images. In addition to client artifacts, you may capture other artifacts not formally supported in the Table of Contents, for example, you might capture a set of Design Thinking artifacts, e.g., Empathy Map, As-Is Scenario Map, etc.  These can be added to the Solution Design as Notes.
@@ -457,4 +457,4 @@ Filters are a set of logical tags that can be associated with each of your Notes
 
 ![Filter Notes by Labels](../../images/label-filter.png)
 
-([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type-v11))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
