@@ -7,7 +7,7 @@ This section will present the details for each of the artifact types, including 
 - [System Context](#system-context)
 - [Use Cases and Use Case Diagrams](#use-cases-and-use-case-diagrams)
 - [Functional Requirements](#functional-requirements)
-- [Non-Functional Requirements](#non---functional-requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
 - [Logical Data Model](#logical-data-model)
 - [AOD Services View](#aod-services-view)
 - [AOD Enterprise View](#aod-enterprise-view)
@@ -185,8 +185,8 @@ The AOD Enterprise View seeks to depict a solution through its Business Architec
 ### AOD IT System View
 Another common way to describe the system is to focus on a logical deployment view. The IT System View is comprised of Locations, Subsystems, Logical Nodes, and Logical Connections. In the more formal Operational Model, Nodes are containers into which functional behavior is deployed. In the more informal IT System View, the details of the deployment units are essentially ignored and instead a Logical Node embodies the net contribution of capabilities available to the solution in a logical packaging within a particular location.
 
-Within IBM, this style is extremely common and is the approach promoted through sites like the ![Cloud Architecture Center (CAC)](https://www.ibm.com/devops/method/category/architectures/). IBM Architect Assistant, Community Edition has formalized this style in the IT System View. Logical Node symbols have an associated icon (an image file). Many of the common CAC node symbols are delivered via a special set of domain specific "palettes" in the IT System View. 
-Note, in addition to the node icons available via the palettes the standard CAC icons are available via the Architecture Pattern, **IBM Architecture Node Library**, that can be reused (copy and paste) via the Resource menu and contains both diagram templates as well as reusable Logical Nodes.
+Within IBM, this style is extremely common and is the approach promoted through sites like the[Cloud Architecture Center (CAC)](https://www.ibm.com/cloud/architecture/architectures). IBM Architect Assistant, Community Edition has formalized this style in the IT System View. Logical Node symbols have an associated icon (an image file). Many of the common CAC node symbols are delivered via a special set of domain specific "palettes" in the IT System View. 
+Note, in addition to the node icons available via the palettes the standard CAC icons are available via the architecture, **Node Library - IBM Cloud Architecture Center**, that can be reused (copy and paste) via the Resource menu and contains both diagram templates as well as reusable Logical Nodes. (This asset is downloaded along with the Community Edition itself.)
 
 One of the validation rules enforced by the IT System View is a Logical Node must be *placed* within a Location. Thus it is not valid for a Logical Node to appear standalone within an IT System View diagram.
 
@@ -352,18 +352,9 @@ The second control, is whether to show Physical Connections on the diagram. With
 
 Physical Nodes have a rich set of attributes that one might like to document, including numbers/type of CPU/Cores, amount of memory, available network ports, and the associated OS/Hypervisor. Also included in information about the Deployment Offering (Managed, Hosted, on-prem, ...) as well as Deployment Provisioning (org responsible for provisioning). Obviously you can easily include other noteworthy attributes/characteristics as part of the Physical Node's description.
 
-#### Linked (Synchronized) LOM/POM
-For most basic solution architectures, one will likely create a LOM view to establish the OMLocations as well as the basic logical packaging of functionality, i.e., define the Logical Nodes along with the DUs that are hosted by these nodes. Then you will create the physical topology in at least one POM view. IBM Architect Assistant, Community Edition provides a productivity enhancement for these simple cases. When you create a POM view and there is at least one LOM view defined, you will get a dialog like the one shown below.
-
-![Linking LOM to POM](../../images/linked-LOM-POM.png)
-
-By selecting a LOM view to link to the POM view being created, a number of things happen. First all of the OMLocations and Actors from the LOM view are copied into the new POM view. Further, going forward, the tool will synchronize changes between these views. For instance when you drag a Logical Node onto a Physical Node in the POM that also in turn specifies a relationship between the Logical Node and the enclosing OMLocation. This will be synchronized back to the LOM, potentially moving the Logical Node to the "new" OMLocation or remove it from the LOM if the target OMLocation doesn't exist in the LOM.
-
-The set of synchronization rules become very complex were the tool to try and support it across more than a single pair of diagrams. As a result, only a single linked pair of LOM-POM is supported. Also note, you do not need to use this feature at all although it does a lot of validation and consistency checking for you when you do use it.
-
 As implied earlier, other than defining the topology of OMLocations, Physical Nodes and Physical Connections (networks) within a POM View, the other major task is then placing the Logical Nodes onto this deployment topology. Here is where having the "**Existing Element**" palettes become particularly useful. Here you can just open up the list of available Logical Nodes and drag each one onto the hosting Physical Node. Once you add a Logical Node to the diagram, the *Logical Overlay* toggle switch will get turned on.  Thus you should be able to verify that the Physical Connections are available to support the specified set of Logical Connections. Again you can toggle this off at any time to simplify the view. The list of Logical Nodes hosted by a Physical Node are always visible in the Physical Nodes' attribute panel.
 
-From a style perspective, Physical and Logical Nodes are simple rectangles that are containers. This is to make it easy to create the nesting (*hosting*) relationships via drag into. However, there will be times in which a simplified POM view may be desired (for certain with Logical Overlay disabled) where you may want more stylistic icons for the various nodes. Just like any other symbol in any of the views you can customize the style via the Style panel see the discussion in the basic Authoring section of the [Overview section of the User Guide](../../master/docs/Cognitive-Architect-Home.md).
+From a style perspective, Physical and Logical Nodes are simple rectangles that are containers. This is to make it easy to create the nesting (*hosting*) relationships via drag into. However, there will be times in which a simplified POM view may be desired (for certain with Logical Overlay disabled) where you may want more stylistic icons for the various nodes. Just like any other symbol in any of the views you can customize the style via the Style panel see the discussion in the basic Authoring section of the [Overview section of the User Guide](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Overview-ITAA-CE.md).
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
 
