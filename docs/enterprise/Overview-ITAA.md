@@ -352,7 +352,7 @@ If you choose Import you are presented are two* choices:
 
   - Next select GitHub for the source of the archive file.  
 
-    ![Upload an architecture](../../images/load-from-github.png.png)
+    ![Upload an architecture](../../images/load-from-github.png)
 
   - You will then provide the repository URL and access token per instructions below.  **[In v2.5, only a SSH URL with a mandatory access token is supported.  This is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). In v2.6, you will be given the option to supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
 
