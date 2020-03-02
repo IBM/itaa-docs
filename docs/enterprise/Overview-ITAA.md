@@ -46,9 +46,11 @@ In each case the fundamental construct is an architecture. An architecture is co
 
 ![Architect Assistant - Table of Contents](../../images/CA-TOC-2.1.png)
 
-This standard structure directly supports the details of a specific solution architecture, but can also be used to manage a set architecture building blocks which are described as a **architecture pattern** within the tool.  This may be a library of reusable standard *parts* or a more integrated set of reusable content.  These *architecture patterns* typical get used as a source resource for copying a subset of the pattern asset into a target architecture.  This is useful to be able to consistently use these building blocks in multiple architecture
+The ToC, shown above, is the default for architectures created in the tool. This standard structure directly supports the details of a specific solution architecture, but can also be used to manage a set architecture building blocks which are described as a **architecture pattern** within the tool.  This may be a library of reusable standard *parts* or a more integrated set of reusable content.  These *architecture patterns* typical get used as a source resource for copying a subset of the pattern asset into a target architecture.  This is useful to be able to consistently use these building blocks in multiple architecture.
 
-An architecture is what is addressable via search, can be edited, copied or deleted. In Architect Assistant, an architecture can be selected via a **card** that will appear in either your workspace or in the search area. 
+IT Architect Assistant does support multiple ToC templates.  A template defines the available artifact types along with the display name and order in which they will appear within the ToC for an architecture with that template applied.  This feature of "custom" ToC templates supports assets that have a different focus (e.g. TOGAF, etc) and/or teams or clients that use different terminology for artifact types or prefer to focus on only a subset of the standard artifact types during architecture documentation.
+
+Note that an architecture is what is addressable via search, can be edited, copied or deleted. In Architect Assistant, an architecture can be selected via a **card** that will appear in either your workspace or in the search area. 
 
 ## Workspace, Search, and [Dashboard]
 When a user logs into Architect Assistant they are presented with two (2) or potentially three (3) tabs.  
@@ -239,7 +241,7 @@ Navigation within the tool is managed in several ways. From a top-level landing 
 
 ![Main Navigation](../../images/main-navigation-ITAA.png)
 
-Within an architecture there are two different navigation mechanisms depending on if you are within an artifact instance. When you are not within an artifact instance, the TOC provides the way to select an artifact type to view or edit. In or out of an artifact instance, there is a "breadcrumb" that supports navigation to all levels of the tool. If a particular level of a breadcrumb represents multiple options at that level, there is a "down arrow" that will present you with the available elements at that level to select and navigate to.
+Within an architecture there are two different navigation mechanisms. When you are not within an artifact instance, the TOC provides the way to select an artifact type to view or edit. In or out of an artifact instance, there is a "breadcrumb" that supports navigation to all levels of the tool. If a particular level of a breadcrumb represents multiple options at that level, there is a "down arrow" that will present you with the available elements at that level to select and navigate to.
 
 ![Breadcrumb Navigation](../../images/breadcrumb-navigation.png)
 
@@ -253,7 +255,7 @@ With any documentation tool you want to be able to quickly reuse elements. This 
 
 
 
-### Course-Grained Reuse
+### Coarse-Grained Reuse
 
 The **copy** operation at an architecture level (either via the '...' menu on the asset card or via the *copy* toolbar button within any architecture) is the purest form of course-grained reuse.   Take an architecture and make a new copy that can be customize independent of the source. This is where it is critical that we build and share (either globally via As-Is or published asset or via explicit collaboration with peers) architectures that form a good foundation for starting to build new solutions.
 
@@ -273,9 +275,19 @@ This allows you to select from 3 sets of architectures to copy from. Open from P
 
 ![Target diagram with read-only source diagram tabs](../../images/source-target-diagrams.png)
 
-Note, it is critical that the paste succeeds. So the tool does not allow for name conflicts. So as the elements are copied from the source to the target, if an element's name matches an element in the target architecture, the "pasted" element will be renamed using a "Copy of" prefix. If these "copied and renamed" elements align with an element in the target architecture you can then use the "Select from existing" option to properly integrate the pasted content.  For example, you are copying a set of Logical Nodes and connections representing a ETL pattern, and one of those nodes is named "Product Data Warehouse" and a node representing that same content already exists in the target architecture, initially on paste you will have a new Logical Node named "Copy of Product Data Warehouse".  If that node didn't already appear on the target diagram you could select the "Copy of Product Data Warehouse", click the Select from existing button and locate and select "Product Data Warehouse". This now "connects" the new set of elements with the existing architecture.  It also produces an "orphaned" Logical Node (not in use) with the name Copy of Product Data Warehouse.  Note if the Product Data Warehouse node was already present on the target diagram, rather than use the Select from existing, you would move the connection endpoints from the Copy of Product Data Warehouse and connect them instead to the pre-existing Product Data Warehouse and then delete the extra "Copy of Product Data Warehouse" node from the diagram.
+Note, it is critical that the paste succeeds and there is a restriction that the **name** of any "sharable/reusable" architecture element within the architecture is **unique**! So how does the tool handle a paste operation that implies the addition of "new" elements with conflicting names? When the user triggers the paste action, a list of all the elements that result in a name conflict are presented to the end-user to determine how the conflict is to be resolved.  The user is given 3 choices which can be summarized: 1) keep both, 2) keep existing, or 3) replace target.   
 
-[In an upcoming release, you will be provided with an option of how to handle the paste operation for each element which has a name conflict with the target architecture.  This will allow you to have the current behavior (create new element with name "copy of …") or to define how the element is "merged" with the target architecture's element with the same name.]
+**Keep both (Make new)** - In this case the "source" element is renamed using a "Copy of" prefix, and added as a new element in the target architecture.
+
+**Keep existing** - In this case the source element is identified to be equivalent to the target element of the same name. The pre-existing target element will retain its current attributes
+
+**Replace (update)** - Like the previous option, the source and target elements are deemed to be equivalent however the desire is for the resulting element to retain the attributes of the source version.
+
+Note, the conflict element list may include "invisible" elements that are "reference" attributes of one or more of the visible elements being pasted!
+
+![Handle name conflict on past](../../images/paste-conflict.png)
+
+As you can see, from the above image, you can select to apply the same conflict resolution approach to all conflicting elements or select individually. Note if you decide to create a copy (keep both) and later want to merge, you can always point to an existing element via the "Select from existing" option on the attributes panel (see Shared Elements discussion earlier)!
 
 In a mechanism very similar to the Resource menu, you can copy text-based artifact instances, e.g., an NFR or a Use Case, directly from one architecture to another. This is triggered on the "Add  <element>" dialog, in the case below, Add Non Functional Requirement.
 
@@ -297,7 +309,7 @@ To support users that are used to quickly duplicating a symbol on a diagram to c
 
 Through the course of authoring an architecture, various architecture elements will be created and then abandoned (orphaned) and not actually used or referenced.  These elements do not impact the architecture's integrity but can become misleading and annoying.  Most notably if you export an architecture to a MS Word document, then in sections that list all of the elements of a particular type, the orphan elements will be listed.   Also, more significant, is when you are provided with a list of available elements of a type for selection of a relationship, e.g. select from available Physical Components for an "Implemented by" relationship - then that list can become extremely long if there are many orphaned "physical components" within the architecture.   
 
-To selectively remove orphan elements, click on the "trash can (Manage orphan elements)" icon within the architecture.  [Note, this toolbar button will only show if you have exclusive edit rights for the architecture and you are at the TOC level, i.e. not editing an artifact instance. If the architecture has multiple collaborators that are editors, then you must obtain the architecture lock (Get pen and lock).]
+To selectively remove orphan elements, click on the "trash can (Manage orphan elements)" icon within the architecture.  **[Note, this toolbar button will only show if you have exclusive edit rights for the architecture and you are at the TOC level, i.e. not editing an artifact instance. If the architecture has multiple collaborators that are editors, then you must obtain the architecture lock (Get pen and lock).]**
 
 ![Manage Orphan Element button](../../images/manage-orphans.png)
 
@@ -307,7 +319,9 @@ This will bring up the manage orphan elements panel.  Here you can select all, s
 
 ## Import and Export
 
-There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. Architect Assistant provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
+#### Export
+
+There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. Cognitive Architect provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
 
 ![Import/Export Toolbar button](../../images/import-export-toolbar.png)
 
@@ -315,15 +329,71 @@ Above you see the toolbar button to access the import and export utilities. Firs
 - **Microsoft PowerPoint** - This produces a summary PPTX document containing the major sections of the architecture. This is a good way to quickly get content out in this format to share with others.  Clicking Next will generate the file and then prompt you with a Browser open/save dialog.
 - **Microsoft Excel** - This produces a multi-worksheet Excel document (XLSX) that include everything in the model with the exception of the diagram images. In reality, when you click next you are presented with a pick list of "reports" to be included in the export.  There are three groupings of reports, Architectural elements (the key reusable elements in the model), Text-based artifact reports (FRs, NFRs, ...), and Diagram-based artifacts that describe content that appears on each diagram.
 - **Microsoft Word** - Today this produces a standard all inclusive Word document.  In the future you will likely be able to select among a set of document templates. **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
+- **GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
+   ![Export to Github Toolbar button](../../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any  IBM IT Architect Assistant hosted system.
+  - When you select this Export format you will be prompted for a URL to the repository, an access token, and a comment message.  **[Only a SSH URL with a mandatory access token is supported.  This is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository).]**
+  - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the Clone/Download button for your repository and copying the ssh URL.
+  - To generate an access token for your repository navigate to *[repository-url]/settings/tokens/new* (e.g. https://github.ibm.com/settings/tokens/new) and **create** a description, e.g. CA-access, and select **repo** scope.  Then click **Generate Token**.  You then will want to click on the **copy to clipboard** icon so that you can paste into the connection dialog for Cognitive Architect.   If you wish to reuse this token for future access to the tool, save this token elsewhere so that you can retrieve it. (You can not retrieve the token from Git after you leave the Token generation page.)
+- **Offline Download** - This logical export option is not actually part of the Export menu but instead is available on the architecture card '...' menu.  This download creates a .zip file of the complete architecture for use within the offline application.  
 
-If you choose Import you are presented with one* choice:
-- **Microsoft Excel** - This expects the import file to conform to a standard import template that you can download via the link. This import only supports the first two report groups from the Excel export utility. This allows you to add or modify shared architectural elements and well as all of the text-based artifacts.  This is a great way to manage working with FRs, NFRs, Use Cases, Architecture Decisions, etc. as spreadsheet data and import / update in a timely manner. 
+#### Import
 
-The template includes a worksheet for each architecture element or artifact instance type. Here there are columns for all attributes of the items to be imported. There is also an extra column, *Previous Name* that can be optional used to indicate you wish to change the name of an existing element.
+If you choose Import you are presented are two* choices:
 
-Import by default supports *Add*, *Update*, and *Rename*. The parser checks the "Name" and "Previous Name" columns. Typically the Previous Name entry will be blank, in which case if a row name matches an existing element, all attributes are overwritten with the values found in the import spreadsheet. If name  does not match any existing elements, a new element is created. If Previous Name matches an existing element then that element is renamed and updated.
+- **Microsoft Excel** - This expects the import file to conform to a standard import template that you can download via the link. This import only supports the first two report groups from the Excel export utility. This allows you to add or modify shared architectural elements and well as all of the text-based artifacts.  This is a great way to manage working with FRs, NFRs, Use Cases, Architecture Decisions, etc. as spreadsheet data and import / update in a timely manner.  The template includes a worksheet for each architecture element or artifact instance type. Here there are columns for all attributes of the items to be imported. There is also an extra column, *Previous Name* that can be optional used to indicate you wish to change the name of an existing element.
+
+  Import by default supports *Add*, *Update*, and *Rename*. The parser checks the "Name" and "Previous Name" columns. Typically the Previous Name entry will be blank, in which case if a row name matches an existing element, all attributes are overwritten with the values found in the import spreadsheet. If name  does not match any existing elements, a new element is created. If Previous Name matches an existing element then that element is renamed and updated. 
+
+- **GitHub** - The support to import from GitHub is to create an architecture from an archive file available on a GitHub repository. The import let's you connect to either a public or enterprise GitHub repository and will upload a new architecture from the selected archive file. 
+
+  - When you select this Import format you will be prompted for a (SSH) URL to the repository and an access token.  You will then get to select from the available archive files the one you wish to upload.
+
+  - The steps to import start with the Add Architecture cell on your private workspace.  Here you select **Load**.  <img src="../../images/upload-architecture.png" alt="Upload an architecture" style="zoom:80%;" />
+
+  - Next select GitHub for the source of the archive file.  
+
+    ![Upload an architecture](../../images/load-from-github.png.png)
+
+  - You will then provide the repository URL and access token per instructions below.  **[In v2.5, only a SSH URL with a mandatory access token is supported.  This is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). In v2.6, you will be given the option to supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
+
+    - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the **Clone/Download** button for your repository and copying the **ssh URL**. (A sample HTTPS URL for a public Git repository is: https://github.com/IBM/itaa-docs.git.)
+    - To generate an access token for your repository navigate to *[repository-url]/settings/tokens/new* (e.g. https://github.ibm.com/settings/tokens/new) and **create** a description, e.g. CA-access, and select **repo** scope.  Then click **Generate Token**.  You then will want to click on the **copy to clipboard** icon so that you can paste into the connection dialog for Cognitive Architect.   If you wish to reuse this token for future access to the tool, save this token elsewhere so that you can retrieve it. (You can not retrieve the token from Git after you leave the Token generation page.)
+
+  - Clicking Next will the provide you with a list of archive files available for you to select from for the upload. Select the archive you desire and click **Load**.
+
+- **Offline Upload** - (See Offline Mode below) This allows you to add a solution architecture created via the offline app to your private workspace. 
 
 In the future, expect to see additional functionality added to the existing import/export utilities including support for other external formats.
+
+### Offline Mode
+
+Related to Import and Export is the support for offline editing. The big picture is you can download a Node.js app that you can run on your local machine and then use a local browser connecting to the Node application to let you edit architectures in a nearly exact same way as you would running the Cloud-based Cognitive Architect. This obviously supports working on an architecture without the need for connectivity. It also means it is possible to work with the tool and an architecture at a client site, even when local network policies may not make it possible to connect to the IBM network. (See [offline mode video](http://w3.tap.ibm.com/medialibrary/media_view?id=423570).) With the v2.7 release this offline mode application has been re-branded, [IBM IT Architect Assistant, Community Edition](https://www.ibm.com/cloud/architecture/architectures/edit/architect-assistant), and is available to Customers and Business Partners to use for free.
+
+The offline mode works with a file system based data store for architectures. The current offline mode support allows you to create a new architecture (offline) and edit that locally.  Also supported is a pre-packaged copy of the IBM Architecture Node Library asset that can be used to copy-and-paste from (see Resource copying). To download the app and  the IBM Architecture Node Library, click on the *more information* icon on Cognitive Architect, and click **Download Single-User Community Edition** or go to the link above.
+
+![Download Offline Mode App](../../images/download-offline.png)
+
+In addition, you are also able to download individual architectures via the architecture card menu item). Note this offline download, as an archive file, is what is exported to a Git repository via the GitHub import/export mechanism. To make the downloaded architecture available in the IT Architect Assistant, Community Edition, expand the archive file contents into the *Workspace* folder within the Community Edition installation directory.
+
+
+
+![Download an architecture](../../images/download-arch-menuitem.png)
+
+You can then upload an asset from your local machine into the Cloud, creating a new architecture asset in your Local Workspace.   To avoid conflicts, the "uploaded" architecture may be auto-renamed to be certain that no existing architecture is "overwritten".  The **Load** button is on the *Add Architecture Solution* card on your workspace. See this [introductory video about offline mode support.](https://sme.video.ibm.com/channel/23648429/playlist/508143/video/120806850)
+
+![Upload an architecture](../../images/upload-architecture.png)
+
+After you click load you will select to load from *local*.  Then you can select the folder from your local file system that corresponds to the architecture you wish to upload.  
+
+![Upload an architecture](../../images/load-from-local.png)
+
+With the ability to download an architecture and work with it offline, this also represents a standard interchange format.  This makes it possible to copy an architecture from the IBM Internal instance of Cognitive Architect to a client specific or shared instance of the IBM IT Architect Assistant as well as anyone's copy of IBM IT Architect Assistant, Community Edition.
+
+If you want to perform a selective "update" of an existing architecture via a offline instance *upload* you need to open the architecture to be updated (be sure and have exclusive edit privileges) and click on the *Go offline / Go online* toolbar button.  Then select *Upload offline version*.
+
+![Upload an architecture](../../images/replace-from-offline.png)
+
+Clicking Next will open a file finder, whereby you can locate the local folder with the updated offline architecture.  You will then be presented with a list of all of the artifact instances available in the offline architecture. You can then select those instances that are to replace their counterpart in (or just add to) the online architecture instance.   **Note - this will overwrite any elements in the online architecture with the content  selected or included via the selection from the offline source. You  need to be careful and very aware of team collaboration activity if working offline on an architecture in which there are multiple collaborating authors.** (Thus the default from the Add Architecture tile is to only support uploading to a new architecture.  Choosing to upload a new architecture allows you to selectively copy-and-paste into the shared collaborative *master* architecture.)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
@@ -370,6 +440,24 @@ In addition to manipulating a shared asset directly one can author content offli
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
 
+
+## Backup and Versioning
+
+IBM IT Architect Assistant is a managed offering with focus on collaboration support.  There are daily backups of all architectures. The purpose of these backups are primarily for disaster recovery. Since most architectures are "live" assets there is no implicit versioning. So as a user, what are the strategies and tools available both for "explicit" versioning as well as user managed backup/restore and archiving?
+
+### Versioning
+
+Most users will create a copy of an architecture when there is a need to "lock down" a particular version.  Simply create a copy and update the name with some indication of the version. You will also likely want to update the role of any collaborators to be "Viewer" to help in minimizing the ability for anyone to make changes to this copy.  Note that this copy will appear in the respective workspace, on-line.
+
+### Archiving techniques
+
+There are two separate methods to externalize a complete architecture off of the hosted cloud platform. Each of these methods produce the exact same archive file. The first is "**offline download**" available from the architecture card "..." menu. (When editing an architecture this is also available from the *Go offline / Go online* toolbar button.) The primary purpose of this action is to make available a copy of the architecture for the single-user, offline tool ([IBM IT Architect Assistant, Community Edition](https://www.ibm.com/cloud/architecture/architectures/edit/architect-assistant)) but the corresponding archive (.zip) file can also serve as a backup/archive for the snapshot of the architecture at the time of the download. To access the downloaded architecture within IBM IT Architect Assistant, Community Edition, expand the zip file within the *Workspace* folder under the directory where the tool has been installed locally.
+
+A more explicit archive (backup/restore) approach is the **Export / Import from GitHub**. Here the export saves the same archive format of the architecture along with a commit comment that usually will be used to detail out the "version / snapshot" information. When using your own Git repository, the approach is intended for archival / versioning as the corresponding Import is used to instantiate a previously archived snapshot as a new architecture online. [Note, the GitHub Import from a public Git repository is more often associated with publishing a specific snapshot for others to be able to use as the foundation for a new architecture.]
+
+It should also be pointed out that this archive file also serves as an *interchange file* since it can be generated and consumed by any of the various offerings of the tool.
+
+([Back to Top and TOC](#cognitive-architect-user-guide-v27)) 
 
 ## Comments
 
