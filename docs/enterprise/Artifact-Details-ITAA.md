@@ -7,7 +7,7 @@ This section will present the details for each of the artifact types, including 
 - [System Context](#system-context)
 - [Use Cases and Use Case Diagrams](#use-cases-and-use-case-diagrams)
 - [Functional Requirements](#functional-requirements)
-- [Non-Functional Requirements](#non---functional-requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
 - [Logical Data Model](#logical-data-model)
 - [AOD Services View](#aod-services-view)
 - [AOD Enterprise View](#aod-enterprise-view)
@@ -183,10 +183,10 @@ The AOD Enterprise View seeks to depict a solution through its Business Architec
 ### AOD IT System View
 Another common way to describe the system is to focus on a logical deployment view. The IT System View is comprised of Locations, Subsystems, Logical Nodes, and Logical Connections. In the more formal Operational Model, Nodes are containers into which functional behavior is deployed. In the more informal IT System View, the details of the deployment units are essentially ignored and instead a Logical Node embodies the net contribution of capabilities available to the solution in a logical packaging within a particular location.
 
-Within IBM, this style is extremely common and is the approach promoted through sites like the ![Cloud Architecture Center (CAC)](https://www.ibm.com/devops/method/category/architectures/). Architect Assistant has formalized this style in the IT System View. Logical Node symbols have an associated icon (an image file). Many of the common CAC node symbols are delivered via a special set of domain specific "palettes" in the IT System View. 
+Within IBM, this style is extremely common and is the approach promoted through sites like the ![IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures)(CAC). Architect Assistant has formalized this style in the IT System View. Logical Node symbols have an associated icon (an image file). Many of the common CAC node symbols are delivered via a special set of domain specific "palettes" in the IT System View. 
 Note, in addition to the node icons available via the palettes, there are two other ways to reuse standard CAC icons:
-- There is an Architecture Pattern published to the public repository, **IBM Architecture Node Library**, that can be reused (copy and paste) via the Resource menu and contains both diagram templates as well as reusable Logical Nodes.
-- A set of the icon images are available in ![Box](https://ibm.box.com/s/hbhzksvvl7ezbb282hzunlxqh1ilknmq) (both in .svg and .png formats).
+
+- There is an Architecture Pattern published As-Is, **Icon Library - IBM Cloud Architecture Center**, that can be reused (copy and paste) via the Resource menu and contains both diagram templates as well as reusable Logical Nodes.
 
 One of the validation rules enforced by the IT System View is a Logical Node must be *placed* within a Location. Thus it is not valid for a Logical Node to appear standalone within an IT System View diagram.
 
@@ -196,7 +196,7 @@ In most cases, an important part of this "deployment view" is the connectivity b
 
 A Subsystem is commonly used when you need to simplify connection details by showing implicit connectivity between a set of Logical Nodes.  By placing Logical Nodes within a Subsystem, you can then have a Logical Connection endpoint connect to a Subsystem instead of a Logical Node.
 
-When creating these diagrams you will frequently want to make use of all of the tabs on the format panel, such as endpoint style and line jumps for Logical Connections on the Style tab, Edit Image for Logical Node on the Style tab, and alignment tools in the Arrange tab. The ![How-to video on IT System view](http://w3.tap.ibm.com/medialibrary/media_view?id=415877) provides a nice summary of many of the stylistic techniques you may want to consider.
+When creating these diagrams you will frequently want to make use of all of the tabs on the format panel, such as endpoint style and line jumps for Logical Connections on the Style tab, Edit Image for Logical Node on the Style tab, and alignment tools in the Arrange tab. 
 
 As noted earlier, the details associated with deployment units are ignored in the IT System view, however it is often the case that one wants to identify the "implementation elements" that are represented by a logical node. Thus, one of the attributes of a Logical Node is **Implementation**. You can think of an Implementation as a short-cut to a DU (either application or technical). The user experience is identical to that described earlier for a Logical Component's implementation in the AOD Services View. The Add/Update Implementation link within the Implementation attribute allows you to select from the list of currently defined Physical Components and/or create new ones.
 
