@@ -465,7 +465,7 @@ The comment feature supports architecture reviews. In an open architecture, you 
 
 ![Comments panel](../../images/comments-panel.png)
 
-This panel let's you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …).
+This panel let's you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …). Given the nature of the single page web app, while you have the comment pane open, you will not see incoming comments (in real-time) without an explicit refresh.
 
 ([Back to Top and TOC](#cognitive-architect-user-guide-v24)) 
 
