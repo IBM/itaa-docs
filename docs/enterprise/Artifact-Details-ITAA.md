@@ -24,7 +24,7 @@ This section will present the details for each of the artifact types, including 
 - [Viability - Dependencies](#viability---dependencies)
 - [Architectural Principles](#architectural-principles)
 - [Notes](#notes)
-- [Glossary](#glossary-shared-core-architectural-elements)
+- [Glossary](#glossary---shared-core-architectural-elements)
 
 ## Overview
 The overview or executive summary is presented to users in the Quick View and forms the first section of the default document and presentation export reports. From a model perspective it is just has a "document body" that can include rich-text and images.
