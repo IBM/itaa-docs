@@ -466,7 +466,7 @@ Filters are a set of logical tags that can be associated with each of your Notes
 
 ### Glossary - Shared Core Architectural Elements
 
-The set of architecture artifacts are comprised of core architectural elements. Many of these elements (types) are shared and reused across multiple artifacts (views).  This Glossary provides the intent and meaning for these architecture elements.
+The set of architecture artifacts are comprised of core architectural elements. Many of these elements (types) are shared and reused across multiple artifacts (views).  This Glossary provides the intent and meaning for these architecture elements. In addition to the core elements there are a set of elements that get associated (referenced attributes) across the model, these include Use Case, Functional Requirement, Non-Functional Requirement (NFR), and Architectural Decision.
 
 #### Actor
 
