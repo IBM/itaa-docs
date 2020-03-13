@@ -165,6 +165,8 @@ Logical Component - this element type is crucial to the information communicated
 
 ![Logical Component Attributes](../../images/lc-attributes.png)
 
+Logical Component Primary capability.  This property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
+
 Logical Component Implementation - Logical vs. Physical.  Frequently when communicating about the functional aspects of a solution, it is important to take the default "Logical" perspective without exposing implementation choices. At the same time it is known that when the solution is deployed one or more physical implementations will actually deliver the capability.  The attribute *Implementation* allows the author to associate a set of implementation choices. In a final solution architecture, only the decided upon implementation will be linked. Within a Reference Solution / Reference Architecture it  a set of choices may be provided as insight in how the solution can be realized.  It is only through this implementation attribute that one can author and edit the details of a **Physical Component**.
 
 In the above, you see three different implementations associated with this LC. You can click on the arrow symbol next to the Implementation name to bring up an editor for the corresponding Physical Component.

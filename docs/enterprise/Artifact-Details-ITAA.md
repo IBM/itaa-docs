@@ -24,6 +24,7 @@ This section will present the details for each of the artifact types, including 
 - [Viability - Dependencies](#viability---dependencies)
 - [Architectural Principles](#architectural-principles)
 - [Notes](#notes)
+- [Glossary](#glossary-shared-core-architectural-elements)
 
 ## Overview
 The overview or executive summary is presented to users in the Quick View and forms the first section of the default document and presentation export reports. From a model perspective it is just has a "document body" that can include rich-text and images.
@@ -162,6 +163,8 @@ Logical Component - this element type is crucial to the information communicated
 - you cannot create either an Architecture Decision or NFR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
 
 ![Logical Component Attributes](../../images/lc-attributes.png)
+
+Logical Component Primary capability [*coming soon*].  This property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
 
 Logical Component Implementation - Logical vs. Physical.  Frequently when communicating about the functional aspects of a solution, it is important to take the default "Logical" perspective without exposing implementation choices. At the same time it is known that when the solution is deployed one or more physical implementations will actually deliver the capability.  The attribute *Implementation* allows the author to associate a set of implementation choices. In a final solution architecture, only the decided upon implementation will be linked. Within a Reference Solution / Reference Architecture it  a set of choices may be provided as insight in how the solution can be realized.  It is only through this implementation attribute that one can author and edit the details of a **Physical Component**.
 
@@ -456,5 +459,35 @@ Notes instances have a name, and a rich text block. The rich text (document) sup
 Filters are a set of logical tags that can be associated with each of your Notes instances. Back on the Notes overview page (with all of the Notes instance cards visible) you can apply filters to select which Labels are active and thus which instances will be visible.  This helps to organize a potentially large set of Notes.
 
 ![Filter Notes by Labels](../../images/label-filter.png)
+
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
+
+##
+
+### Glossary - Shared Core Architectural Elements
+
+The set of architecture artifacts are comprised of core architectural elements. Many of these elements (types) are shared and reused across multiple artifacts (views).  This Glossary provides the intent and meaning for these architecture elements.
+
+#### Actor
+
+An actor is any entity that interacts with the "Target System". An actor can be of type **Human** or type **IT System**. By being declared an actor, the human or system element is identified to be "external" to the system being documented. Actors appear on System Context diagram, act as initiators and supporter to Use Cases, and they appear at the boundary of solution diagrams, e.g., Component Model and Operation Model diagrams.
+
+#### Logical Component
+
+A logical component represents a functional capability or behavior in the system. Components are a way of decomposing a system into functional elements that have attributes such as low coupling, high cohesion. The Logical qualifier is to specify the functional capability without commiting to a particular realization. The realization or implementation is represented in this model by a **Physical Component**.
+
+#### Logical Node
+
+A node at its core is really just a container to show colocated functionality and interacting elements. Similar to a Logical Component it is used to identify the colocated elements without regard for the specific packaging technology or physical placement. A **Physical Node** specifies this implementation details indicating if it is physical hardware, a virtual machine, a container as well as attributes like compute, memory, storage and network specification. The **Physical Operational Model** show the "hosting" relationships between potentially multiple layers of Physical Nodes as well as the Logical Nodes that are deployed to them.
+
+#### OMLocation
+
+A location in general is a specification for an area or grouping with equivalent set of access capabilities.  In the physical sense it may correspond to a data center, or the set of hosts accessible via an internal network (such employee workstations on-site), or the mobile network which includes all similarly secured public mobile devices. In Operation Model views, these locations need to be treated consistently across all diagrams and so they are reusable across these. Note that Nodes must appear within some designated location.  This rule is enforced in all diagrams in which Nodes appear (OM views and the AOD IT System view).
+
+#### Deployment Model
+
+In this system model, we need a way to show the mapping (deployment) of system behavior (functional) on to the operational environment. Effectively components are placed or deployed onto nodes. However, a given component may have "parts" that get deployed to multiple nodes (e.g. in a Client-Server architecture where part of the component resides on the server while part executes on the client). Thus the formal model defines an abstraction called a **Deployment Unit (DU)**. A DU then is something that can be packaged and deployed to some runtime. The mapping between the Functional view and the Operational view involves the specification of DUs (which Logical Components [parts of] are packaged together) and then which Nodes those DUs are deployed to. 
+
+Thus the full navigation from a Physical Node to Physical Component (realized functionality) in a POM view is Physical Node (PN) [possibly multi-nested, e.g. bare metal, hosting virtual machines, hosting containers] -> hosting one or more Logical Node (LN) -> hosting a set of Deployment Units (DUs) -> each comprised of parts of a set of Logical Components (LC) -> each realized by Physical Component (PC).
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
