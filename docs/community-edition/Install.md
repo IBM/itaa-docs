@@ -26,7 +26,7 @@ Key Benefits and savings from using **IBM IT Architect Assistant, Community Edit
 
 ### How to get it？
 
-Currently, the community edition is provided via a zip file in Github for downloading. After **downloading**, **unzipping** and **installing**, you can use it on your local system.
+Currently, the community edition is provided via a zip file at [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures/edit/architect-assistant). After **downloading**, **unzipping** and **installing**, you can use it on your local system.
 
 ### Prerequisite
 
