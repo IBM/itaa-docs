@@ -8,7 +8,7 @@ The introduction is organized in the following sections:
 - [Installation](#installation)
 - [Running](#running)
 - [Guide](#guide)
-- [Terms & Conditions](#terms-&-conditions) 
+- [Terms & Conditions](#terms--conditions) 
 - [FAQ](#faq)
 - [How to create issues and contact us?](#how-to-create-issues-and-contact-us) 
 
