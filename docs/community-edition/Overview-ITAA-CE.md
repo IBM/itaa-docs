@@ -11,7 +11,7 @@ The Documentation is organized in the following sections:
 - [Workspace Details](#workspace---private-collaboration-and-bookmarks)
 - [Basic authoring of architecture artifacts](#authoring)
 - [Reuse, Copy and Paste](#copy-and-paste)
-- [Import and Export](#import-and-export)
+- [Export](#export)
 - [Detailed authoring - by artifact type](./Artifact-Details-ITAA-CE.md) 
 
 
@@ -213,55 +213,20 @@ Click on the *Copy xxx from another architecture* to get a selection menu equiva
 
 To support users that are used to quickly duplicating a symbol on a diagram to create a new element, a local copy-paste or "duplicate" behaves this way, namely a new architecture element of the same type is created with a new name "copy of <copied from name>". The copy will include the same direct attribute values and any "child" dependent relationship elements will also be cloned ("copy by value") as the source element to keep (duplicate) the same structure.
 
-#### Orphan element clean-up
-
-Through the course of authoring an architecture, various architecture elements will be created and then abandoned (orphaned) and not actually used or referenced.  These elements do not impact the architecture's integrity but can become misleading and annoying.  Most notably if you export an architecture to a MS Word document, then in sections that list all of the elements of a particular type, the orphan elements will be listed.   Also, more significant, is when you are provided with a list of available elements of a type for selection of a relationship, e.g. select from available Physical Components for an "Implemented by" relationship - then that list can become extremely long if there are many orphaned "physical components" within the architecture.   
-
-To selectively remove orphan elements, click on the "trash can (Manage orphan elements)" icon within the architecture.  [**Note, this toolbar button will only show if you have exclusive edit rights for the architecture and you are at the TOC level, i.e. not editing an artifact instance. If the architecture has multiple collaborators that are editors, then you must obtain the architecture lock (Get pen and lock)**.]
-
-![Manage Orphan Element button](../../images/manage-orphans.png)
-
-This will bring up the manage orphan elements panel.  Here you can select all, select all by type, or drill down and select individual orphan elements, and then click **Delete**.
-
-![Manage Orphan Element panel](../../images/manage-orphan-panel.png)
-
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
-## Import and Export
+## Export
 
 #### Export
 
 There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. IBM Architect Assistant, Community Edition provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
 
-![Import/Export Toolbar button](../../images/import-export-toolbar.png)
+![Import/Export Toolbar button](../../images/CE-export.png)
 
 Above you see the toolbar button to access the import and export utilities. First you select if you want to export or import.  Note there is also a link to an *import template* file to download and modify in order to be able to import from an Excel spreadsheet. Selecting Export and clicking Next will take you to a dialog where you can choose the type of export. There are two* choices presented:
 **Microsoft Excel** - This produces a multi-worksheet Excel document (XLSX) that include everything in the model with the exception of the diagram images. In reality, when you click next you are presented with a pick list of "reports" to be included in the export.  There are three groupings of reports, Architectural elements (the key reusable elements in the model), Text-based artifact reports (FRs, NFRs, ...), and Diagram-based artifacts that describe content that appears on each diagram.
 
 **Microsoft Word** - Today this produces a standard all inclusive Word document.  In the future you will likely be able to select among a set of document templates. **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
-
-#### GitHub
-
-**GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Note, like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
-
- ![Export to Github Toolbar button](../../images/export-to-github.png)  
-
-Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise GitHub repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can be uploaded to any IBM IT Architect Assistant hosted system.
-
-- When you select this Export format you will provide the repository URL and access token per instructions below.  **[A SSH URL with a mandatory access token is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). You can supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
-- A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the **Clone/Download** button for your repository and copying the **ssh URL**. (A sample HTTPS URL for a public Git repository is: https://github.com/IBM/itaa-docs.git.)
-- To generate an access token for your repository navigate to *[repository-url]/settings/tokens/new* (e.g. https://github.ibm.com/settings/tokens/new) and **create** a description, e.g. CA-access, and select **repo** scope.  Then click **Generate Token**.  You then will want to click on the **copy to clipboard** icon so that you can paste into the connection dialog for Cognitive Architect.   If you wish to reuse this token for future access to the tool, save this token elsewhere so that you can retrieve it. (You can not retrieve the token from Git after you leave the Token generation page.)
-
-#### Import
-
-If you choose Import you are presented with a single choice:
-
-- **Microsoft Excel** - This expects the import file to conform to a standard import template that you can download via the link. This import only supports the first two report groups from the Excel export utility. This allows you to add or modify shared architectural elements and well as all of the text-based artifacts.  This is a great way to manage working with FRs, NFRs, Use Cases, Architecture Decisions, etc. as spreadsheet data and import / update in a timely manner.  The template includes a worksheet for each architecture element or artifact instance type. Here there are columns for all attributes of the items to be imported. There is also an extra column, *Previous Name* that can be optional used to indicate you wish to change the name of an existing element.
-
-  Import by default supports *Add*, *Update*, and *Rename*. The parser checks the "Name" and "Previous Name" columns. Typically the Previous Name entry will be blank, in which case if a row name matches an existing element, all attributes are overwritten with the values found in the import spreadsheet. If name  does not match any existing elements, a new element is created. If Previous Name matches an existing element then that element is renamed and updated. 
-
-
-In the future, expect to see additional functionality added to the existing import/export utilities including support for other external formats.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
@@ -277,21 +242,7 @@ When collaborating with a team authoring an architecture, it is valuable to be a
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
-## Co-Relationships
 
-Most of the time, you will be reviewing an architecture from an artifact perspective, i.e., you will be using the Table of Contents as a navigation tool to locate a particular aspect or view of the architecture and then open that artifact instance.  It is however, useful to be able to navigate the architecture from a more bottom up approach.  For instance, you are looking at a diagram and find a particular Logical Component, say **Event Services** and then you want to understand what other diagrams does this Logical Component appear on and what other elements are related to (referenced by) this element?  
-
-A new co-relationship feature allows you to explore the relationships within an architecture from the perspective of the primitive architecture elements.  Open the co-relationship panel via the Co-relationship toolbar button.
-
-![Co-Relationship button](../../images/co-relationship.png)
-
-The Co-Relationship Table (panel) displays the architecture elements by type. You can then select an element and drill down and see what diagrams that element appears on, and what other elements it is related to via a relationship property.
-
-![Co-Relationship Table](../../images/co-relationship-table.png)
-
-
-
-([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Accessibility
 
