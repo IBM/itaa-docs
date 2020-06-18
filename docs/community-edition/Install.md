@@ -99,11 +99,11 @@ After the popup windows don't have new outputs, you can access the application b
 
 ### Guide
 
-There is an [operation guide](docs/Overview-ITAA-CE.md) and an [artifact guide](docs/Artifact-Details-ITAA-CE.md) that provide guidance for basic operation of the tool along with more detailed information around the creation and manipulation of specific architecture artifacts.
+There is an [operation guide](./Overview-ITAA-CE.md) and an [artifact guide](./Artifact-Details-ITAA-CE.md) that provide guidance for basic operation of the tool along with more detailed information around the creation and manipulation of specific architecture artifacts.
 
-### License
+### Terms & Conditions
 
-Please see [LICENSE](LICENSE) for more information.
+Please see [T&Cs](./Term&Conditions.pdf) for more information.
 
 ### FAQ
 
