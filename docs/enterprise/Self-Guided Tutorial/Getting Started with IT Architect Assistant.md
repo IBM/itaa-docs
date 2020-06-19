@@ -190,7 +190,7 @@ ___ **AOD and other architecture diagrams**
 
 At this point, although we copied an existing architecture - we have not reused any of the content we copied. So the tasks you have performed could just have easily been done on an initially empty new architecture. So let's focus more on the reuse. To do this we will look at the two artifact types that were populated in the asset we copied: **AOD - IT System View** and an associated **AOD - Usage Scenario**. You should take some time to read through the [description of Architecture Overview](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#architecture-overview) within IT Architect Assistant's  User Guide!
 
-One of the reasons for selecting this asset for reuse was the usage scenario text that follows the solution for Insurance claim processing. There are many elements to this solution to the one we are trying to solve.
+One of the reasons for selecting this asset for reuse was the usage scenario text that follows the solution for Insurance claim processing. There are many elements in this usage scenario that align with the scenario we are trying to solve.
 
 Click on **5.1.4 Usage Scenario in the ToC**. Next click on **Automotive Claims Processing**. When you look at this diagram you will note a set of **step** labels. 
 
@@ -200,7 +200,7 @@ Click on each step starting with **1** and finishing up with **8**.
 
 
 
-You will see that each step provides details on a Use Case (or Usage Scenario) and highlights the part of the architecture that is active in supporting that step. This particular scenario has a Business User or our Case office directly involved in the creation of a new case (an auto insurance claim).  That may or may not be the flow you envision for our government scenario, but either way a new case is established. In a similar manner certain supporting documents may need to be added to the case, consider for instance billing history from each of the citizen's utility providers.  Where will those documents be retrieved from? Will there be need for machine learning models to predict things like fraudulent claims?  Where will the business rules reside to determine eligibility and exceptions?  There might not be any analogy in our scenerio for the repair estimation phase! Dashboards and event collection and display are probably useful in our scenario too.
+You will see that each step provides details on a Use Case (or Usage Scenario) and highlights the part of the architecture that is active in supporting that step. This particular scenario has a Business User or our Case office directly involved in the creation of a new case (an auto insurance claim).  That may or may not be the flow you envision for our government scenario, but either way a new case is established. In a similar manner certain supporting documents may need to be added to the case, for instance billing history from each of the citizen's utility providers.  Where will those documents be retrieved from? Will there be need for machine learning models to predict things like fraudulent claims?  Where will the business rules reside to determine eligibility and exceptions?  There might not be any analogy in our scenerio for the repair estimation phase! Dashboards and event collection and display are probably useful in our scenario too.
 
 With that as background, consider the source of this Usage Scenario?   It is an *overlay* to an AOD diagram.  In this case the base diagram is an **IT System view**.  Let's see about manipulating this base diagram and customizing it for our solution design.
 
@@ -214,7 +214,7 @@ Click on **5.1.3 IT System View**.  Click on **Reference Architecture**. You wil
 
 First change the name of the diagram.  With no element selected the Attribute panel will show the diagram name and description.   Change Reference Architecture to **Gov Services Case Management Platform**.
 
-Next, change the Node that currently is named **User/Customer** and change that to **Citizen**.  Update the description too.
+Next, change the Actor that currently is named **User/Customer** and change that to **Citizen**.  Update the description too.
 
 Next contemplate the one known external entity which will require Transformation & Connectivity (e.g. API Gateway, etc.) to connect to - namely the **Utilities**.   And what "Location" with they appear in?   Let's consider the following:
 
