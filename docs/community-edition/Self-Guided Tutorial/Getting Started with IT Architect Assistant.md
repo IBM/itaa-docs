@@ -74,7 +74,7 @@ On the offline workspace, hover over the architecture card, **Digial Business Au
 
 ![Architecture with Table of Contents](../tutorial-images/arch-with-TOC.png)
 
-The [detailed artifact guide](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Artifact-Details-ITAA-CE.md) can be reviewed for much greater explanation about each artifact type and what is involved in authoring that kind of content.
+The [detailed artifact guide](../Artifact-Details-ITAA-CE.md) can be reviewed for much greater explanation about each artifact type and what is involved in authoring that kind of content.
 
 ### Copy Architecture
 
@@ -116,7 +116,7 @@ For the Business Challenge, you might add in the KPIs that a new solution might 
 
 ___ **First Diagram**
 
-The asset we copied does not provide a System Context diagram. That is not surprising as the source asset was a reference architecture that is applicable for a wide range of solutions.  Our System Context wants to provide the scope for our particular solution.  Before getting started creating a System Context diagram, you may want to review the details provided in the [user guide for SCD](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Artifact-Details-ITAA-CE.md#system-context).  
+The asset we copied does not provide a System Context diagram. That is not surprising as the source asset was a reference architecture that is applicable for a wide range of solutions.  Our System Context wants to provide the scope for our particular solution.  Before getting started creating a System Context diagram, you may want to review the details provided in the [user guide for SCD](../Artifact-Details-ITAA-CE.md#system-context).  
 
 **Click on System Content** in the TOC! As noted in the user guide, unlike all other diagram artifact types, an architecture currently is restricted to a single System Context diagram instance. So clicking on System Context will immediately take you into the MxGraph-based diagram editor. (For all other diagram/artifact types, you will need to create/open a named diagram instance.)
 
@@ -130,7 +130,7 @@ The first thing to notice is the **Attributes** panel that is part of the format
 
 In addition to the Target System, a System Context will define the set of interacting elements "external" to the solution itself to indicate *how* the target system integrates into the larger enterprise. **Add two human actors**: *Citizen* and *Case officer*. Again drag human actor icon from palette onto the drawing canvas.
 
-Next, connect these human actors with the target system. The quick connect user guesture starts by hovering over an edge of an element on the canvas, and waiting for a green "connection" dot to appear. Then click and drag to the other element waiting on a similar green dot before "releasing" mouse button. (see [drawing instructions in user guide](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Overview-ITAA-CE.md#quick-connect).)
+Next, connect these human actors with the target system. The quick connect user guesture starts by hovering over an edge of an element on the canvas, and waiting for a green "connection" dot to appear. Then click and drag to the other element waiting on a similar green dot before "releasing" mouse button. (see [drawing instructions in user guide](../Overview-ITAA-CE.md#quick-connect).)
 
 ![Add and connect Human actors](../tutorial-images/scd-connect-human-actors.png)
 
@@ -172,7 +172,7 @@ Feel free to explore and create a Use Case diagram and reuse the existing Actors
 
 ___ **AOD and other architecture diagrams**
 
-At this point, although we copied an existing architecture - we have not reused any of the content we copied. So the tasks you have performed could just have easily been done on an initially empty new architecture. So let's focus more on the reuse. To do this we will look at the two artifact types that were populated in the asset we copied: **AOD - IT System View** and an associated **AOD - Usage Scenario**. You should take some time to read through the [description of Architecture Overview](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Artifact-Details-ITAA-CE.md#architecture-overview) within IT Architect Assistant's User Guide!
+At this point, although we copied an existing architecture - we have not reused any of the content we copied. So the tasks you have performed could just have easily been done on an initially empty new architecture. So let's focus more on the reuse. To do this we will look at the two artifact types that were populated in the asset we copied: **AOD - IT System View** and an associated **AOD - Usage Scenario**. You should take some time to read through the [description of Architecture Overview](../Artifact-Details-ITAA-CE.md#architecture-overview) within IT Architect Assistant's User Guide!
 
 One of the reasons for selecting this asset for reuse was the usage scenario text that follows the solution for Insurance claim processing. There are many elements in this usage scenario that align with the scenario we are trying to solve.
 
@@ -282,7 +282,7 @@ Open a new tab in your Browser and enter **https://www.draw.io** in the URL.  Cl
 
 ___ **Other Import and Export Options**
 
-Not everyone you work with have access to IT Architect Assistant or may prefer different formats to consume that asset. There is a rich set of interchange forms available to you in the tool.  For a more complete discussion look at the [Import/Export chapter](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Overview-ITAA-CE.md#import-and-export) in the User Guide. For this examination, let's take a look at exporting to **Microsoft Word** document.
+Not everyone you work with have access to IT Architect Assistant or may prefer different formats to consume that asset. There is a rich set of interchange forms available to you in the tool.  For a more complete discussion look at the [Import/Export chapter](../Overview-ITAA-CE.md#import-and-export) in the User Guide. For this examination, let's take a look at exporting to **Microsoft Word** document.
 
 Back in IT Architect Assistant, click on the back arrow to exit the IT System view diagram.
 
@@ -298,9 +298,9 @@ ___ **Explore on your own**
 
 There are many additional artifact types available that this tutorial has not explored: Functional Requirements, Architecture Decisions, Architecture Principles, RAID elements, Logical Data model diagrams, additional AOD types, Component Model view and Operational Model views. 
 
-At a minimum, study the description of a [Usage Scenario](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Artifact-Details-ITAA-CE.md#aod-usage-scenario) and start to build a Usage Scenario based on the IT system view diagram you created earlier. If you are successful, delete the Usage Scenarios that you "inherited" when you copied the original architecture.
+At a minimum, study the description of a [Usage Scenario](../Artifact-Details-ITAA-CE.md#aod-usage-scenario) and start to build a Usage Scenario based on the IT system view diagram you created earlier. If you are successful, delete the Usage Scenarios that you "inherited" when you copied the original architecture.
 
-Follow the [detailed artifact editing guide](https://github.com/IBM/itaa-docs/blob/master/docs/community-edition/Artifact-Details-ITAA-CE.md) and explore other artifact types.  Also consider exporting to PowerPoint and/or Excel.   Note the Excel export has an analogous Import operation that is useful to bulk load model elements into a new architecture.
+Follow the [detailed artifact editing guide](../Artifact-Details-ITAA-CE.md) and explore other artifact types.  Also consider exporting to PowerPoint and/or Excel.   Note the Excel export has an analogous Import operation that is useful to bulk load model elements into a new architecture.
 
 
 
