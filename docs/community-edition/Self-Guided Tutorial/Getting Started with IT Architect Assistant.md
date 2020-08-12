@@ -282,13 +282,13 @@ Open a new tab in your Browser and enter **https://www.draw.io** in the URL.  Cl
 
 ___ **Other Import and Export Options**
 
-Not everyone you work with have access to IT Architect Assistant or may prefer different formats to consume that asset. There is a rich set of interchange forms available to you in the tool.  For a more complete discussion look at the [Import/Export chapter](../Overview-ITAA-CE.md#import-and-export) in the User Guide. For this examination, let's take a look at exporting to **Microsoft Word** document.
+Not everyone you work with have access to IT Architect Assistant or may prefer different formats to consume that asset. There is a rich set of interchange forms available to you in the tool.  For a more complete discussion look at the [Export chapter](../Overview-ITAA-CE.md#export) in the User Guide. For this examination, let's take a look at exporting to **Microsoft Word** document.
 
 Back in IT Architect Assistant, click on the back arrow to exit the IT System view diagram.
 
-Then on the top right side, review the large number of toolbar buttons.
+Then on the top right side, review the other toolbar buttons.
 
-Here you see: Co-relationship, Change log, Export to GitHub, Go Offline / Go Online, Manage orphaned elements, Collaborate, Export / Import, Copy, Comments, and Info.
+Here you see: Change log, Export / Import, Copy, and Info.
 
 #### Export to MS Word
 
