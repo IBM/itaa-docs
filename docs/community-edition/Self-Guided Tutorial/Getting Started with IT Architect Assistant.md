@@ -10,7 +10,7 @@ This tutorial is intended as a guided tour of using IT Architect Assistant, Comm
 
 ### What is IT Architect Assistant, Community Edition?
 
-IT Architect Assistant, Community Edition is a single-user architecture design tool. This single web page application provides the ability to author and customize your own architecture solutions.  Note, that this provides a subset of the functionality of the hosted SaaS offering, IT Architect Assistant.  The architectures authored in the Community Edition are fully interchangable with the hosted environment. For quick pointers see the tool's [User Guide](../../Overview-ITAA-CE.md). 
+IT Architect Assistant, Community Edition is a single-user architecture design tool. This single web page application provides the ability to author and customize your own architecture solutions.  Note, that this provides a subset of the functionality of the hosted SaaS offering, IT Architect Assistant.  The architectures authored in the Community Edition are fully interchangable with the hosted environment. For quick pointers see the tool's [User Guide](../Overview-ITAA-CE.md). 
 
 The benefits are improved productivity for a solution architect and improved quality of the solutions created. These benefits result from a consistent, yet efficient approach to documenting solution designs (based on a subset of the IBM System Design Standard), that enhances the ability to quickly and effectively reuse past solutions to construct new client architectures. 
 
