@@ -219,14 +219,28 @@ To support users that are used to quickly duplicating a symbol on a diagram to c
 
 #### Export
 
-There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. IBM Architect Assistant, Community Edition provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
+There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. IBM Architect Assistant, Community Edition provides a set of export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
 
 ![Import/Export Toolbar button](../../images/CE-export.png)
 
-Above you see the toolbar button to access the import and export utilities. First you select if you want to export or import.  Note there is also a link to an *import template* file to download and modify in order to be able to import from an Excel spreadsheet. Selecting Export and clicking Next will take you to a dialog where you can choose the type of export. There are two* choices presented:
+Above you see the toolbar button to access the export utilities. There are three* choices presented:
+
+**Microsoft PowerPoint** - This produces a summary PPTX document containing the major sections of the architecture. This is a good way to quickly get content out in this format to share with others.  Clicking Next will generate the file and then prompt you with a Browser open/save dialog.
+
+------
+
+In this single-user community edition, the document generation is handled by a tomcat service. And in the case of the PowerPoint export, it is driven by a set of individual .ppt template files.  Thus, you do have a limited ability to customize the look and feel of the exported document.  You can find these files in the following folder: *<install_directory>*/tomcat/webapps/DocGenMicroService/WEB-INF/classes/ppt.  The generator has a number of "keyed" placeholders in these documents that must be preserved (as well as the filenames) in order for the service to be able to successfully generate a document.  If you choose to customize the template for your local needs here is the general guidance:
+
+- Make a backup copy of this template folder.  This way you can restore correct behavior and the default template should you need to revert
+- When editing individual files do not change the filenames.
+- Do not change any text that starts with **CA** and do not add any text that starts with CA.  These are placeholder variables which are populated with content from the architecture model during document generation.
+- After you make a change - to apply it you will need to restart the tomcat server.
+
+------
+
 **Microsoft Excel** - This produces a multi-worksheet Excel document (XLSX) that include everything in the model with the exception of the diagram images. In reality, when you click next you are presented with a pick list of "reports" to be included in the export.  There are three groupings of reports, Architectural elements (the key reusable elements in the model), Text-based artifact reports (FRs, NFRs, ...), and Diagram-based artifacts that describe content that appears on each diagram.
 
-**Microsoft Word** - Today this produces a standard all inclusive Word document.  In the future you will likely be able to select among a set of document templates. **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
+**Microsoft Word** - Today this produces a standard all inclusive Word document.  In the future you will be able to select among a set of document templates. **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
