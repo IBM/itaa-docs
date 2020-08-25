@@ -54,7 +54,7 @@ There is a rich repository of reference architectures and reference solutions pu
 
 In your local installation of the Community Edition, you will find the **Workspace** folder. Within this folder there are subfolders, each representing a different architecture available locally within the tool.  To add new architectures from an external source such as the IBM Cloud Architecture Center, you will download an architecture archive file (.zip) and uncompress this archive file into the Workspace folder.
 
-For this tutorial, download the Digital Business Automation reference architecture [archive file](). Then use the  appropriate utility on your system to uncompress this file into your Workspace folder.
+For this tutorial, download the Digital Business Automation reference architecture by clicking on the **IT Architect Assistant** button under the [reference architecture diagram](https://www.ibm.com/cloud/architecture/architectures/dba-architecture/reference-architecture). Then use the  appropriate utility on your system to uncompress this file into your Workspace folder.
 
 ![Load external architecture into tool](../tutorial-images/architecture-in-workspace-folder.png)
 
@@ -70,7 +70,7 @@ In this way you can import a wide variety of architectures that can be reused, c
 
 After importing the Digital Business Automation Reference asset into your system, open this architecture from the tool's Offline workspace. (A reminder, once you start IBM IT Architect Assistance, Community Edition you access the tool through a Browser and the URL, http://localhost:3300). 
 
-On the offline workspace, hover over the architecture card, **Digial Business Automation Reference** and click Open.  When you open an architecture, you will be presented with a structured asset organized by *artifact types*. The left navigation (top-level) for an architecture is described as the asset Table of Contents (or ToC). Here you will see the available set of artifacts that can be populated.  The name of the artifact type will either be grayed out (currently no content) or bold (indicating available content). 
+On the offline workspace, hover over the architecture card, **Digital Business Automation Reference** and click Open.  When you open an architecture, you will be presented with a structured asset organized by *artifact types*. The left navigation (top-level) for an architecture is described as the asset Table of Contents (or ToC). Here you will see the available set of artifacts that can be populated.  The name of the artifact type will either be grayed out (currently no content) or bold (indicating available content). 
 
 ![Architecture with Table of Contents](../tutorial-images/arch-with-TOC.png)
 
