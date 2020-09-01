@@ -34,7 +34,7 @@ Currently, the community edition is provided via a zip file at [IBM Cloud Archit
 1. This application currently supports the following systems. Check if your system is compatible, older systems may encounter unpredictable bugs.
   - MacOS 10.12+
   - Windows 10
-2. This application is dependent on several third-party tools, and it will install these when installing. Please **confirm you have permission to use below tools**. If you are not permitted, there are some risks to run the application on your system.
+2. This application is dependent on several third-party tools, and it will configure these when installing. Please **confirm you have permission to use below tools**. If you are not permitted, there are some risks to run the application on your system.
   - [Tomcat V8](https://tomcat.apache.org/tomcat-8.5-doc/)
   - [Java SDK V8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 3. The application needs you to confirm some operations when installing and running, such as inputting system password to work on system path, inputting 'Y' for using commands, permitting the network access for the application, please ensure that these operations are permitted within your organization, otherwise the application is unavailable.
