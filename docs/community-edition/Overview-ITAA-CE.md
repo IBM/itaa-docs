@@ -27,7 +27,13 @@ Before diving into details about IBM IT Architect Assistant, Community Edition i
 
 ## Getting Started
 
-Getting started with IBM Architect Assistant, Community Edition involves authoring a new or existing architecture.  
+Getting started with IBM Architect Assistant, Community Edition involves authoring a new or existing architecture.  As a single-user environment, the only available assets are those that you author and those that you download and import.
+
+One source for content to import are the reference architectures and reference solutions published on [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures). You are strongly encouraged to work through the [self-paced tutorial](./Self-Guided%20Tutorial/Getting%20Started%20with%20IT%20Architect%20Assistant.md) which has you download an architecture from this site and install it into your local workspace.
+
+In your local installation of the Community Edition, you will find the **Workspace** folder. Within this folder there are subfolders, each representing a different architecture available locally within the tool.  To add new architectures from an external source such as the IBM Cloud Architecture Center, you will download an architecture archive file (.zip) and uncompress this archive file into the Workspace folder. After loading a new architecture into the workspace folder just refresh the Browser running community edition to see the architecture card show up on the offline workspace.
+
+### Consistent architecture template
 
 An architecture is comprised of a set of interrelated artifacts many of which share a set of elemental architecture building blocks (or elements). The best way to visualize this structure is through IBM Architect Assistant, Community Edition's Table of Contents for any architecture.
 
