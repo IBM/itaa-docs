@@ -23,6 +23,7 @@ This section will present the details for each of the artifact types, including 
 - [Viability - Issues](#viability---issues)
 - [Viability - Dependencies](#viability---dependencies)
 - [Architectural Principles](#architectural-principles)
+- [Misc Diagrams](#misc-diagrams)
 - [Notes](#notes)
 
 ## Overview
@@ -441,7 +442,16 @@ Architectural Principles are generally managed and reviewed as a table or spread
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
 
+### Misc Diagrams
+
+This artifact type is NOT an architectural meta-model type. Its role is to enable users to author diagrams otherwise not supported in the tool's meta model (either type or style). It provides the raw MxGraph (Draw.io foundation) drawing editor and palettes.  There will be no "Attribute" panel appearing for anything about any Misc Diagram created.  
+
+In addition to providing these generic drawing capabilities within the tool to supplement the native rich architecture model diagrams, Misc Diagrams also presents the ability to import a Draw.io (.xml or .drawio) diagram into your architecture asset. Details on the Draw.io import feature is [presented in the companion document](../../master/docs/Overview-2.1.md#drawio) of the User Guide.
+
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
+
 ### Notes
+
 Notes are designed to provide flexibility for packaging all the elements you need to manage with a Solution Design / Architecture. You will frequently receive reference documents and content from the client that you want to manage. For these you can create a Note artifact instance and attach documents and/or images. In addition to client artifacts, you may capture other artifacts not formally supported in the Table of Contents, for example, you might capture a set of Design Thinking artifacts, e.g., Empathy Map, As-Is Scenario Map, etc.  These can be added to the Solution Design as Notes.
 
 Notes instances have a name, and a rich text block. The rich text (document) support inserting images and attaching documents/files. Within the set of Notes you can define *Labels*. 

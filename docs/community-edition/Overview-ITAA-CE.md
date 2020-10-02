@@ -173,6 +173,26 @@ In addition to adding and associating steps to connectors, you can also select a
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
+#### Misc Diagrams
+
+As briefly noted earlier, the Misc Diagrams have a different purpose. Misc Diagrams are based on the same MxGraph framework as the other diagram types but are delivered without coupling to a specific architecture [diagram type] meta-model. Here all drawing elements are *annontations* (no attached meta-data). You do have a richer set of drawing palettes to support creation of org charts, business process flows, C4 diagrams, etc.   Thus you can use Cognitive Architect to create diagrams not supported as first class citizens by the underlying architecture meta-model.  As will be described shortly, you can also start with this diagram style (as a **sketch**) and later, if appropriate, convert the diagram into a supported architecture diagram. The other feature supported in Misc Diagrams is importing an existing Draw.io authored diagram. This import is provided via the *File > import draw.io diagram* menu item.
+
+![Usage scenario](../../images/import-drawio.png)
+
+#### Render Typed Diagram and Convert Elements
+
+Closely related to the introduction of the Misc Diagram is the ability to apply architecture meta-model attributes to an object that doesn't currently exhibit any such attributes. The first part of this is to be able to create an architecture diagram from an existing Misc Diagram. Each artifact type that is represented by a diagram now has the option on the "Add diagram" dialog, to *Render from miscellaneous diagram*.
+
+![Render from Misc Diagram](../../images/render-from.png)
+
+Clicking on this link will provide you with the list of current Misc Diagrams available in the architecture. Completing the "render" operation will add just the meta-data for the diagram itself appropriate for the type of diagram being added.
+
+This is generally only valuable if you can also then **convert** the associated drawing elements (annotations) into architectural elements, thus adding or associating the corresponding element type meta-data. To convert a drawing element, select it, then right-mouse click to bring up the context menu, and then select Convert > *type of architecture element to covert to* from the menu. (Note you will only be presented with the element types supported by the drawing element kind: line or shape AND the corresponding diagram type.) Via repeated application of element conversion, you can take any sketch or imported diagram and manually convert these to full-fledged architecture diagrams while retaining the original look and feel.
+
+![Convert to element type](../../images/convert-to-element.png)
+
+([Back to Top and TOC](#cognitive-architect-user-guide-v30)) 
+
 ## Breadcrumbs and Navigation
 
 Within an architecture there are two different navigation mechanisms. When you are not within an artifact instance, the TOC provides the way to select an artifact type to view or edit. In or out of an artifact instance, there is a "breadcrumb" that supports navigation to all levels of the tool. If a particular level of a breadcrumb represents multiple options at that level, there is a "down arrow" that will present you with the available elements at that level to select and navigate to.
@@ -256,6 +276,12 @@ In this single-user community edition, the document generation is handled by a t
 **Microsoft Excel** - This produces a multi-worksheet Excel document (XLSX) that include everything in the model with the exception of the diagram images. In reality, when you click next you are presented with a pick list of "reports" to be included in the export.  There are three groupings of reports, Architectural elements (the key reusable elements in the model), Text-based artifact reports (FRs, NFRs, ...), and Diagram-based artifacts that describe content that appears on each diagram.
 
 **Microsoft Word** - Today this produces a standard all inclusive Word document.  In the future you will be able to select among a set of document templates. **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
+
+#### Import
+
+##### Draw.io
+
+**Import draw.io diagram** - This is supported within a [**Misc Diagram** instance](#misc-diagrams). Current limitation is only draw.io files (.xml or .drawio) containing a single diagram are supported. The content will be imported as it would be visualized within Draw.io.  All drawing elements are *annotations*. If you later choose, the resulting diagram can then be rendered into an architectural diagram type and then the drawing elements can be converted to architectural elements. [Additional details](#render-typed-diagram-and-convert-elements) in Misc Diagram section of user guide.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
