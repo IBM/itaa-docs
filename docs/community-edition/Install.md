@@ -113,13 +113,13 @@ There maybe some blocks when installing/running the application, here are some p
 
     ![Image damaged](../../images/screenshot-damage.png)
 
-Solution: try to execute "xattr -cr ./ca-offline-macos" in Terminal.
+Solution: Execute "xattr -cr ./ca-offline-macos" in Terminal.
 
 2. the app can't be opened like below:
 
     ![Image not open](../../images/screenshot-open.png)
 
-Solution: try to change the allowance in system config -> Security & Privacy, select the 2nd or 3rd allowance.
+Solution: Change the allow apps setting in system config -> Security & Privacy, select the 2nd or 3rd option.
 
   ![Change allowance](../../images/screenshot-allowance.png)
 
