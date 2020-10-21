@@ -27,6 +27,10 @@ Before diving into details about IBM IT Architect Assistant, Community Edition i
 
 ## Getting Started
 
+### Help
+
+Anywhere within Cognitive Architect you can navigate to the appropriate section of this User Guide via the keyboard short-cut (**F1** or **fn-F1**)!
+
 Getting started with IBM Architect Assistant, Community Edition involves authoring a new or existing architecture.  As a single-user environment, the only available assets are those that you author and those that you download and import.
 
 One source for content to import are the reference architectures and reference solutions published on [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures). You are strongly encouraged to work through the [self-paced tutorial](./Self-Guided%20Tutorial/Getting%20Started%20with%20IT%20Architect%20Assistant.md) which has you download an architecture from this site and install it into your local workspace.
@@ -57,7 +61,7 @@ When a user connects to IBM Architect Assistant, Community Edition they land in 
 
 ![Local Workspace](../../images/offline-workspace-ce.png)
 
-Here you can see the architectures you have loaded/authored on your local environment.  You also have the card to Add a new architecture. Click on the Add Architecture Solution and you will be prompted to supply a name for the architecture along with other optional meta-data. After supplying details, clicking on Add will create a new empty architecture.
+Here you can see the architectures you have loaded/authored on your local environment.  You also have the card to Add a new architecture. Click on the **Add Architecture Solution** and you will be prompted to supply a name for the architecture along with other optional meta-data. After supplying details, clicking on **Add** will create a new empty architecture.
 
 ![Create a new architecture](../../images/add-architecture-ce.png)
 
