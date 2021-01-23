@@ -66,11 +66,9 @@ Discovery of both public and As-Is assets if provided via **Search**. (More on [
 
 **Login** to IT Architect Assistant.  If this is the first time you have login to this application you will be prompted to accept a data privacy statement.
 
-Switch to the **Search** page. You can choose to use a combination of Catalog and Keyword search. Click on the Catalog and select "required" asset categories and then add 1 or more descriptive keywords in the search text field! *Don't over specify required terms and keywords.*
+Switch to the **Search** page. You can choose to use a combination of Catalog and Keyword search. Click on the Industry and select *Consumer* then hit enter (or click on Magnifying Glass).
 
-This shows the search when *Consumer* is selected from the Industry category in the catalog.
-
-![Search for Consumer Industry assets](../tutorial-images/search-consumer.png)
+![Search for Consumer Industry assets](../tutorial-images/search-consumer2.png)
 
 ##### ___ Review search results
 
@@ -98,7 +96,7 @@ How best to get started on authoring a new solution design?  One can always go t
 
 All architecture cards provide a *copy* menu item in the **...** menu. Thus, any way that you can locate an architecture (in private workspace, in collaboration workspace, or via search), that architecture can then be cloned to seed a new solution architecture. **Note, architecture copy is by far the most expensive operation that can be performed within IT Architect Assistant. The more complex the architecture being copied, the longer the operation will take to complete. So be patient.**
 
-Based on your review of architectures returned via search and the Client problem statement, select an architecture to use as the basis for your client architecture. You can trigger creating a copy from two locations. As noted earlier, you can invoke copy from the architecture card view "..." menu. Alternatively, while "in" an architecture you can click on the **copy** toolbar icon.
+Based on a review of architectures returned via search and and your target problem statement, you may be able to select an architecture to use as the basis for your client architecture. You can trigger creating a copy from two locations. As noted earlier, you can invoke copy from the architecture card view "..." menu. Alternatively, while "in" an architecture you can click on the **copy** toolbar icon.
 
 ![Copy from architecture toolbar](../tutorial-images/copy-toolbar-icon.png)
 
@@ -106,9 +104,17 @@ Either method will take you to a pop-up where you can fill in data describing th
 
 ![Copy to workspace](../tutorial-images/copy-arch-form.png)
 
-For the balance of this tutorial, screen shots and available elements are the result of creating a copy of the **Digital Business Automation Reference** architecture.  (If you want to follow along and find this asset, return to search, enter *automation* in the search box and click on the magnifying glass.   Then select the asset named *Digital Business Automation Reference*.)  
+For the balance of this tutorial, screen shots and available elements are the result of creating a copy of the **Digital Business Automation Reference** architecture.  To follow along:
 
-Note, your architecture (the new copy) needs to have a unique name in the system.  So when making a copy, at least initially use a naming scheme involving your name, initials or client details.   For the tutorial I created a copy named - "**DBA RA - GLC**".
+___ Return to search 
+
+___ Enter *automation* in the search box and click on the magnifying glass.   
+
+___ Select the asset named *Digital Business Automation Reference*. 
+
+___ Click open and then click on the "copy" toolbar icon to start the copy operation.
+
+Note, your architecture (the new copy) needs to have a **unique name** in the system.  So when making a copy, at least initially, use a naming scheme involving your name, initials or client details.   For example for this tutorial I created a copy named - "**DBA RA - GLC**".
 
 ### Customize
 
@@ -214,7 +220,7 @@ Click on **5.1.3 IT System View**.  Click on **Reference Architecture**. You wil
 
 First change the name of the diagram.  With no element selected the Attribute panel will show the diagram name and description.   Change Reference Architecture to **Gov Services Case Management Platform**.
 
-Next, change the Actor that currently is named **User/Customer** and change that to **Citizen**.  Update the description too.
+Next, you will want to "change" the Actor that currently is named **User/Customer** and change that to **Citizen**.  However, doing so will result in the tool letting you know that an Actor named Citizen already exists in the architeture.  Instead, what you are really wanting to do is make this icon refer to the Actor named **Citizen**. To do this, select "User/Customer" then in the Attributes panel click on **Select from Existing**. In the resulting list, locate and select **Citizen** and click **Apply**. Note, this replaces the name and description associated with this icon in the diagram.
 
 Next contemplate the one known external entity which will require Transformation & Connectivity (e.g. API Gateway, etc.) to connect to - namely the **Utilities**.   And what "Location" with they appear in?   Let's consider the following:
 
@@ -246,7 +252,9 @@ Next we are going to copy a node icon from another diagram in another asset. Cli
 
 Next click **Open** for the **Icon Library - IBM Cloud Architecture Center**.  This is an **As-Is** asset.  Clicking open will add you as a viewer collaborator on the asset.   Meaning it is now available in your **Workspace | Collaboration** tab.
 
-From within this asset, feel free to navigate around and take a look at what is available in the various IT System view diagrams.  Then click on the down arrow next to **Workspace** in the breadcrumbs and this time click on Workspace. In the list in your private workspace, find the architecture you have been editing and click **Open**.  And then navigate to the IT System View diagram now named - **Gov Services Case Management Platform**.
+From within this asset, feel free to navigate around and take a look at what is available in the various IT System view diagrams.  
+
+You will now return to the architecture you have been editing.  The quick way back is to click on the down arrow next to **Workspace** in the breadcrumbs and this time click on Workspace. In the list in your private workspace, find the architecture you have been editing and click **Open**.  And then navigate to the IT System View diagram now named - **Gov Services Case Management Platform**.
 
 #### Copy from resource
 
@@ -254,7 +262,13 @@ Click on **Resource** menu and select **Open from Collaboration**.  In the list 
 
 ![Select Icon Library](../tutorial-images/open-collab.png)
 
-Next select **ALL ICONS BY CATEGORY** and click **Open**.  This will take a little bit of time to open as it is a very large diagram with hundreds of icons.  It will open in a new diagram editor tab (read-only).   You may need to scroll the canvas to see the icons.  Locate the **Applications** category.  Find the icon/node named **Customer Care**, select it and "copy it".  Then click on the tab for the diagram you have been editing (to switch to that as the active diagram) and "**paste**" the node.   You may have to zoom out to find where it is placed on the canvas.  Locate the node and move it into the Cloud Network location aligned with the Citizen node (like below).
+Next select **ALL ICONS BY CATEGORY** and click **Open**.  
+
+This will take a little bit of time to open as it is a very large diagram with hundreds of icons.  It will open in a new diagram editor tab (read-only).   The "tab"/"diagram selector" can be found on the bottom of the screen.   This is a large diagram so you will need to scroll the canvas to see the icons.  
+
+Locate the **Applications** category.  Find the icon/node named **Customer Care**, select it and "copy it" [Ctrl-C / Cmd-C].  Then click on the tab for the diagram you have been editing (to switch to that as the active diagram) and "**paste**" the node [Ctrl-V / Cmd-V].   You will likely have to zoom out to find where the copied icon has been placed on the canvas.  
+
+Locate the node and move it into the Cloud Network location aligned with the Citizen node (like below).
 
 ![Customer Care added](../tutorial-images/paste-customer-care.png)
 
