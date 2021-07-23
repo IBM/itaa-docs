@@ -1,12 +1,12 @@
-# Tips for success with Cognitive Architect
+# Tips for success with IT Architect Assistant, Community Edition
 
-This part of the User's Guide is intended to highlight common questions and challenges new users to Cognitive Architect tend to run into along with supporting guidance.
+This part of the User's Guide is intended to highlight common questions and challenges new users to ITAA Community Edition tend to run into along with supporting guidance.
 
 ## Common Topic Areas
 
 ### Unique Shared Architecture Elements within an Asset
 
-Within each Cognitive Architect asset / architecture there is a set of shared/reused elements. Not all element types are reused across the architecture but most are, including:
+Within each Community Edition asset / architecture there is a set of shared/reused elements. Not all element types are reused across the architecture but most are, including:
 
 - Actors
 - Logical Components
@@ -40,13 +40,13 @@ A best practice is to create a [**full MS Excel export**](../../master/docs/Over
 
 ### Diagram Icons and Style manipulation
 
-For most, the user experience in creating diagrams and the ease by which one can create compelling and conforming* visuals greatly determines how one perceives how productive you can be within a tool. A key design principle for Cognitive Architect is to deliver an intuitive and productive drawing experience while managing a simplified meta-model. This balance of delivering a modeling tool with most of the beneficial experiences of a drawing tool is one we continually strive for.  
+For most, the user experience in creating diagrams and the ease by which one can create compelling and conforming* visuals greatly determines how one perceives how productive you can be within a tool. A key design principle for Community Edition is to deliver an intuitive and productive drawing experience while managing a simplified meta-model. This balance of delivering a modeling tool with most of the beneficial experiences of a drawing tool is one we continually strive for.  
 
 With that in mind, it is important to understand the underlying drawing engine (MxGraph framework) and how and where we can and will deliver ease of use. MxGraph (and the derived tool, **Draw.io**) provide a simple drawing tool. Beyond foundation tooling to adjust and manage style, productivity comes from delivering a rich set of standard element styles (icons), through a number of drawing palettes.
 
-In Cognitive Architect, we need to be able to associate an icon with an architectural element. Note that an icon or shape manifests itself on the drawing as a *drawing element* and that drawing element's look and feel can be completely altered via the tools available in the format panel. Most notable are the edit style and edit image buttons. In most cases (with the exception of AOD IT System View), Cognitive Architect provides a default (vanilla) icon for each architecture element type. When you add such an element to the diagram you are manipulating two elements: a UI element (drawing element) and an *architectural element*. From the discussion above, note that you can change the binding between a visible UI element and the associated architectural element via the ["Select from existing" button](../../master/docs/Overview-2.1.md#bind-to-existing-element). At the same time, the default behavior is to create an architectural element each time you add a new UI/drawing element onto a diagram.
+In Community Edition, we need to be able to associate an icon with an architectural element. Note that an icon or shape manifests itself on the drawing as a *drawing element* and that drawing element's look and feel can be completely altered via the tools available in the format panel. Most notable are the edit style and edit image buttons. In most cases (with the exception of AOD IT System View), Community Edition provides a default (vanilla) icon for each architecture element type. When you add such an element to the diagram you are manipulating two elements: a UI element (drawing element) and an *architectural element*. From the discussion above, note that you can change the binding between a visible UI element and the associated architectural element via the ["Select from existing" button](../../master/docs/Overview-2.1.md#bind-to-existing-element). At the same time, the default behavior is to create an architectural element each time you add a new UI/drawing element onto a diagram.
 
-So how do you provide easy access to a rich set of shapes and icons while keeping the palette structure simple? This trade-off continues to be a work in progress in Cognitive Architect.  Today, as of version 3.0, the AOD IT System View, is unique and contains a set of, now legacy palettes representing a snapshot in time of many of the standard icons used in reference architectures in the IBM Cloud Architecture Center. 
+So how do you provide easy access to a rich set of shapes and icons while keeping the palette structure simple? This trade-off continues to be a work in progress.  Today, as of version 3.0, the AOD IT System View, is unique and contains a set of, now legacy palettes representing a snapshot in time of many of the standard icons used in reference architectures in the IBM Cloud Architecture Center. 
 
 ![IT System View specialized palettes](../images/ITsystem-palettes.png)
 
@@ -62,7 +62,7 @@ One strategy is to use the "Edit Image" button on any* icon (drawing element) an
 
 A second strategy is to copy style from known graphics. For example, the Annotation palette is provided both to create non-architectural content on a diagram, but also is available to copy the style to be applied to the UI element associated with an architectural element. Select the "Edit Style" on a *drawing element* and copy the contents of the Style, then select the "Edit Style" for the *drawing element* you wish to change and paste the copied style contents.  In a similar way you can also copy the style from other palettes available other places.
 
-The third strategy is to build and maintain or just reuse content from one or more assets established primarily as a reusable element library. The intent here it to capture reusable "packages" that include architectural element (type), Name, Description, icon/visualization, and possibly additional attributes. An excellent example of this is the **Icon Library- IBM Cloud Architecture Center** that you can find via Search in Cognitive Architect. Here 1 or more AOD IT System View instances provide access to reusable content that one can copy from using the ["Resource > Copy from xxx" approach](../../master/docs/Overview-2.1.md#fine-grained-reuse).  Note this approach is powerful beyond delivering a set of reusable elements for your diagrams.  It can also be used to capture a reference set of other elements, such as typically used Architectural Decisions, Non-Functional Requirements, perhaps even Use Cases. Managing a reuse library help you and your team to consistently use the same artifacts across multiple architectures!
+The third strategy is to build and maintain or just reuse content from one or more assets established primarily as a reusable element library. The intent here it to capture reusable "packages" that include architectural element (type), Name, Description, icon/visualization, and possibly additional attributes. An excellent example of this is the **Icon Library- IBM Cloud Architecture Center** that you can find via Search in Community Edition. Here 1 or more AOD IT System View instances provide access to reusable content that one can copy from using the ["Resource > Copy from xxx" approach](../../master/docs/Overview-2.1.md#fine-grained-reuse).  Note this approach is powerful beyond delivering a set of reusable elements for your diagrams.  It can also be used to capture a reference set of other elements, such as typically used Architectural Decisions, Non-Functional Requirements, perhaps even Use Cases. Managing a reuse library help you and your team to consistently use the same artifacts across multiple architectures!
 
 ### Dependent and Linked Diagrams
 
