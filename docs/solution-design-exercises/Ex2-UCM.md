@@ -34,7 +34,7 @@ Add the following additional Use Cases to the diagram with the corresponding ini
 | ------ | -------------------------------------- | ------------------------------------------------------------ | --------------------------- | --------------------- |
 | UC_002 | UC_Obtain Account Information          | Given account number owned by customer, return account information details. | A_Customer Support          | A_Specialized Support |
 | UC_003 | UC_Create Service Request              | Initiate a Service Request on behalf of customer.            | A_Specialized Support       |                       |
-| UC_004 | UC_Perform System Administration Tasks | System Administator performs scheduled or on request system maintenance activities | A_System Administration     |                       |
+| UC_004 | UC_Perform System Administration Tasks | System Administator performs scheduled or on request system maintenance activities | A_System Administrator      |                       |
 | UC_005 | UC_Customer Inquiry                    | Customer issues inquiry via MyBank Customer Service Portal   | A_Restricted Account Viewer |                       |
 | UC_006 | UC_Verify Customer's Identity          | Identity and authentication of customer                      |                             |                       |
 
