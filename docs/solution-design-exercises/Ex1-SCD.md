@@ -32,6 +32,8 @@ Enter **MyBank-<your initials>** for the Architecture Name, and enter **MyBank**
 
 The newly created architecture will then open up and you will see the Table of Contents on the left hand navigation area. For this exercise you will be working on the artifact, 2.2 System Context under section 2. Scope.
 
+The purpose of the System Context is to provide the scope for the solution architecture. Namely it defines the solution to be delivered as a **Target System**. It the documents the elements that interface with this Target System.  These external elements are **Actors**.  See [SCD content](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#system-context) in the tool's user guide for additional guidance. 
+
 Click on the **2.2 System Context** in the Table of Contents to open up the diagram editor.
 
 You will be presented with an error stating that any valid System Context Diagram (SCD) must have a ***Target System*** defined.  You can close the Table of Contents, by clicking on the 'X' next to the ToC title. 
