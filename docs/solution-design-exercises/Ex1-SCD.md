@@ -70,9 +70,9 @@ To fill this out you can optionally add the following additional actors to the d
 
 | Actor Type | Actor Name                         | Actor Description                                            | Connector Name            |
 | ---------- | ---------------------------------- | ------------------------------------------------------------ | ------------------------- |
-| Human      | A_Customer Support                 | Customer service representatives (CSRs) help the customers with their account inquiries. The CSRs send customer inquiries. IM, calendar, class and receive the responses as requested. | Account Inquiry/Update    |
-| Human      | A_Administrator                    | Bank's IT System Administrator                               | System Administration     |
-| Human      | A_Specialized Support              | The CSRs send customer inquiries. IM, calendar, class and receive the responses as requested. | Customer Account Mgmt     |
+| Human      | A_Customer Support                 | Customer support is the role that is able to fully interact with a customer's account information. This role will perform transactions on behalf of the customer and modify the accounts (create new ones, delete accounts, modify terms of accounts) affiliated with a customer. | Account Inquiry/Update    |
+| Human      | A_Administrator                    | The role involved in supporting system adminstration tasks related to the Customer Service Portal. | System Administration     |
+| Human      | A_Specialized Support              | This role provides customer and bank support activities.  Can support create of and configuration of non-standard Arrangements. | Customer Account Mgmt     |
 | IT System  | A_Staff Training Service           | The eLearning Center receives all requests for classes and respond accordingly. | Class Info Mgmt           |
 | IT System  | A_Marketing Data                   |                                                              | Marketing Info Mgmt       |
 | IT System  | A_Customer Service Ticket Services |                                                              | Online Customer Data Mgmt |
