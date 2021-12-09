@@ -47,9 +47,9 @@ A draft explaining the notation standard is [available for review](../../master/
 
 To resolve this the user can select the Logical Node in error and click on the **Select from existing** button (at the bottom of the Attributes tab of the Format panel) and point to the existing Logical Node, indicating you are reusing the same element. 
 
-<img src="/Users/glcraig/Documents/GitHub/Cognitive-Architect-Enablement/images/Select-from-existing.png" height="244px" alt="Select from existing button" />
+<img src="../../images/Select-from-existing.png" height="244px" alt="Select from existing button" />
 
-<img src="/Users/glcraig/Documents/GitHub/Cognitive-Architect-Enablement/images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
+<img src="../../images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
 
 
 
