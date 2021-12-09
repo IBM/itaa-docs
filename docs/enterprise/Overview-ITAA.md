@@ -41,7 +41,7 @@ At the time of this release, the diagram specific palettes will contain the new 
 
 It should be noted that the code for this standard notation is shared with IBM released palettes for the Draw.io tool.  The full IBM [draw.io] architecture palettes can be found in the Misc Diagram palette.
 
-A draft explaining the notation standard is [available for review](../../master/docs/Archi-diagrs-v3.pdf) (will be updated to point to the ibm.com/design documentation when published).
+A draft explaining the notation standard is [available for review](../Archi-diagrs-v3.pdf) (will be updated to point to the ibm.com/design documentation when published).
 
 ###### Bind to existing element
 
