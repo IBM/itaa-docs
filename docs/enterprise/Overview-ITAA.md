@@ -31,14 +31,49 @@ An owner can explicitly "invite" collaborators and assign corresponding role to 
 
 **Artifact** -- An architecture (asset) is comprised of a set of artifacts that are typed. The standard set of artifacts are displayed in the architecture's Table of Contents (**TOC**). Many of the artifact types can have 0 to n **artifact instances**.  Examples of artifacts include Business Challenge, System Context, Functional Requirement, etc.  Most of the artifacts correspond to a technical work product.
 
-**Shared Elements** -- The building blocks of an architecture are a set of architectural elements. Each of these elements have a specific type along with a set of attributes. Many of the architecture elements contribute to and are referenced within multiple artifacts and artifact instances. As such it is important that these elements are shared (i.e., by reference). The implication is that each shared element must have a unique name within the architecture. To enforce this constraint the tool will flag as an error anytime a new element is created and given a name already in use in the architecture.  This error forces the user to either bind to (reference) the currently existing shared element or if the user needs to reference a different architecture element, supply the new element with a unique name. For example, adding a new Logical Node to an AOD IT System View instance and giving it the name **Security Services** when a Logical Node with that name already exists (perhaps on a different diagram instance) results in an error (duplicate name error). To resolve this the user can click on the **Select from existing** button and point to the existing Logical Node, indicating you are reusing the same element. Alternatively a different (unique) name can be assigned. Either approach will remove the error.
+**Shared Elements** -- The building blocks of an architecture are a set of **architectural elements**. Each of these elements have a **specific type** along with a **set of attributes**. Many of the architecture elements contribute to and are referenced within multiple artifacts and artifact instances. As such it is important that these elements are shared (i.e., by reference). The implication is that each shared element must have a *unique name* within the architecture. To enforce this constraint the tool will *flag as an error* anytime a new element is created and given a name already in use in the architecture.  This error forces the user to either bind to (reference) the currently existing shared element or if the user needs to reference a different architecture element, supply the new element with a unique name. For example, adding a new Logical Node to an AOD IT System View instance and giving it the name **Customer Service** when a Logical Node with that name already exists (perhaps on a different diagram instance) results in an error (duplicate name error). 
+
+##### Visualization Notation
+
+With release 3.3 of the tool, most of the diagram specific element palettes have been updated to reflect the emerging IBM Architecture visualization notation. This IBM Design supported notation specifies graphical element shapes and properties that can be consistently recognized to represent specific architecture elements types, e.g Logical or Prescribed Nodes, Logical or Prescribed Components, Target System, Actors and then various Groups e.g. Locations, Zones, VPC, etc. 
+
+At the time of this release, the diagram specific palettes will contain the new standards as well as the previous (deprecated) notation. The reason for preserving the deprecated notation is to support ongoing editing of diagrams built with the previous default notation.
+
+It should be noted that the code for this standard notation is shared with IBM released palettes for the Draw.io tool.  The full IBM [draw.io] architecture palettes can be found in the Misc Diagram palette.
+
+A draft explaining the notation standard is [available for review](../../master/docs/Archi-diagrs-v3.pdf) (will be updated to point to the ibm.com/design documentation when published).
+
+###### Bind to existing element
+
+To resolve this the user can select the Logical Node in error and click on the **Select from existing** button (at the bottom of the Attributes tab of the Format panel) and point to the existing Logical Node, indicating you are reusing the same element. 
+
+<img src="/Users/glcraig/Documents/GitHub/Cognitive-Architect-Enablement/images/Select-from-existing.png" height="244px" alt="Select from existing button" />
+
+<img src="/Users/glcraig/Documents/GitHub/Cognitive-Architect-Enablement/images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
+
+
+
+Alternatively a different (unique) name can be assigned. Either approach will remove the error.
+
+------
+
+Additional "big picture" tips about the tool can be reviewed in the [Common Tips](../../master/docs/CATips.md) document.
+
+------
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide-v11))
 
 
 ## Getting Started
 
+### Help
+
+Anywhere within Cognitive Architect you can navigate to the appropriate section of this User Guide via the keyboard short-cut (**F1** or **fn-F1**)!
+
+###Usage Intent
+
 Getting started with Architect Assistant depends on your usage intent. The most common usage intents are:  
+
 - Search for and review an existing and accessible architecture. This scenario may be to support an architect understanding about what assets are available and/or specific details about any particular architecture.  
 - Author a new or existing architecture.  
 
@@ -73,11 +108,7 @@ Currently the search is made against a set of keywords and tags as well as the t
 
 
 
-In the above image, it can be seen that the tags are displayed on the architecture **card**. The corresponding search terms can be typed into the search text box and/or can be selected from the Catalog.
-
-![Search Page](../../images/ITAA-search-catalog.png)
-
-The architectures returned in a search result set are either **public, readonly (curated)** assets or are **private, As-Is** assets. 
+In the above image, it can be seen that the tags are displayed on the architecture **card**. The architectures returned in a search result set are either **public, readonly (curated)** assets or are **private, As-Is** assets. 
 
 ### As-Is
 Any user of the system can choose to have a private architecture that they own, discoverable via search. This property is enabled/disabled via the architecture information page.  The information page is accessible via the info toolbar button of an open architecture. This architecture information page is where an asset owner can change the architecture name and other attributes such as client, opportunity number, tags, etc.
@@ -88,7 +119,11 @@ If you are the architecture's owner and you currently have edit control on the a
 
 ![Share As-Is control](../../images/As-Is-Control.png)
 
-This shareable link has a special format. The URL will be of the form &lt;Architect Assistant server&gt;/architectures/**Social**/...  When a URL of this form is used to access the identified architecture, two actions occur prior to redirecting to a URL where **Social** is replaced by **Collaboration**.  First a check is made to see if the target architecture still has "As-Is" property enabled. If not, the URL is rejected. If the architecture does have "As-Is" property enabled, a check is made to see if the logged in user is currently a "collaborator" for the target architecture and if not, they are added as a *Viewer* on the architecture's collaboration team. Then the URL is rewritten and forwarded, resulting in opening the architecture from the user's Collaboration Workspace tab.
+This shareable link has a special format. The URL will be of the form &lt;Cognitive Architect server&gt;/architectures/**Social**/...  When a URL of this form is used to access the identified architecture, two actions occur prior to redirecting to a URL where **Social** is replaced by **Collaboration**.  First a check is made to see if the target architecture still has "As-Is" property enabled. If not, the URL is rejected. If the architecture does have "As-Is" property enabled, a check is made to see if the logged in user is currently a "collaborator" for the target architecture and if not, they are added as a *Viewer* on the architecture's collaboration team. Then the URL is rewritten and forwarded, resulting in opening the architecture from the user's Collaboration Workspace tab. 
+
+A second part of this Sharing (supporting search), is the checkbox to set the architecture as **Discoverable**. By default when you turn on "Share As-Is", the Discoverable checkbox is selected.  When Discoverable is checked the architecture is included as an asset that is discoverable by the tool's Search engine. Note, with this secondary selector, it is possible to get a sharable URL to your architecture, without having your asset show up in Search results.  This would be accomplished by having Share As-Is turned on and uncheck (disable) the Discoverable setting.
+
+####Copy Architecture
 
 Any architecture returned via search will have a minimum of "Viewer" access for all users. Thus the architecture card's additional menu will include **Copy**.  This permits the user to create a complete copy of the architecture by supplying a new unique name for the resulting Copy.
 
@@ -171,15 +206,23 @@ Above is a System Context diagram in Architect Assistant. Let's look at the vari
 
 The top two rows include the menu and toolbar controls.  These are only present when the diagram is open in edit mode. If you are just viewing a diagram, these elements won't appear on screen (including the explicit save button). 
 
-Next on the left hand side you will find a set of drawing palettes. These supply the elements that can be added to the drawing canvas (the main part of the editor and where the diagram resides). In Architect Assistant, the top most palette will have a name that specifies the type of diagram, and includes all of the *architectural elements *that can be added to the diagram.  In this case the **System Context Palette** includes a Human Actor symbol, an IT System Actor symbol, a Target System symbol and a Connector symbol. Each of these symbols, when added to the diagram, will be associated with an architecture element (core model element) each of which have an associated set of attributes dependent on the element type. 
+Next on the left hand side you will find a set of drawing palettes. These supply the elements that can be added to the drawing canvas (the main part of the editor and where the diagram resides). In Cognitive Architect, the top most palette will have a name that specifies the type of diagram, and includes all of the *architectural elements* that can be added to the diagram [**Note**, the [Misc Diagrams](#misc-diagrams) are an exception to this pattern as they are intended as a sketch tool without specificing architectural elements].  In this case the **System Context Palette** includes a Human Actor symbol, an IT System Actor symbol, a Target System symbol and a Connector symbol. Each of these symbols, when added to the diagram, will be associated with an architecture element (core model element) each of which have an associated set of attributes dependent on the element type. 
 
-The attributes for a model element appear within the Attribute tab of the **format panel** typically visible to the right of the diagram (canvas).  For example, in the diagram above you see the purple IT System symbol, named DDoS System, selected. Since the selected item represents an architectural element, there is an Attributes tab on the format panel that displays the attributes of the associated architectural element. In this case the type of architectural element is an **Actor** with Name, *DDoS System*; Description, "*new description imported*"; and a Type of *IT System*.
+The attributes for a model element appear within the **Attribute** tab of the **format panel** typically visible to the right of the diagram (canvas).  For example, in the diagram above you see the green Target System symbol, named Target System, selected. Since the selected item represents an architectural element, there is an Attributes tab on the format panel that displays the attributes of the associated architectural element. In this case the type of architectural element is a **Target System** with **Name**, *Target System* and **Description**, "System to support ...". The Attribute panel is where you actively edit the underlying architecture meta-data within the diagram editor. Depending on the architecture element type of the drawing element selected on the canvas the attribute panel can display a large set of element attributes.
 
 In addition to the diagram specific palette, there will always be an *Annotation* palette.  This palette contains a set of common shapes. Adding a symbol from the annotation palette onto the diagram just adds that shape to the diagram. This shape is NOT associated with any architectural element.  Thus annotations are just used to add style to the diagram.
 
-Below is the same System Context diagram, with the pink cloud shape selected. Note that the format panel only shows the Style, Text and Arrange tabs; the Attributes tab is missing.
+Below is the same System Context diagram (using older deprecated drawing elements), with the pink cloud shape selected. Note that the format panel only shows the Style, Text and Arrange tabs; the Attributes tab is missing.
 
 ![System Context Diagram - Annotation](../../images/annotation-symbol-selected.png)
+
+#### Existing element palettes
+
+Also available are a set of palettes that represent the reusable architecture elements available in the architecture that are appropriate for this artifact type.   In the example above you see **Existing Human** (actor) and **Existing IT System** (actor) palettes. Here you can easily drag an element that has been defined elsewhere in the architecture onto the diagram (for reuse).  
+
+With the exception (currently) of Existing Nodes in AOD IT System View, dragging an existing element onto a diagram will use the default icon for the element type.  As of release 2.9, Logical Nodes in IT System views, will be associated with the icon you are using within your diagrams (and are visible as such on the Existing Nodes palette).
+
+![Reuse existing nodes with icons](../../images/existing-node-icons.png)
 
 A few diagram types have additional palettes available beyond the diagram specific palette and the annotation palette. Those will be detailed in sections specific to those diagram types.
 
@@ -198,6 +241,14 @@ The MxGraph framework provides a rich set of formatting tools to help you make t
 The Style panel let's you apply style to whatever element is selected.  So if it is a line, the choice of line style (dash, solid), endpoint style (arrow type), thickness, color, etc.  You can also adjust whether the line is straight, curved, orthogonal jogs, etc.  Also if two lines are selected (which cross), you can set the style for the line crossing.  If the symbol is a shape then things like fill and outline color, etc are available to be changed. 
 
 The style panel also includes an Edit Style button which provides access to the basic properties of the shape for instance the base shape type, whether it is a container, whether the shape is represented by an image (icon) - thus exposing an "edit image" control, etc. Knowledge of the "Edit Style" and the corresponding style commands are most important to be able to replace the style of one symbol with the basic style of some other symbol in the system. 
+
+------
+
+Today there are two major element styles within each architecture diagram specific palette. The first set conform to a new emerging [IBM architecture visualization standard](../../master/docs/ArchVisualization.md). The second (labeled 'original') are the original styled elements from the origin of the tool. Manipulation of each of these, particularly from a graphic icon perspective, are evolving within the tool. These new styled elements are manipulated through a set of Style properties that override many of the built-in, MxGraph, style controls.
+
+------
+
+##### Style Properties
 
 **Tip:** For instance, you might want to have your Target System represented by an image in the System Context diagram. One way to do this is copy the style from a Logical Node from an AOD IT System View and paste that into the Style for the Target System and then edit its image. This approach of identifying and applying a style from a symbol from any diagram to a different symbol in the same or different diagram type can universally be applied. 
 
@@ -227,11 +278,31 @@ In any diagram in Architect Assistant, with no symbol selected, the Attributes p
 ### Diagram Overlay artifacts
 The fourth artifact type from a user experience basis is a diagram overlay, **Usage Scenario**. The usage scenario provides a way to overlay a "story" or "flow" onto an existing Architecture Overview diagram. What is uniquely authored in a Usage Scenario instance, is this story. When a new instances is created, you must first specify the AOD diagram it is based upon (selected from a list) along with the scenario name.
 
-In the editor for a usage scenario, there are no drawing palettes. Instead you are provided with a way to select a "connector" from the underlying AOD diagram and then associate it with one or more *steps*. A step has two attributes, name and description. Further the name must be a single token and either be all numeric or all alphabetic. (The idea is the steps have names: 1, 2, 3, ... or A, B, C, ...).  The description is used to tell the "story segment" associated with the step. When a "connector" is selected, all currently defined steps for the usage scenario are presented along with a checkbox to select or deselect each one. The usage scenario editor will place "step circles" on the selected connector for each associated step. When given the option to select the associated steps, you are also presented with the ability to create a new step.
+In the editor for a usage scenario, there are no drawing palettes. Instead you are provided with a way to select a "connector" or "element" from the underlying AOD diagram and then associate it with one or more *steps*. A step has two attributes, **name** and **description**. The name must be a single token limited to 3 characters max from the set of "letters", "numbers", and ".".  The description is used to tell the "story segment" associated with the step. When an architecture element is selected on the diagram, all currently defined steps for the usage scenario are presented along with a checkbox to select or deselect each one. The usage scenario editor will place "step circles" on the selected connector or on the edge of a "node-type" element for each associated step. When given the option to select the associated steps, you are also presented with the ability to create a new step.
 
-In addition to adding and associating steps to connectors, you can also select any other (non-connector) symbols and "disable" them.  The editor then will "gray-out" these disabled symbols.
+In addition to adding and associating steps to connectors, you can also select any non-connector symbols and "disable" them.  The editor then will "gray-out" these disabled symbols.
 
 ![Usage scenario](../../images/sample-usage-scenario.png)
+
+#### Misc Diagrams
+
+As briefly noted earlier, the Misc Diagrams have a different purpose. Misc Diagrams are based on the same MxGraph framework as the other diagram types but are delivered without coupling to a specific architecture [diagram type] meta-model. Here all drawing elements are *annontations* (no attached meta-data). You do have a richer set of drawing palettes to support creation of org charts, business process flows, C4 diagrams, etc.   Thus you can use Cognitive Architect to create diagrams not supported as first class citizens by the underlying architecture meta-model.  As will be described shortly, you can also start with this diagram style (as a **sketch**) and later, if appropriate, convert the diagram into a supported architecture diagram. The other feature supported in Misc Diagrams is importing an existing Draw.io authored diagram. This import is provided via the *File > import draw.io diagram* menu item.
+
+![Usage scenario](../../images/import-drawio.png)
+
+#### Render Typed Diagram and Convert Elements
+
+Closely related to the introduction of the Misc Diagram is the ability to apply architecture meta-model attributes to an object that doesn't currently exhibit any such attributes. The first part of this is to be able to create an architecture diagram from an existing Misc Diagram. Each artifact type that is represented by a diagram now has the option on the "Add diagram" dialog, to *Render from miscellaneous diagram*.
+
+![Render from Misc Diagram](../../images/render-from.png)
+
+Clicking on this link will provide you with the list of current Misc Diagrams available in the architecture. Completing the "render" operation will add just the meta-data for the diagram itself appropriate for the type of diagram being added.
+
+This is generally only valuable if you can also then **convert** the associated drawing elements (annotations) into architectural elements, thus adding or associating the corresponding element type meta-data. To convert a drawing element, select it, then right-mouse click to bring up the context menu, and then select Convert > *type of architecture element to covert to* from the menu. (Note you will only be presented with the element types supported by the drawing element kind: line or shape AND the corresponding diagram type.) Via repeated application of element conversion, you can take any sketch or imported diagram and manually convert these to full-fledged architecture diagrams while retaining the original look and feel.
+
+![Convert to element type](../../images/convert-to-element.png)
+
+
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
@@ -325,16 +396,49 @@ There is a lot of value of having everything associated with a Solution Architec
 
 ![Import/Export Toolbar button](../../images/import-export-toolbar.png)
 
-Above you see the toolbar button to access the import and export utilities. First you select if you want to export or import.  Note there is also a link to an *import template* file to download and modify in order to be able to import from an Excel spreadsheet. Selecting Export and clicking Next will take you to a dialog where you can choose the type of export. There are three* choices presented:
-- **Microsoft PowerPoint** - This produces a summary PPTX document containing the major sections of the architecture. This is a good way to quickly get content out in this format to share with others.  Clicking Next will generate the file and then prompt you with a Browser open/save dialog.
-- **Microsoft Excel** - This produces a multi-worksheet Excel document (XLSX) that include everything in the model with the exception of the diagram images. In reality, when you click next you are presented with a pick list of "reports" to be included in the export.  There are three groupings of reports, Architectural elements (the key reusable elements in the model), Text-based artifact reports (FRs, NFRs, ...), and Diagram-based artifacts that describe content that appears on each diagram.
-- **Microsoft Word** - Today this produces a standard all inclusive Word document.  In the future you will likely be able to select among a set of document templates. **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
-- **GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
-   ![Export to Github Toolbar button](../../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any  IBM IT Architect Assistant hosted system.
-  - When you select this Export format you will provide the repository URL and access token per instructions below.  **[A SSH URL with a mandatory access token is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). You can supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
-  - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the **Clone/Download** button for your repository and copying the **ssh URL**. (A sample HTTPS URL for a public Git repository is: https://github.com/IBM/itaa-docs.git.)
-  - To generate an access token for your repository navigate to *[repository-url]/settings/tokens/new* (e.g. https://github.ibm.com/settings/tokens/new) and **create** a description, e.g. CA-access, and select **repo** scope.  Then click **Generate Token**.  You then will want to click on the **copy to clipboard** icon so that you can paste into the connection dialog for Cognitive Architect.   If you wish to reuse this token for future access to the tool, save this token elsewhere so that you can retrieve it. (You can not retrieve the token from Git after you leave the Token generation page.)
-- **Offline Download** - This logical export option is not actually part of the Export menu but instead is available on the architecture card '...' menu.  This download creates a .zip file of the complete architecture for use within the offline application.  
+- Above you see the toolbar button to access the import and export utilities. First you select if you want to export or import.  Note there is also a link to an *import template* file to download and modify in order to be able to import from an Excel spreadsheet. Selecting Export and clicking Next will take you to a dialog where you can choose the type of export. 
+
+   ![Export Options](../../images/export-options.png)
+
+   There are three* choices presented:
+
+   - **Microsoft PowerPoint** - This produces a summary PPTX document containing the major sections of the architecture. This is a good way to quickly get content out in this format to share with others.  Clicking Next will generate the file and then prompt you with a Browser open/save dialog. 
+
+     ------
+
+     **Note** on both PowerPoint and Word exports, images of type **.svg will not render**. This includes custom icons imported to diagrams as well as images imported into rich text fields. If you are going to use these exported file formats as deliverables, you will want to stick with working with **.png or .jpg** images.
+
+     ------
+
+     
+
+   - **Microsoft Excel** - This produces a multi-worksheet Excel document (XLSX) that include everything in the model with the exception of the diagram images. In reality, when you click next you are presented with a pick list of "reports" to be included in the export.  There are three groupings of reports, Architectural elements (the key reusable elements in the model), Text-based artifact reports (FRs, NFRs, ...), and Diagram-based artifacts that describe content that appears on each diagram.
+
+   - **Microsoft Word** - This export format provides the user with a set of options.
+
+     The **Default(All)** option produces an extensive, all inclusive Microsoft Word document based on the full architecture Table of Contents (ToC).  The second option, **Customize Content**, allows the user to select those sections of the architecture ToC to include in the generated report as well as manage the structure, naming, and order of the document sections.  Once you create a customize report structure, you can save that as a resuable template by supplying a name.  Selecting **Your Custom Template** option will present the user with all saved document templates and allow one to be selected and used in the generation of the exported document.
+
+     The general structure of the Customize Content, build document structure, dialog (shown below), provides the architecture ToC on the left and the document structure on the right.  You can drag sections of the ToC into the document structure and rename, add section titles, and move content sections up and down. (Note, only ToC sections that have content in the architecture show up on the left. Also there is the special, Architecture-Wide Elements, section in the ToC, which provides a summary of all core architecture elements available across the architecture.) Double click on a section title (right-side) to edit. When you edit the text of a section that has populated content (from the ToC) you are shown the source section (ToC) name to the right.
+
+     <img src="../../images/custom-word-report.png" alt="Create custom word report structure" style="zoom:60%;" />
+
+     Click **Save** to save the structure as a custom template.  Click **Export** to use the current structure to generate the document.
+
+     You can also export this custom template to be shared with others.  The **Load Template** and **Download Template** icons just to the left of the "Structure by:" text in the template editor will generate/consume a JSON document representation of the custom template.
+
+     **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
+
+     #### GitHub Export
+
+   - **GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
+
+     ![Export to Github Toolbar button](../../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any Cognitive Architect or IBM IT Architect Assistant hosted system.
+
+     - When you select this Export format you will provide the repository URL and access token per instructions below.  **[A SSH URL with a mandatory access token is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). You can supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
+     - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the **Clone/Download** button for your repository and copying the **ssh URL**. (A sample HTTPS URL for a public Git repository is: https://github.com/IBM/itaa-docs.git.)
+     - To generate an access token for your repository navigate to *[repository-url]/settings/tokens/new* (e.g. https://github.ibm.com/settings/tokens/new) and **create** a description, e.g. CA-access, and select **repo** scope.  Then click **Generate Token**.  You then will want to click on the **copy to clipboard** icon so that you can paste into the connection dialog for Cognitive Architect.   If you wish to reuse this token for future access to the tool, save this token elsewhere so that you can retrieve it. (You can not retrieve the token from Git after you leave the Token generation page.)
+
+   - **Offline Download** - This logical export option is not actually part of the Export menu but instead is available on the architecture card '...' menu.  This download creates a .zip file of the complete architecture for use within the offline application.  
 
 #### Import
 
@@ -360,6 +464,12 @@ If you choose Import you are presented are two* choices:
     - To generate an access token for your repository navigate to *[repository-url]/settings/tokens/new* (e.g. https://github.ibm.com/settings/tokens/new) and **create** a description, e.g. CA-access, and select **repo** scope.  Then click **Generate Token**.  You then will want to click on the **copy to clipboard** icon so that you can paste into the connection dialog for Cognitive Architect.   If you wish to reuse this token for future access to the tool, save this token elsewhere so that you can retrieve it. (You can not retrieve the token from Git after you leave the Token generation page.)
 
   - Clicking Next will the provide you with a list of archive files available for you to select from for the upload. Select the archive you desire and click **Load**.
+
+  
+
+  ##### Draw.io
+
+- **Import draw.io diagram** - This is supported within a [**Misc Diagram** instance](#misc-diagrams). Current limitations include: only draw.io files (.xml or .drawio) containing a single diagram are supported and multiple layers are not imported. The content will be imported as it would be visualized within Draw.io.  All drawing elements are *annotations*. If you later choose, the resulting diagram can then be rendered into an architectural diagram type and then the drawing elements can be converted to architectural elements. [Additional details](#render-typed-diagram-and-convert-elements) are described in the Misc Diagram section of user guide.
 
 - **Offline Upload** - (See Offline Mode below) This allows you to add a solution architecture created via the offline app to your private workspace. 
 
