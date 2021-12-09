@@ -57,7 +57,7 @@ Alternatively a different (unique) name can be assigned. Either approach will re
 
 ------
 
-Additional "big picture" tips about the tool can be reviewed in the [Common Tips](../../master/docs/CATips.md) document.
+Additional "big picture" tips about the tool can be reviewed in the [Common Tips](../CATips.md) document.
 
 ------
 
@@ -244,7 +244,7 @@ The style panel also includes an Edit Style button which provides access to the 
 
 ------
 
-Today there are two major element styles within each architecture diagram specific palette. The first set conform to a new emerging [IBM architecture visualization standard](../../master/docs/ArchVisualization.md). The second (labeled 'original') are the original styled elements from the origin of the tool. Manipulation of each of these, particularly from a graphic icon perspective, are evolving within the tool. These new styled elements are manipulated through a set of Style properties that override many of the built-in, MxGraph, style controls.
+Today there are two major element styles within each architecture diagram specific palette. The first set conform to a new emerging [IBM architecture visualization standard](../ArchVisualization.md). The second (labeled 'original') are the original styled elements from the origin of the tool. Manipulation of each of these, particularly from a graphic icon perspective, are evolving within the tool. These new styled elements are manipulated through a set of Style properties that override many of the built-in, MxGraph, style controls.
 
 ------
 
