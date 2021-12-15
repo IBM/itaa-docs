@@ -6,12 +6,6 @@
 
 This is the first in a series of exercises to better understand how to build core artifacts within IBM IT Architect Assistant.  It is not intended to focus on the Solutioning tasks but is focused on the tool usage.
 
-##Case Study
-
-These exercises focus on the case study described below:
-
-*MyBank, based in St. Louis, are having big problems in their Retail Division with customer service and have asked to expand on the current solution. They have started down the road of a multi-channel customer experience. They integrated their existing mainframe-based systems so that CSRs can see all information about a customer's accounts and are allowing customers to access this info from the Internet. However, they are now having issues with supporting various campaigns from both a customer segmenting perspective and a bank staffing perspective. They want to expand the current functionality into an on-demand contact center implementation.* 
-
 This exercise focuses on building a System Context diagram (SCD) to establish the scope of the target solution being architected. The purpose of the System Context artifact is:
 
 ·    To clarify and confirm the environment in which the system has to operate. Once agreed to by the client and the development team, the System Context becomes very useful for maintaining focus on the development effort.

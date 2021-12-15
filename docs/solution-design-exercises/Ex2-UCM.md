@@ -16,7 +16,7 @@ You can approach development of this model from either the perspective of a UC D
 
 Let's start by working from a diagram and then drop into the Use Case forms to fill in details.
 
-Open your architecture you started working on in Exercise 1. Click on 3.1.1 Use Case Diagram the Click on Add Diagram. In the pop-up, provide the name of MyBank UCD and click Create.
+Open your architecture you started working on in Exercise 1. Click on **3.1.1 Use Case Diagram** then Click on **Add Diagram**. In the pop-up, provide the name of **MyBank UCD** and click Create.
 
 On the newly opened diagram, expand the twisty for the **Existing Human** palette.  Drag on the 4 actors and arrange and shown below. Note you are reusing a set of Actors created during the construction of the System Context Diagram.
 

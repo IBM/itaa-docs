@@ -1,4 +1,4 @@
-# Design on IBM IT Architect Assistant
+# Solution Design on IBM IT Architect Assistant
 
 ## Exercise 4 - AOD IT System View
 
