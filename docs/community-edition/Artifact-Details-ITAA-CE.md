@@ -293,7 +293,7 @@ Manipulating the messages in MxGraph does require a bit of practice.  The two mo
 
 An alternative style for a Component dynamic model is the collaboration view.  Here, that than using the timelines of a sequence view, you have actors and components layout with numbered flows between them. This style is particular popular to show Event Flows associated with an Event Driven Architecture.
 
-Here the connectors are typed as Events with 4 core attributes: Number (a value showing order in a sequence), Name and Description, and then Type.  Type, if specified, must be selected from and existing **Entity** from the Logical Data model.  The purpose of this Type is to be able to identify the specific "event type" (or payload).
+Here the connectors are typed as Events with 4 core attributes: Number (a value showing order in a sequence), Name and Description, and then Type.  Type, if specified, must be selected from an existing **Entity** from the Logical Data model.  The purpose of this Type is to be able to identify the specific "event type" (or payload).
 
 ![Collaboration View of Component Model](../images/collab-view.png)
 
