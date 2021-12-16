@@ -567,7 +567,7 @@ A more explicit archive (backup/restore) approach is the **Export / Import from 
 
 It should also be pointed out that this archive file also serves as an *interchange file* since it can be generated and consumed by any of the various offerings of the tool.
 
-([Back to Top and TOC](#cognitive-architect-user-guide-v27)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
 ## Comments
 
@@ -577,7 +577,7 @@ The comment feature supports architecture reviews. In an open architecture, you 
 
 This panel let's you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …). Given the nature of the single page web app, while you have the comment pane open, you will not see incoming comments (in real-time) without an explicit refresh.
 
-([Back to Top and TOC](#cognitive-architect-user-guide-v24)) 
+([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
 ## Change Log
 
