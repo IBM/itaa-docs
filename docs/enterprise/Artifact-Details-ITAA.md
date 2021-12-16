@@ -48,7 +48,7 @@ Typically the diagram will then show connections (**connector**) between each ac
 
 The current meta-model restricts an architecture having only one System Context diagram and within that System Context diagram having only 1 target system element. There are several reasons for this restriction, most notably, that when more than one solution is included, the distinction between out-of-scope, boundary elements (**actors**) and in-scope white box functionality (**logical components**) become very confused. Within this "one solution architecture - one Architect Assistant asset" constraint, one can still document separate "phases" of a phased solution. In this case some of the actors and actor to system interactions (connector) are only applicable within certain project phases. Use colors and other annotation within the system context diagram to allow the overall system view for a particular phase to be identifiable.
 
-![Architect Assistant - Table of Contents](../../images/system-context-multiple-scenarios.png)
+![Architect Assistant - Table of Contents](../images/system-context-multiple-scenarios.png)
 
 *System Context diagram with multiple phases or scenarios*
 
@@ -61,21 +61,21 @@ It is important to document and **track** the definitive set of requirements on 
 ### Use Cases and Use Case Diagrams
 Use Cases are a familiar way to document the functional behavior of the solution from the perspective of an initiating actor's perspective. There are two linked artifact types within Architect Assistant to capture use cases. A high-level Use Case Diagram (UCD), allows one to quickly see the relationship between a set of Actors and a set of Use Cases. A diagram can include Use Cases, Actors, and Use Case associations.
 
-![Use Case Diagram](../../images/ucd.png)
+![Use Case Diagram](../images/ucd.png)
 
 With the focus on the relationship between the Actors and a set of Use Cases, a limited amount of detail about each use case is presented in the attribute panel. However, the shared Use Case element has a rich set of attributes that are fully exposed in the corresponding Use Case (text) artifact instance. You can see the link to the detailed use case in the attribute panel.
 
-![Use Case attributes in UCD](../../images/ucd-usecase-attributes.png)
+![Use Case attributes in UCD](../images/ucd-usecase-attributes.png)
 
 The Use Case artifact instances are form-based text. They form the more complete Use Case Model but are less visual and in some case not required to be elaborated, at least early in the sales cycle.
 
-![Use Case artifact instance](../../images/usecase-text.png)
+![Use Case artifact instance](../images/usecase-text.png)
 
 The tool coordinates these two use case artifacts to maintain data model consistency. This involves several actions. One such action is if a new use case is created within a Use Case Diagram instance, then that Use Case will show up and be editable as a Use Case artifact instance. In a similar way, if an association is made or deleted between an Actor and a Use Case (either in the Use Case artifact instance or on a UCD), then the corresponding association is updated everywhere.
 
 Note that an author can choose to select the Actors and Use Cases to be presented within a UCD instance. If you build at least some of the Use Case Model via the Use Case artifact instances, then you will have the corresponding (existing) Actors and Use Cases available in special palettes from which you can drag and drop these predefined elements onto the UCD.
 
-![Existing Element palettes](../../images/ucd-existing-element-palettes.png)
+![Existing Element palettes](../images/ucd-existing-element-palettes.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
@@ -127,7 +127,7 @@ NFRs and Architectural Decisions generally apply to a particular part of the sol
 
 The Logical Data Model artifact type provides the ability to create instances of an Entity-Relationship diagram (ERD). There are 3 key elements that appear (as symbols) on an E-R diagram, Entities, Relationships, and Generalization (IS-A).  In addition to the typical name and description attributes, and entity can have any number of *attribute* attributes. In the current meta-model and attribute has a name, description and type (e.g., String, Customer, ...).  A relationship connects two Entities.  There is a multiplicity indication next to each entity to indicate the multiplicity of that entity that can participate in the relation.  A relationship can also have *attribute*s associated with them.  Finally, you can indicate that an Entity specializes or has a generalization/Is-A relationship with another Entity.   This Is-A relationship is represented by a triangle.
 
-![Sample ERD](../../images/ERD-sample.png)
+![Sample ERD](../images/ERD-sample.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
@@ -147,7 +147,7 @@ One of the ways to describe a solution is via the set of functions or services t
 
 A common look and feel for an AOD Services View is a "layered architecture". Here is an example showing the high-level One IBM Cloud Architecture.  This example only makes use of Subsystems and Logical Components -- the relationships are described via the grouping and the relative placement of the *layers*.
 
-![AOD Services View - Layered Architecture](../../images/aod-services-example.png)
+![AOD Services View - Layered Architecture](../images/aod-services-example.png)
 
 This simple style, can communicate a lot of information. But a simple picture is open to ambiguous interpretation. Here is where populating the attributes of the underlying elements is extremely important. Like all architecture elements in the tool, Subsystems, Logical Components and Logical Connectors have a name and a description attribute.  The name is visible on the diagram.  The description is where you can provide detailed explanation about the purpose and capabilities associated with each element.
 
@@ -162,7 +162,7 @@ Logical Component - this element type is crucial to the information communicated
 - if there is a defined Architecture Decision / NFR there will always be a link to **Associate ...**.  Clicking this list brings up a list of all of the corresponding element of the association type available in the solution architecture with checkboxes allowing you to select or deselect an element to associate.
 - you cannot create either an Architecture Decision or NFR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
 
-![Logical Component Attributes](../../images/lc-attributes.png)
+![Logical Component Attributes](../images/lc-attributes.png)
 
 Logical Component Primary capability [*coming soon*].  This property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
 
@@ -170,7 +170,7 @@ Logical Component Implementation - Logical vs. Physical.  Frequently when commun
 
 In the above, you see three different implementations associated with this LC. You can click on the arrow symbol next to the Implementation name to bring up an editor for the corresponding Physical Component.
 
-![Physical Component Attributes](../../images/PC-edit-panel.png)
+![Physical Component Attributes](../images/PC-edit-panel.png)
 
 Clicking on the **Add/Update Implementation** link will provide a list of all available Physical Components defined in this Solution Architecture (to select or deselect).  It also provides a link to **Create New** which allows you to define a new Physical Component to select.
 
@@ -179,7 +179,7 @@ Clicking on the **Add/Update Implementation** link will provide a list of all av
 ### AOD Enterprise View
 The AOD Enterprise View seeks to depict a solution through its Business Architecture.   The presents the architecture through 3 standard layers: Channels (a type of logical component that deliver services to a type of user/actor), Application Services (a type of logical component that deliver the core business functionality) and Resources (a type of logical component that represent current, dependent capabilities). In addition to Channels, Application Services and Resources, the diagram supports Actors (Human actors), SubSystem (used to group different set of components) and Logical Connectors.
 
-![AOD Enterprise View](../../images/enterprise-view.png)
+![AOD Enterprise View](../images/enterprise-view.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
@@ -195,7 +195,7 @@ One of the validation rules enforced by the IT System View is a Logical Node mus
 
 In most cases, an important part of this "deployment view" is the connectivity between Logical Nodes.  Logical Connections help tell the story about how the system is "wired together". 
 
-![Example IT System View diagram](../../images/IT_System_View.png)
+![Example IT System View diagram](../images/IT_System_View.png)
 
 A Subsystem is commonly used when you need to simplify connection details by showing implicit connectivity between a set of Logical Nodes.  By placing Logical Nodes within a Subsystem, you can then have a Logical Connection endpoint connect to a Subsystem instead of a Logical Node.
 
@@ -214,7 +214,7 @@ In the editor for a usage scenario, there are no drawing palettes. Instead you a
 
 In addition to adding and associating steps to connectors, you can also select any other (non-connector) symbols and "disable" them.  The editor then will "gray-out" these disabled symbols.
 
-![Usage scenario](../../images/sample-usage-scenario.png)
+![Usage scenario](../images/sample-usage-scenario.png)
 
 ## Architectural Decisions
 Architectural Decisions (ArchDs) are central to documenting a solution architecture and providing traceability into the *why* the architecture looks the way it does. An architectural decision is authored via a "web form" style editor.  Each ArchD has a set of attributes:
@@ -266,7 +266,7 @@ Any other details about the Logical Component should be documented in the Descri
 
 The Logical Connector usually represents a communication channel (interaction dependence) between two Components. This dependency is most important as an overlay onto the Operational Model to verify the appropriate network SLAs are in place to support the interaction between each communicating pair of Components.
 
-![Static View of Component Model](../../images/CM-Static-View.png)
+![Static View of Component Model](../images/CM-Static-View.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
@@ -283,7 +283,7 @@ Manipulating the messages in MxGraph does require a bit of practice.  The two mo
 - Focus on connecting the endpoints of a message to the respective participant timeline. Often the message line will snap to a position on the timeline different from what you want.  Then hover over the midpoint of the message (you will see a midpoint *dot*), then click and drag up or down to re-position the message.  If you try dragging from any place other than the midpoint, moving the message will result in one or both endpoints getting disconnected from the participant timeline.
 - When adding and manipulating a "self call" message, first make it wider than the associated timeline (by dragging out the right side).  Then you can manipulate the endpoints and position on the timeline.   Once it is where you want it then you can shrink its width (drag the right side to the left) for more aesthetically pleasing sizing.
 
-![Dynamic View of Component Model](../../images/CM-Dynamic-View.png)
+![Dynamic View of Component Model](../images/CM-Dynamic-View.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
@@ -303,7 +303,7 @@ Logical Nodes and **Actors** are then placed within OMLocations indicating the n
 
 Finally, from a diagram perspective, Logical Nodes and Actors interconnect via **Logical Connections** which represent necessary communication paths to support system behavior.
 
-![Partial view of a LOM diagram](../../images/LOM-basics.png)
+![Partial view of a LOM diagram](../images/LOM-basics.png)
 
 There are a large list of model validation rules associated with each of the Operational Model views. First there is a strict parent-child relationship between an OMLocation and an Actor or Node (Logical or Physical). In general an Actor or a Node should only appear within a single OMLocation and cannot appear more than once one a diagram.
 
@@ -314,25 +314,25 @@ In Operational Modeling, the deployment unit model, defines as set of deployment
 
 In Architect Assistant, DUs get *Added to* (placed on/within) a Node. All of the pure application-level DUs will be placed on Logical Nodes (within LOM). Technical-level DUs can be placed directly on either a Logical or a Physical Node. For a user experience, selecting a Logical Node on a LOM view and reviewing its Attributes, there are two areas to be aware of.
 
-![DUs placed in a Logical Node](../../images/LN-DU-attributes.png)
+![DUs placed in a Logical Node](../images/LN-DU-attributes.png)
 
 In the above diagram, note the nested relationship graphic. A Logical Node can have multiple DUs placed within it and a given DUs can package up elements of multiple Logical Components. This graphic provides navigation within this nested hierarchy, once you start drilling down.
 
 The Deployment Unit attribute is intended to all the user to select which of the currently defined DUs are to be placed within the currently selected node.  In the example from above, LN_Gateway currently has DU, E_07, placed within it.  Clicking on the right arrow, to the right of E_07, let's you drill down and see the attributes of that particular DU.
 
-![DU attributes](../../images/DU-attributes.png)
+![DU attributes](../images/DU-attributes.png)
 
 Here you can see the navigation (nested structure) is indicating you are editing DU E_07, a child of LN_Gateway. You also see the key attributes of a DU including its type, whether it is a Technical DU, and the collection of defining Logical Components. From a user experience perspective, the Logical Component attribute of a DU behaves just like the DU attribute of a Logical Component. Here you can manipulate the list of Logical Components and for those already selected, you can drill down to view/edit the specific Logical Component.
 
 At this level (or back at the DU attribute level), clicking on the *Add/Update xxx* link will present the user with a list of elements of the appropriate type each with a checkbox to add/remove their association with the current element.
 
-![Selecting or Creating DU](../../images/select-create-DU.png)
+![Selecting or Creating DU](../images/select-create-DU.png)
 
 Currently, this is the only way to define/create a DU within Architect Assistant. You can see the list of defined DUs. If the DU you need to associate with the Node does not appear, then you click **Create New** and you are taken to a new DU attribute panel where you can supply all of the attributes including *Name*. **Note**, when you define DUs, there are two distinct model operations that you need to signal to Architect Assistant. First, on the DU attribute page, there is a **Save** button at the bottom. After filling in the details for a new DU, you must click Save to have that element be created. You will then be returned back to the DU list screen, where you can separately choose to add it to the current Node or not. Making changes to the list of *placed* DUs but be confirmed by clicking the **Apply** button.
 
 **Existing Element Palettes** In the LOM view, you will find a set of palettes as seen in the diagram below.
 
-![LOM existing element palettes](../../images/LOM-current-elements.png)
+![LOM existing element palettes](../images/LOM-current-elements.png)
 
 Here you will find listed all of the elements that exist in this solution architecture that can be placed on the LOM diagram. This allows for a much more efficient drag to reuse user experience. Note, once an element appears on the current diagram, it will be removed from this list of "existing elements (available for use in this diagram)" since that element is currently "in use on the diagram".  These existing element palettes are available in LOM views, POM views, and Use Case Diagram views at the moment.
 
@@ -347,7 +347,7 @@ The POM view is the most complex diagram type currently supported in Architect A
 
 This hierarchical nesting can produce very cluttered diagrams. Thus at the diagram level you have some global controls that will show/hide different layers.
 
-![Controlling POM elements](../../images/POM-views.png)
+![Controlling POM elements](../images/POM-views.png)
 
 Here you see two toggle controls unique to POM view. The first, Logical Overlay, indicates whether any part of the LOM elements are shown, i.e., if the Logical Nodes hosted by the Prescribed Nodes are displayed along with the Logical Connections between the Logical Nodes. By default this is turned off.
 The second control, is whether to show Prescribed Connections on the diagram. With it turned off just the OMLocations, Prescribed Nodes and Actors will be shown on the diagram.
@@ -357,7 +357,7 @@ Prescribed Nodes have a rich set of attributes that one might like to document, 
 #### Linked (Synchronized) LOM/POM
 For most basic solution architectures, one will likely create a LOM view to establish the OMLocations as well as the basic logical packaging of functionality, i.e., define the Logical Nodes along with the DUs that are hosted by these nodes. Then you will create the physical topology in at least one POM view. Architect Assistant provides a productivity enhancement for these simple cases. When you create a POM view and there is at least one LOM view defined, you will get a dialog like the one shown below.
 
-![Linking LOM to POM](../../images/linked-LOM-POM.png)
+![Linking LOM to POM](../images/linked-LOM-POM.png)
 
 By selecting a LOM view to link to the POM view being created, a number of things happen. First all of the OMLocations and Actors from the LOM view are copied into the new POM view. Further, going forward, the tool will synchronize changes between these views. For instance when you drag a Logical Node onto a Prescribed Node in the POM that also in turn specifies a relationship between the Logical Node and the enclosing OMLocation. This will be synchronized back to the LOM, potentially moving the Logical Node to the "new" OMLocation or remove it from the LOM if the target OMLocation doesn't exist in the LOM.
 
@@ -456,11 +456,11 @@ Notes are designed to provide flexibility for packaging all the elements you nee
 
 Notes instances have a name, and a rich text block. The rich text (document) support inserting images and attaching documents/files. Within the set of Notes you can define *Labels*. 
 
-![Add Label to Notes](../../images/notes-tags.png)
+![Add Label to Notes](../images/notes-tags.png)
 
 Filters are a set of logical tags that can be associated with each of your Notes instances. Back on the Notes overview page (with all of the Notes instance cards visible) you can apply filters to select which Labels are active and thus which instances will be visible.  This helps to organize a potentially large set of Notes.
 
-![Filter Notes by Labels](../../images/label-filter.png)
+![Filter Notes by Labels](../images/label-filter.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
