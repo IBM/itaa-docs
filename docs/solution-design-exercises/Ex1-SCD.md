@@ -78,3 +78,7 @@ Click Save.
 ![Named connectors](./images/final_SCD.png)
 
 Continue to explore formatting, moving objects, etc. Save changes when you are happy with things.
+
+
+
+[Next Exercise - Ex2 Use Case Model](./Ex2-UCM)

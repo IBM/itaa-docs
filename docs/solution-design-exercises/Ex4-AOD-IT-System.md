@@ -48,3 +48,5 @@ Next we are going to add the steps to the diagram. First select the connector be
 Given both the flow and the step details, you may want to consolidate steps and clean up the diagram a bit so that the story flows without excess amount of steps.   The other thing you can control in Usage Scenario diagram is being able to *hide* elements (e.g. subsystems, Logical Components, Logial Nodes). Select LC_Online Training Manger, select the Attributes tab on the right side, and change the slider for Node Status to be disabled.  Do the same for LC_Collaboration Services.  After this, your diagram should look like:
 
 ![Final Usage Scenario](./images/usage_scenario_2.png)
+
+[Next Exercise - Ex5 ADs and Traceability](./Ex5-ADs-Traceability)

@@ -35,3 +35,7 @@ Change the "Icon Name" for the LC_Application and Services Hub to be 'applicatio
 Note adding in detailed descriptions for all of the components and subsystems is essential to helping a reader understand the solution.
 
 <img src="./images/service_view_final.png" alt="Stylized AOD Services View" style="zoom:150%;" />
+
+
+
+[Next Exercise - Ex4 AOD IT System View](./Ex4-AOD-IT-System)

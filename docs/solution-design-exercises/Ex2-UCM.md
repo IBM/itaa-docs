@@ -79,3 +79,9 @@ Next click on the left arrow (upper left) to exit the diagram. Next click on the
 Click Save.
 
 Reopen the Use Case diagram and select File > Export and save a .png file for the diagram that you can upload.
+
+
+
+
+
+[Next Exercise - Ex3 AOD Services View](./Ex2-AOD-Services)
