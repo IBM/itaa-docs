@@ -101,7 +101,7 @@ Clicking on **Open** will then open the architecture, displaying the Table of Co
 
 ### Workspace - Local
 
-The Workspace is an area in which a set of Architectures, referenced by the user, can be located. In the Community Edition, all architectures are located on your local filesystem, thus the label of Local for the Workspace. The full hosted version of the tool, [IBM Architect Assistant](https://www.ibm.com/us-en/marketplace/architect-assistant?mhsrc=ibmsearch_a&mhq=Architect%20Assistant), presents 3 workspaces: Private, Collaboration and Bookmarks as this tool maintains a rich collaborative architecture repository
+The Workspace is an area in which a set of Architectures, referenced by the user, can be located. In the Community Edition, all architectures are located on your local filesystem, thus the label of Local for the Workspace. The full hosted version of the tool, IBM IT Architect Assistant), presents 3 workspaces: Private, Collaboration and Bookmarks as this tool maintains a rich collaborative architecture repository
 
 On each architecture card there is a set of options available to you on the "more" **...** menu. Always available on all architectures everywhere is **Copy**.  This requests a new copy of the architecture to be created, owned by the invoker. Scenarios for copying include implicit versioning or starting a new project with an initial starting point. In addition, as an owner of an asset you will have the ability to select **Delete** off of the same menu. 
 
