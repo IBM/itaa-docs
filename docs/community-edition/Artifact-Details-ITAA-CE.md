@@ -295,7 +295,7 @@ An alternative style for a Component dynamic model is the collaboration view.  H
 
 Here the connectors are typed as Events with 4 core attributes: Number (a value showing order in a sequence), Name and Description, and then Type.  Type, if specified, must be selected from and existing **Entity** from the Logical Data model.  The purpose of this Type is to be able to identify the specific "event type" (or payload).
 
-![Collaboration View of Component Model](/Users/glcraig/Documents/GitHub/itaa-docs/docs/images/collab-view.png)
+![Collaboration View of Component Model](../images/collab-view.png)
 
 ([Back to Top and TOC](#cognitive-architect---detailed-authoring-by-artifact-type-v35))
 
