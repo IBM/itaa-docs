@@ -47,9 +47,9 @@ A draft explaining the notation standard is [available for review](../Archi-diag
 
 To resolve this the user can select the Logical Node in error and click on the **Select from existing** button (at the bottom of the Attributes tab of the Format panel) and point to the existing Logical Node, indicating you are reusing the same element. 
 
-<img src="../../images/Select-from-existing.png" height="244px" alt="Select from existing button" />
+<img src="../images/Select-from-existing.png" height="244px" alt="Select from existing button" />
 
-<img src="../../images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
+<img src="../images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
 
 
 
@@ -79,7 +79,7 @@ Getting started with Architect Assistant depends on your usage intent. The most 
 
 In each case the fundamental construct is an architecture. An architecture is comprised of a set of interrelated artifacts many of which share a set of elemental architecture building blocks (or elements). The best way to visualize this structure is through Architect Assistant's Table of Contents for any architecture.
 
-![Architect Assistant - Table of Contents](../../images/CA-TOC-2.1.png)
+![Architect Assistant - Table of Contents](../images/CA-TOC-2.1.png)
 
 The ToC, shown above, is the default for architectures created in the tool. This standard structure directly supports the details of a specific solution architecture, but can also be used to manage a set architecture building blocks which are described as a **architecture pattern** within the tool.  This may be a library of reusable standard *parts* or a more integrated set of reusable content.  These *architecture patterns* typical get used as a source resource for copying a subset of the pattern asset into a target architecture.  This is useful to be able to consistently use these building blocks in multiple architecture.
 
@@ -89,7 +89,7 @@ Note that an architecture is what is addressable via search, can be edited, copi
 
 ## Workspace, Search, and [Dashboard]
 When a user logs into Architect Assistant they are presented with two (2) or potentially three (3) tabs.  
-![Main Navigation](../../images/main-navigation-ITAA.png)
+![Main Navigation](../images/main-navigation-ITAA.png)
 
 The two primary tabs (sections) of the tool are **Workspace** and **Search**. **Search** is used to discover existing assets found in the Public and As-Is repositories. **Workspace** is where a user has access to a specific set of architectures. If a user is the owner of 1 or more architectures that are discoverable via search, then the **Dashboard** tab will be available.  The Dashboard provides information about who has made copies of the user's "published" architectures. 
 
@@ -98,13 +98,13 @@ The two primary tabs (sections) of the tool are **Workspace** and **Search**. **
 ### Search
 When a user navigates to the Search page, they are presented with the **top trending public assets** along with a search bar.  
 
-![Search Page](../../images/ITAA-search.png)
+![Search Page](../images/ITAA-search.png)
 
 Currently the search is made against a set of keywords and tags as well as the text of the Title of the architecture.  Each architecture can have a set of tags associated with them. These include the applicable **Industry(ies), Technology(ies), and Tags**.  
 
 
 
-![Basic Architecture card - Search result](../../images/asset-card-search.png)
+![Basic Architecture card - Search result](../images/asset-card-search.png)
 
 
 
@@ -113,11 +113,11 @@ In the above image, it can be seen that the tags are displayed on the architectu
 ### As-Is
 Any user of the system can choose to have a private architecture that they own, discoverable via search. This property is enabled/disabled via the architecture information page.  The information page is accessible via the info toolbar button of an open architecture. This architecture information page is where an asset owner can change the architecture name and other attributes such as client, opportunity number, tags, etc.
 
-![Info toolbar icon](../../images/Info-toolbar-button.png)
+![Info toolbar icon](../images/Info-toolbar-button.png)
 
 If you are the architecture's owner and you currently have edit control on the architecture, the **Share As-Is** slider control is enabled to turn **On** or **Off**.  When on, there is a "shareable" URL available for copy.
 
-![Share As-Is control](../../images/As-Is-Control.png)
+![Share As-Is control](../images/As-Is-Control.png)
 
 This shareable link has a special format. The URL will be of the form &lt;IT Architect Assistant server&gt;/architectures/**Social**/...  When a URL of this form is used to access the identified architecture, two actions occur prior to redirecting to a URL where **Social** is replaced by **Collaboration**.  First a check is made to see if the target architecture still has "As-Is" property enabled. If not, the URL is rejected. If the architecture does have "As-Is" property enabled, a check is made to see if the logged in user is currently a "collaborator" for the target architecture and if not, they are added as a *Viewer* on the architecture's collaboration team. Then the URL is rewritten and forwarded, resulting in opening the architecture from the user's Collaboration Workspace tab. 
 
@@ -127,7 +127,7 @@ A second part of this Sharing (supporting search), is the checkbox to set the ar
 
 Any architecture returned via search will have a minimum of "Viewer" access for all users. Thus the architecture card's additional menu will include **Copy**.  This permits the user to create a complete copy of the architecture by supplying a new unique name for the resulting Copy.
 
-![Create a personal copy](../../images/copy-architecture-form.png)
+![Create a personal copy](../images/copy-architecture-form.png)
 
 This is a fundamental operation to support rapid reuse of an asset. Once you have created a personal copy it can then be tailored to meet your needs. Many of the public, curated architectures are Reference Architectures or Reference Solutions, ideal for tailoring and generating a specific solution architecture. 
 
@@ -141,13 +141,13 @@ The result of a search produces a set of cards for the architectures matching th
 
 In all contexts an Architecture card has many of the same elements displayed. The architecture name is prominent on the top left with an "additional menu" identified via the ellipses **...** in the upper right corner. The color of the top half of the card along with the text and icon at the bottom of the colored section identify the type of asset. In the bottom half of the card (when you are not hovering over it), you will see a set of optional tags. And at the bottom you may see 0-2 *metrics* displayed, depending on context and whether or not the architecture is As-Is or a public curated architecture.
 
-![Basic Architecture card - Search result](../../images/asset-card-search.png)
+![Basic Architecture card - Search result](../images/asset-card-search.png)
 
 In the card above, you see a public *reference architecture*. As such there are two displayed metrics. The first, *copied* will be associated with both public assets and As-Is assets. It shows the number of unique copies that have been made by users. The second metric, *Rank*, is unique to public assets. Rank is computed daily and rank orders all public assets based on the number of copied made during the past 30 days. So in the example, 9/19 indicates this architecture had the 9th most number of copies made in the past 30 days when comparing all 19 public assets. Non-searchable architectures will not have any metrics computed or displayed on the corresponding architecture card.
 
 When you hover over an architecture card, the display changes.
 
-![Architecture card - hover view](../../images/asset-card-hover.png)
+![Architecture card - hover view](../images/asset-card-hover.png)
 
 The display will provide the architecture name and then two buttons, **Open** and **Quick View**. Clicking on **Quick View** opens up a summary panel on the right side of the browser. This quick view will include Type, Name, Tags, the Overview text and a list of the populated Artifacts.  If this is a private asset, the information about the owner will also be displayed.  The bottom of this Quick View is the **View Detail** button which performs the same operation as the **Open** button on the main card.
 
@@ -157,7 +157,7 @@ Clicking on **Open** will then open the architecture, displaying the Table of Co
 
 In general, if you choose to open an architecture discovered via search you will open in **View mode**. And most will use this detail viewing as an opportunity to decide how they wish to use the asset. When an architecture is open on the primary TOC view (i.e., not within an artifact instance), there are a set of toolbar buttons available on the upper right part of the display, immediately under the Workspace and Search tabs. Two of these are more commonly used while reviewing a discovered architecture. 
 
-![Bookmark and Copy toolbar buttons](../../images/bookmark-copy-toolbar-buttons-2.1.png)
+![Bookmark and Copy toolbar buttons](../images/bookmark-copy-toolbar-buttons-2.1.png)
 
 First, the bookmark button, which allows you to add a link to this architecture to your bookmarks to either locate it more quickly later or to reference the asset for fine-grained copy and paste. Second is the copy button that allows you to create your own **private read-write** copy of the complete architecture. If you choose to create a private copy, you will supply a unique architecture name and optionally provide client name, opportunity number and tags.  Once the copy has been created you will be taken to your Private Workspace view where you can then open this newly created copy.
 
@@ -167,7 +167,7 @@ First, the bookmark button, which allows you to add a link to this architecture 
 
 The Workspace is an area in which a set of Architectures, referenced by the user, can be located. The default workspace tab, your **Private Workspace**, maintains all architectures owned by you. These are read-write assets that will typically be associated with specific solution designs that you are working on. The default sort order is by name, you can temporarily select to sort by most recently modified. You can also filter the list of architectures visible by selecting 0 or more Client Names and 0 or more Tags. This makes it very easy to locate specific architectures within your workspace.
 
-![Main Navigation](../../images/main-navigation-ITAA.png)
+![Main Navigation](../images/main-navigation-ITAA.png)
 
 The second workspace tab is labeled **Collaboration**. Here you will find all architectures that have been shared with you. These are architectures owned by someone else and they have either explicitly shared access with you by adding you as a collaborator or they have chosen to share the architecture anonymously by marking it **As-Is**. Once you follow a link to open an As-Is architecture you are immediately added as a Viewer on that architecture. 
 
@@ -185,14 +185,14 @@ Back on the private workspace where you find the set of architectures you own, t
 
 If you have edit control, when you open the architecture you will be able to author any of the contained artifacts.  Earlier we showed the standard TOC for an architecture. Let's classify the individual artifacts to help setup common user experience for authoring. First, there are artifacts that have exactly one instance and thus edit them directly and another set of artifacts in which you will edit individual artifact instances. The Overview, Business Challenge, and System Context each only have a single instance. So when selecting these artifacts in the TOC, the directly editable content appear on the right side with the ability to **save** your changes. Both the Overview and Business Challenge are rich text based artifacts, so the "editor" is a lightweight rich text enabled text box. The System Context is a diagram and thus the editor is the tool's MxGraph-based diagram editor. All other artifacts support multiple instances, so selecting such an artifact (for example Functional Requirements) will lead to the right side being a list (card style) of the currently existing instances plus a card-like control (**Plus sign**) that you can click on to create a new instance.
 
-![Artifact Instance List](../../images/artifact-instance-list.png)
+![Artifact Instance List](../images/artifact-instance-list.png)
 
 Clicking on the Add instance button will prompt for the minimal set of properties to uniquely define the instance (usually just name, but sometimes also an id). From a basic user experience perspective, there are four types of artifacts and therefore artifact instance types: 1) Form-based text artifacts, 2) Free form text artifacts, 3) Diagram artifacts, and 4) a diagram overlay artifact. 
 
 ### Form-based text artifact types
 The first type includes: Use Cases, Functional Requirements, Non-Functional Requirements, Architecture Decisions, Architecture Principles, Risk, Assumptions, Issues, and Dependencies.  These typically would be viewed outside the tool as tables each with a very specific structure (attributes) based on the information represented by the artifact type where each row (or record) corresponds to a single artifact instance. Since the editor is form-based, you will have individual fields (attributes) editable by their own UI control.  In some cases, an attribute value may be a reference to an architectural element, typically presented via a drop-down list.
 
-![Form Based Editor - Functional Requirement](../../images/fr-editor-form.png)
+![Form Based Editor - Functional Requirement](../images/fr-editor-form.png)
 
 ### Free form text artifacts
 The second type of artifact from a UI perspective includes **Notes**. Notes are intended to easily allow any miscellaneous content to be attached or associated with an architecture that otherwise doesn't have a structured artifact prescribed. Each Note is a standalone entity which includes Rich Text (including embedded images) along with file attachments. Here the editor is a specialized rich text editor. There is an option to create (manage) a set of labels or tags that can then be added to Notes. The visible Note instances can then be filtered based on the applied labels.
@@ -200,7 +200,7 @@ The second type of artifact from a UI perspective includes **Notes**. Notes are 
 ### Diagrams
 The third type of artifact provides the richest user experience. These are specialized diagram types all of which are delivered by a custom *MxGraph-based* diagram editor. MxGraph is an open source framework that delivers client side JavaScript diagramming capabilities.
 
-![System Context Diagram - MxGraph Editor](../../images/system-context-diagram.png)
+![System Context Diagram - MxGraph Editor](../images/system-context-diagram.png)
 
 Above is a System Context diagram in Architect Assistant. Let's look at the various parts of the editor. 
 
@@ -214,7 +214,7 @@ In addition to the diagram specific palette, there will always be an *Annotation
 
 Below is the same System Context diagram (using older deprecated drawing elements), with the pink cloud shape selected. Note that the format panel only shows the Style, Text and Arrange tabs; the Attributes tab is missing.
 
-![System Context Diagram - Annotation](../../images/annotation-symbol-selected.png)
+![System Context Diagram - Annotation](../images/annotation-symbol-selected.png)
 
 #### Existing element palettes
 
@@ -222,13 +222,13 @@ Also available are a set of palettes that represent the reusable architecture el
 
 With the exception (currently) of Existing Nodes in AOD IT System View, dragging an existing element onto a diagram will use the default icon for the element type.  As of release 2.9, Logical Nodes in IT System views, will be associated with the icon you are using within your diagrams (and are visible as such on the Existing Nodes palette).
 
-![Reuse existing nodes with icons](../../images/existing-node-icons.png)
+![Reuse existing nodes with icons](../images/existing-node-icons.png)
 
 A few diagram types have additional palettes available beyond the diagram specific palette and the annotation palette. Those will be detailed in sections specific to those diagram types.
 
 In general you add something from a palette onto the drawing canvas via a drag operation. Select a symbol and drag from the palette to where you want to place it on the canvas. If you just click on a symbol, the symbol will get added at a random location on the canvas. All non-line/connector symbols have a "bounding box" which includes anchor points where connections can be made by the endpoint of a line/connector symbol. When connecting the end of a connector to a symbol you will want to see a "green" connection dot or green bounding box outline appear before releasing the mouse to make the connection. Otherwise, you will have just moved the line's endpoint without accomplishing making a connection.
 
-![Connecting symbols](../../images/making-connection.png)
+![Connecting symbols](../images/making-connection.png)
 
 The start state for the above graphic is a connector (highlighted in red along with error message) whose one endpoint is not connected. The arrow head end has been grabbed using the mouse and the mouse moves over the edge of the target system. When positioned properly, you see the anchor points (the tiny blue 'x's), and the "hot green dot" shows a selected anchor is active. Releasing the mouse will make the connection (as per earlier version of the diagram) and the error will be removed.
 
@@ -282,25 +282,25 @@ In the editor for a usage scenario, there are no drawing palettes. Instead you a
 
 In addition to adding and associating steps to connectors, you can also select any non-connector symbols and "disable" them.  The editor then will "gray-out" these disabled symbols.
 
-![Usage scenario](../../images/sample-usage-scenario.png)
+![Usage scenario](../images/sample-usage-scenario.png)
 
 #### Misc Diagrams
 
 As briefly noted earlier, the Misc Diagrams have a different purpose. Misc Diagrams are based on the same MxGraph framework as the other diagram types but are delivered without coupling to a specific architecture [diagram type] meta-model. Here all drawing elements are *annontations* (no attached meta-data). You do have a richer set of drawing palettes to support creation of org charts, business process flows, C4 diagrams, etc.   Thus you can use IT Architect Assistant to create diagrams not supported as first class citizens by the underlying architecture meta-model.  As will be described shortly, you can also start with this diagram style (as a **sketch**) and later, if appropriate, convert the diagram into a supported architecture diagram. The other feature supported in Misc Diagrams is importing an existing Draw.io authored diagram. This import is provided via the *File > import draw.io diagram* menu item.
 
-![Usage scenario](../../images/import-drawio.png)
+![Usage scenario](../images/import-drawio.png)
 
 #### Render Typed Diagram and Convert Elements
 
 Closely related to the introduction of the Misc Diagram is the ability to apply architecture meta-model attributes to an object that doesn't currently exhibit any such attributes. The first part of this is to be able to create an architecture diagram from an existing Misc Diagram. Each artifact type that is represented by a diagram now has the option on the "Add diagram" dialog, to *Render from miscellaneous diagram*.
 
-![Render from Misc Diagram](../../images/render-from.png)
+![Render from Misc Diagram](../images/render-from.png)
 
 Clicking on this link will provide you with the list of current Misc Diagrams available in the architecture. Completing the "render" operation will add just the meta-data for the diagram itself appropriate for the type of diagram being added.
 
 This is generally only valuable if you can also then **convert** the associated drawing elements (annotations) into architectural elements, thus adding or associating the corresponding element type meta-data. To convert a drawing element, select it, then right-mouse click to bring up the context menu, and then select Convert > *type of architecture element to covert to* from the menu. (Note you will only be presented with the element types supported by the drawing element kind: line or shape AND the corresponding diagram type.) Via repeated application of element conversion, you can take any sketch or imported diagram and manually convert these to full-fledged architecture diagrams while retaining the original look and feel.
 
-![Convert to element type](../../images/convert-to-element.png)
+![Convert to element type](../images/convert-to-element.png)
 
 
 
@@ -310,11 +310,11 @@ This is generally only valuable if you can also then **convert** the associated 
 
 Navigation within the tool is managed in several ways. From a top-level landing pages you have the two-level navigation tabs presented as seen here.
 
-![Main Navigation](../../images/main-navigation-ITAA.png)
+![Main Navigation](../images/main-navigation-ITAA.png)
 
 Within an architecture there are two different navigation mechanisms. When you are not within an artifact instance, the TOC provides the way to select an artifact type to view or edit. In or out of an artifact instance, there is a "breadcrumb" that supports navigation to all levels of the tool. If a particular level of a breadcrumb represents multiple options at that level, there is a "down arrow" that will present you with the available elements at that level to select and navigate to.
 
-![Breadcrumb Navigation](../../images/breadcrumb-navigation.png)
+![Breadcrumb Navigation](../images/breadcrumb-navigation.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
@@ -340,11 +340,11 @@ What about fine-grained copying between architectures? Today there are two appro
 
 For diagrams, you likely will only want to copy part of a source artifact instance (diagram). To suport this,  Architect Assistant provides the **Resource** menu.  Within that menu there are three choices: Open from Private, Open from Collaboration, and Open from Bookmarks.
 
-![Resource copy from menu](../../images/resource-copy-menu.png)
+![Resource copy from menu](../images/resource-copy-menu.png)
 
 This allows you to select from 3 sets of architectures to copy from. Open from Private will list all of your private workspace architecture, Open from Collaboration will list all of the architectures in your collaboration workspace, while Open from Bookmarks allows you to access public assets that you have bookmarked. The user experience is then to select the architecture you want to copy from. Once an source architecture is selected you will be present with the list of architecture artifact instances that match the artifact type of your target diagram. (Only copying between the same artifact type instances is supported.) You then will select the artifact instance and that instance is opened read-only as an addition tab within the editor. You can then select a portion (or all) of the content of the source diagram and select copy, then click on the tab of your target diagram and select paste.
 
-![Target diagram with read-only source diagram tabs](../../images/source-target-diagrams.png)
+![Target diagram with read-only source diagram tabs](../images/source-target-diagrams.png)
 
 Note, it is critical that the paste succeeds and there is a restriction that the **name** of any "sharable/reusable" architecture element within the architecture is **unique**! So how does the tool handle a paste operation that implies the addition of "new" elements with conflicting names? When the user triggers the paste action, a list of all the elements that result in a name conflict are presented to the end-user to determine how the conflict is to be resolved.  The user is given 3 choices which can be summarized: 1) keep both, 2) keep existing, or 3) replace target.   
 
@@ -356,19 +356,19 @@ Note, it is critical that the paste succeeds and there is a restriction that the
 
 Note, the conflict element list may include "invisible" elements that are "reference" attributes of one or more of the visible elements being pasted!
 
-![Handle name conflict on past](../../images/paste-conflict.png)
+![Handle name conflict on past](../images/paste-conflict.png)
 
 As you can see, from the above image, you can select to apply the same conflict resolution approach to all conflicting elements or select individually. Note if you decide to create a copy (keep both) and later want to merge, you can always point to an existing element via the "Select from existing" option on the attributes panel (see Shared Elements discussion earlier)!
 
 In a mechanism very similar to the Resource menu, you can copy text-based artifact instances, e.g., an NFR or a Use Case, directly from one architecture to another. This is triggered on the "Add  <element>" dialog, in the case below, Add Non Functional Requirement.
 
-![copy from another architecture](../../images/CopyFromTextArtifact.png)
+![copy from another architecture](../images/CopyFromTextArtifact.png)
 
 
 
 Click on the Copy xxx from another architecture to get a selection menu equivalent to the Resource > Copy from menus found on the diagrams.
 
-![Select from architecture type pool](../../images/text-copy2.png)
+![Select from architecture type pool](../images/text-copy2.png)
 
 
 
@@ -382,11 +382,11 @@ Through the course of authoring an architecture, various architecture elements w
 
 To selectively remove orphan elements, click on the "trash can (Manage orphan elements)" icon within the architecture.  **[Note, this toolbar button will only show if you have exclusive edit rights for the architecture and you are at the TOC level, i.e. not editing an artifact instance. If the architecture has multiple collaborators that are editors, then you must obtain the architecture lock (Get pen and lock).]**
 
-![Manage Orphan Element button](../../images/manage-orphans.png)
+![Manage Orphan Element button](../images/manage-orphans.png)
 
 This will bring up the manage orphan elements panel.  Here you can select all, select all by type, or drill down and select individual orphan elements, and then click **Delete**.
 
-![Manage Orphan Element panel](../../images/manage-orphan-panel.png)
+![Manage Orphan Element panel](../images/manage-orphan-panel.png)
 
 ## Import and Export
 
@@ -394,11 +394,11 @@ This will bring up the manage orphan elements panel.  Here you can select all, s
 
 There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. IT Architect Assistant provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
 
-![Import/Export Toolbar button](../../images/import-export-toolbar.png)
+![Import/Export Toolbar button](../images/import-export-toolbar.png)
 
 - Above you see the toolbar button to access the import and export utilities. First you select if you want to export or import.  Note there is also a link to an *import template* file to download and modify in order to be able to import from an Excel spreadsheet. Selecting Export and clicking Next will take you to a dialog where you can choose the type of export. 
 
-   ![Export Options](../../images/export-options.png)
+   ![Export Options](../images/export-options.png)
 
    There are three* choices presented:
 
@@ -420,7 +420,7 @@ There is a lot of value of having everything associated with a Solution Architec
 
      The general structure of the Customize Content, build document structure, dialog (shown below), provides the architecture ToC on the left and the document structure on the right.  You can drag sections of the ToC into the document structure and rename, add section titles, and move content sections up and down. (Note, only ToC sections that have content in the architecture show up on the left. Also there is the special, Architecture-Wide Elements, section in the ToC, which provides a summary of all core architecture elements available across the architecture.) Double click on a section title (right-side) to edit. When you edit the text of a section that has populated content (from the ToC) you are shown the source section (ToC) name to the right.
 
-     <img src="../../images/custom-word-report.png" alt="Create custom word report structure" style="zoom:60%;" />
+     <img src="../images/custom-word-report.png" alt="Create custom word report structure" style="zoom:60%;" />
 
      Click **Save** to save the structure as a custom template.  Click **Export** to use the current structure to generate the document.
 
@@ -432,7 +432,7 @@ There is a lot of value of having everything associated with a Solution Architec
 
    - **GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
 
-     ![Export to Github Toolbar button](../../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any IT Architect Assistant or IBM IT Architect Assistant hosted system.
+     ![Export to Github Toolbar button](../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any IT Architect Assistant or IBM IT Architect Assistant hosted system.
 
      - When you select this Export format you will provide the repository URL and access token per instructions below.  **[A SSH URL with a mandatory access token is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). You can supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
      - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the **Clone/Download** button for your repository and copying the **ssh URL**. (A sample HTTPS URL for a public Git repository is: https://github.com/IBM/itaa-docs.git.)
@@ -452,11 +452,11 @@ If you choose Import you are presented are two* choices:
 
   - When you select this Import format you will be prompted for a (SSH) URL to the repository and an access token.  You will then get to select from the available archive files the one you wish to upload.
 
-  - The steps to import start with the Add Architecture cell on your private workspace.  Here you select **Load**.  <img src="../../images/upload-architecture.png" alt="Upload an architecture" style="zoom:80%;" />
+  - The steps to import start with the Add Architecture cell on your private workspace.  Here you select **Load**.  <img src="../images/upload-architecture.png" alt="Upload an architecture" style="zoom:80%;" />
 
   - Next select GitHub for the source of the archive file.  
 
-    ![Upload an architecture](../../images/load-from-github.png)
+    ![Upload an architecture](../images/load-from-github.png)
 
   - You will then provide the repository URL and access token per instructions below.  **[A SSH URL with a mandatory access token is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). You can supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
 
@@ -481,27 +481,27 @@ Related to Import and Export is the support for offline editing. The big picture
 
 The offline mode works with a file system based data store for architectures. The current offline mode support allows you to create a new architecture (offline) and edit that locally.  Also supported is a pre-packaged copy of the IBM Architecture Node Library asset that can be used to copy-and-paste from (see Resource copying). To download the app and  the IBM Architecture Node Library asset, click on the *more information* icon on IT Architect Assistant, and click **Download Single-User Community Edition** or go to the link above.
 
-![Download Offline Mode App](../../images/download-offline.png)
+![Download Offline Mode App](../images/download-offline.png)
 
 In addition, you are also able to download individual architectures via the architecture card menu item). Note this offline download, as an archive file, is what is exported to a Git repository via the GitHub import/export mechanism. To make the downloaded architecture available in the IT Architect Assistant, Community Edition, expand the archive file contents into the *Workspace* folder within the Community Edition installation directory.
 
 
 
-![Download an architecture](../../images/download-arch-menuitem.png)
+![Download an architecture](../images/download-arch-menuitem.png)
 
 You can then upload an asset from your local machine into the Cloud, creating a new architecture asset in your Local Workspace.   To avoid conflicts, the "uploaded" architecture may be auto-renamed to be certain that no existing architecture is "overwritten".  The **Load** button is on the *Add Architecture Solution* card on your workspace. 
 
-![Upload an architecture](../../images/upload-architecture.png)
+![Upload an architecture](../images/upload-architecture.png)
 
 After you click load you will select to load from *local*.  Then you can select the folder from your local file system that corresponds to the architecture you wish to upload.  
 
-![Upload an architecture](../../images/load-from-local.png)
+![Upload an architecture](../images/load-from-local.png)
 
 With the ability to download an architecture and work with it offline, this also represents a standard interchange format.  This makes it possible to copy an architecture from the IBM Internal instance of IT Architect Assistant to a client specific or shared instance of the IBM IT Architect Assistant as well as anyone's copy of IBM IT Architect Assistant, Community Edition.
 
 If you want to perform a selective "update" of an existing architecture via a offline instance *upload* you need to open the architecture to be updated (be sure and have exclusive edit privileges) and click on the *Go offline / Go online* toolbar button.  Then select *Upload offline version*.
 
-![Upload an architecture](../../images/replace-from-offline.png)
+![Upload an architecture](../images/replace-from-offline.png)
 
 Clicking Next will open a file finder, whereby you can locate the local folder with the updated offline architecture.  You will then be presented with a list of all of the artifact instances available in the offline architecture. You can then select those instances that are to replace their counterpart in (or just add to) the online architecture instance.   **Note - this will overwrite any elements in the online architecture with the content  selected or included via the selection from the offline source. You  need to be careful and very aware of team collaboration activity if working offline on an architecture in which there are multiple collaborating authors.** (Thus the default from the Add Architecture tile is to only support uploading to a new architecture.  Choosing to upload a new architecture allows you to selectively copy-and-paste into the shared collaborative *master* architecture.)
 
@@ -515,35 +515,35 @@ Let's take a step back and realize that Solutioning tends to be a team sport.  E
 
 To explicitly share, click on the share button.
 
-![Share an architecture](../../images/share-button.png)
+![Share an architecture](../images/share-button.png)
 
 Here you can see the current collaborators and their role (Admin, Editor, or Viewer).  Click Invite to locate a user or group to add as collaborators.
 
-![Select collaborator](../../images/collab-lookup.png)
+![Select collaborator](../images/collab-lookup.png)
 
 
 
 Once a user has been selected, choose the role, and click Invite. 
 
-![Choose role and invite](../../images/select-role.png)
+![Choose role and invite](../images/select-role.png)
 
 In each of these cases, once the sharing has occurred, the architecture shows up on the users' Workspace > Collaboration tab.
 
 A collaborator that has Editor or higher rights has the ability to modify the architecture.  The platform implicitly "locks" the current artifact instance being worked on by an editor.  When you enter an architecture the "Overview" is locked.  Collaborators can see this lock on the (artifact instance) card view and on the architecture toolbar.
 
-![Artifact Instance locked by peer](../../images/currently-edited-instance.png)
+![Artifact Instance locked by peer](../images/currently-edited-instance.png)
 
 It is the pen icon and collaborator's name that indicates this artifact instance is currently being edited by someone else.  Note from the menu you still have the ability to open the artifact instance read-only via selecting **View**.  This same View menu item is available even when an artifact instance is not currently locked.  This allows you to view the artifact and not lock out any of your peers.
 
-![Read only](../../images/select-viewonly.png)
+![Read only](../images/select-viewonly.png)
 
 It is also possible as an owner/collaborator with a minimum of Editor role to lock (for write) the entire architecture.   This is done at the architecture card level on the workspace view (either Private or Collaboration).  If currently no one is editing within the architecture you will see the "box" icon on the architecture card.   In this case you will have the ability to **get pen**. 
 
-![Unlocked prepare to get pen](../../images/pen-in-box-get.png)
+![Unlocked prepare to get pen](../images/pen-in-box-get.png)
 
 Once you have acquired the pen, then all other collaborators will only be presented with a read-only view of the architecture.   You can **release pen** to unlock the architecture returning it to default behavior.
 
-![Holding pen option to release](../../images/hold-lock-return.png)
+![Holding pen option to release](../images/hold-lock-return.png)
 
 In addition to manipulating a shared asset directly one can author content offline via Excel spreadsheet and import (update) content in bulk. Also, although not direct, one can also edit a copy of an architecture in offline mode (single user mode) and bring that updated content back into the cloud and then use Resource > Copy from to move/copy updated content back into a  master [shared] architecture asset.
 
@@ -573,7 +573,7 @@ It should also be pointed out that this archive file also serves as an *intercha
 
 The comment feature supports architecture reviews. In an open architecture, you will find the comment tool bar button, that will open the comment panel.   
 
-![Comments panel](../../images/comments-panel.png)
+![Comments panel](../images/comments-panel.png)
 
 This panel let's you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …). Given the nature of the single page web app, while you have the comment pane open, you will not see incoming comments (in real-time) without an explicit refresh.
 
@@ -583,11 +583,11 @@ This panel let's you select an artifact type (section) within the architecture a
 
 When collaborating with a team authoring an architecture, it is valuable to be able to understand the change history.  You can review major change events via the Change Log. This does not track the actual change data, but identifies the change action and the responsible party.  To display the Change Log, click on the corresponding toolbar button.
 
-![Show Change Log button](../../images/change-log.png)
+![Show Change Log button](../images/change-log.png)
 
 
 
-![Show Change Log panel](../../images/change-log-panel.png)
+![Show Change Log panel](../images/change-log-panel.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
@@ -597,11 +597,11 @@ Most of the time, you will be reviewing an architecture from an artifact perspec
 
 A new co-relationship feature allows you to explore the relationships within an architecture from the perspective of the primitive architecture elements.  Open the co-relationship panel via the Co-relationship toolbar button.
 
-![Co-Relationship button](../../images/co-relationship.png)
+![Co-Relationship button](../images/co-relationship.png)
 
 The Co-Relationship Table (panel) displays the architecture elements by type. You can then select an element and drill down and see what diagrams that element appears on, and what other elements it is related to via a relationship property.
 
-![Co-Relationship Table](../../images/co-relationship-table.png)
+![Co-Relationship Table](../images/co-relationship-table.png)
 
 
 
