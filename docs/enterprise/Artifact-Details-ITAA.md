@@ -48,7 +48,7 @@ Typically the diagram will then show connections (**connector**) between each ac
 
 The current meta-model restricts an architecture having only one System Context diagram and within that System Context diagram having only 1 target system element. There are several reasons for this restriction, most notably, that when more than one solution is included, the distinction between out-of-scope, boundary elements (**actors**) and in-scope white box functionality (**logical components**) become very confused. Within this "one solution architecture - one Architect Assistant asset" constraint, one can still document separate "phases" of a phased solution. In this case some of the actors and actor to system interactions (connector) are only applicable within certain project phases. Use colors and other annotation within the system context diagram to allow the overall system view for a particular phase to be identifiable.
 
-![Architect Assistant - Table of Contents](../images/system-context-multiple-scenarios.png)
+![System Context diagram](../images/system-context.png)
 
 *System Context diagram with multiple phases or scenarios*
 
@@ -164,7 +164,7 @@ Logical Component - this element type is crucial to the information communicated
 
 ![Logical Component Attributes](../images/lc-attributes.png)
 
-Logical Component Primary capability [*coming soon*].  This property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
+Logical Component Primary capability property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
 
 Logical Component Implementation - Logical vs. Physical.  Frequently when communicating about the functional aspects of a solution, it is important to take the default "Logical" perspective without exposing implementation choices. At the same time it is known that when the solution is deployed one or more physical implementations will actually deliver the capability.  The attribute *Implementation* allows the author to associate a set of implementation choices. In a final solution architecture, only the decided upon implementation will be linked. Within a Reference Solution / Reference Architecture it  a set of choices may be provided as insight in how the solution can be realized.  It is only through this implementation attribute that one can author and edit the details of a **Physical Component**.
 
@@ -186,10 +186,9 @@ The AOD Enterprise View seeks to depict a solution through its Business Architec
 ### AOD IT System View
 Another common way to describe the system is to focus on a logical deployment view. The IT System View is comprised of Locations, Subsystems, Logical Nodes, and Logical Connections. In the more formal Operational Model, Nodes are containers into which functional behavior is deployed. In the more informal IT System View, the details of the deployment units are essentially ignored and instead a Logical Node embodies the net contribution of capabilities available to the solution in a logical packaging within a particular location.
 
-Within IBM, this style is extremely common and is the approach promoted through sites like the [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures) (CAC). Architect Assistant has formalized this style in the IT System View. Logical Node symbols have an associated icon (an image file). Many of the common CAC node symbols are delivered via a special set of domain specific "palettes" in the IT System View. 
-Note, in addition to the node icons available via the palettes, there are two other ways to reuse standard CAC icons:
+Within IBM, this style is extremely common and is the approach promoted through sites like the [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures) (CAC). Architect Assistant has formalized this style in the IT System View. Logical Node symbols (original) have an associated icon (an image file). 
 
-- There is an Architecture Pattern published As-Is, **Icon Library - IBM Cloud Architecture Center**, that can be reused (copy and paste) via the Resource menu and contains both diagram templates as well as reusable Logical Nodes.
+There is an Architecture Pattern published As-Is, **Icon Library - IBM Cloud Architecture Center**, that can be reused (copy and paste) via the Resource menu and contains both diagram templates as well as reusable Logical Nodes.
 
 One of the validation rules enforced by the IT System View is a Logical Node must be *placed* within a Location. Thus it is not valid for a Logical Node to appear standalone within an IT System View diagram.
 
@@ -286,6 +285,18 @@ Manipulating the messages in MxGraph does require a bit of practice.  The two mo
 ![Dynamic View of Component Model](../images/CM-Dynamic-View.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
+
+### Component Model - Collaboration View
+
+An alternative style for a Component dynamic model is the collaboration view.  Here, that than using the timelines of a sequence view, you have actors and components layout with numbered flows between them. This style is particular popular to show Event Flows associated with an Event Driven Architecture.
+
+Here the connectors are typed as Events with 4 core attributes: Number (a value showing order in a sequence), Name and Description, and then Type.  Type, if specified, must be selected from and existing **Entity** from the Logical Data model.  The purpose of this Type is to be able to identify the specific "event type" (or payload).
+
+![Collaboration View of Component Model](../images/collab-view.png)
+
+([Back to Top and TOC](#cognitive-architect---detailed-authoring-by-artifact-type-v35))
+
+
 
 ## Operational Model
 The Operational Model is probably the most involved set of artifacts we create as architects. The focus of this model is to describe the placement of the workloads onto a operational environment insuring that the required service levels are met.
