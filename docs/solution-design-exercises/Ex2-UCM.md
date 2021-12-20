@@ -1,4 +1,4 @@
-# Solution Design on IBM IT Architect Assistant
+# [Solution Design on IBM IT Architect Assistant](../Solution-Design-ITAA)
 
 ## Exercise 2 - Use Case Model
 
@@ -10,7 +10,7 @@ The Use-Case Model, along with the System Context and Non-Functional Requirement
 
 ## The Use-Case Model
 
-Within IT Architect Assistant, the Use Case model is comprised to two synchronized artifact types, the Use-Case Diagram and the set of Use Cases.  For a high-level description of manipulating these artifact types within the tool refer to the [User's Guide](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#use-cases-and-use-case-diagrams).  
+Within IT Architect Assistant, the Use Case model is comprised to two synchronized artifact types, the Use-Case Diagram and the set of Use Cases.  For a high-level description of manipulating these artifact types within the tool refer to the [User's Guide](../../Artifact-Details-ITAA#use-cases-and-use-case-diagrams).  
 
 You can approach development of this model from either the perspective of a UC Diagram or from individual Use Cases (form based artifact).  Either way, a diagram represents (shows) a subset of the Use Cases in the model.  In other words you can have multiple Use Case Diagram each organized around a Theme; Subsystem; or set of Actors.
 
@@ -18,17 +18,17 @@ Let's start by working from a diagram and then drop into the Use Case forms to f
 
 Open your architecture you started working on in Exercise 1. Click on **3.1.1 Use Case Diagram** then Click on **Add Diagram**. In the pop-up, provide the name of **MyBank UCD** and click Create.
 
-On the newly opened diagram, expand the twisty for the **Existing Human** palette.  Drag on the 4 actors and arrange and shown below. Note you are reusing a set of Actors created during the construction of the System Context Diagram.
+On the newly opened diagram, expand the twisty for the **Existing Human** palette.  Drag on the 4 actors and arrange as shown below. Note you are reusing a set of Actors created during the construction of the System Context Diagram.
 
 ![Initial Actor layout](./images/actors_on_ucd.png)
 
 Next from the Use Case diagram palette, drag a new Use Case onto the canvas. Set the ID, *UC_001* and Name, *UC_Obtain Customer Relationship*. Next set the high-level Description as: *Given Client Account number and Client authentication credential return the set of customer relationships*
 
-With the Use Case select, open the **Style** tab of the Format Panel. Change the value of the style attribute *Shape (Layout)* to be Expanded instead of Collapsed.  Next you want to show that the Actor, *A_Customer Support* initiates the Use Case and the Use Case is supported by Actor, *A_Specialized Support*. To do this, connect those Actors to the Use Case.
+With the Use Case selected, open the **Style** tab of the Format Panel. Change the value of the style attribute *Shape (Layout)* to be Expanded instead of Collapsed.  Next you want to show that the Actor, *A_Customer Support* initiates the Use Case and the Use Case is supported by Actor, *A_Specialized Support*. To do this, connect those Actors to the Use Case.
 
 ![Use Case connected with actors](./images/connected_uc.png)
 
-Add the following additional Use Cases to the diagram with the corresponding initiate and support connections:
+Add the following additional Use Cases to the diagram with the corresponding initiates and supports connections:
 
 | UC ID  | UC Name                                | Description                                                  | Initiator                   | Supporter             |
 | ------ | -------------------------------------- | ------------------------------------------------------------ | --------------------------- | --------------------- |
@@ -78,10 +78,8 @@ Next click on the left arrow (upper left) to exit the diagram. Next click on the
 
 Click Save.
 
-Reopen the Use Case diagram and select File > Export and save a .png file for the diagram that you can upload.
+Typically, the Use Case Model is something that gets elaborated throughout the solution design process. It is important to start with those key Use Cases that are important to the solution Stakeholder and collectively help specify the core capabilities delivered by the solution. More detailed Use Cases and/or User Stories will usually be developed further into design. 
 
 
 
-
-
-[Next Exercise - Ex3 AOD Services View](./Ex2-AOD-Services)
+[Next Exercise - Ex3 AOD Services View](./Ex3-AOD-Services)

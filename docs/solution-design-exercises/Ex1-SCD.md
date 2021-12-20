@@ -1,4 +1,4 @@
-# Solution Design on IBM IT Architect Assistant
+# [Solution Design on IBM IT Architect Assistant](../Solution-Design-ITAA)
 
 ## Exercise 1 - System Context Diagram
 
@@ -20,13 +20,13 @@ The System Context work product, along with the Non-Functional Requirements and 
 
 To get started, after logging into IBM IT Architect Assistant, you will need to create a new architecture you will use to work through the tool exercises.
 
-On the private workshop page, hover over the "+" card and click on **Create**.
+On the private workspace page, hover over the "+" card and click on **Create**.
 
-Enter **MyBank-<your initials>** for the Architecture Name, and enter **MyBank** for the Client Name. Click  **Add**.
+Enter **MyBank-<lt;>your initials<gt;>** for the Architecture Name, and enter **MyBank** for the Client Name. Click  **Add**.
 
-The newly created architecture will then open up and you will see the Table of Contents on the left hand navigation area. For this exercise you will be working on the artifact, 2.2 System Context under section 2. Scope.
+The newly created architecture will then open up and you will see the Table of Contents on the left hand navigation area. For this exercise you will be working on the artifact **2.2 System Context** under section 2. Scope.
 
-The purpose of the System Context is to provide the scope for the solution architecture. Namely it defines the solution to be delivered as a **Target System**. It the documents the elements that interface with this Target System.  These external elements are **Actors**.  See [SCD content](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#system-context) in the tool's user guide for additional guidance. 
+The purpose of the System Context is to provide the scope for the solution architecture. Namely it defines the solution to be delivered as a **Target System**. It then documents the elements that interface with this Target System.  These external elements are **Actors**.  See [SCD content](../enterprise/Artifact-Details-ITAA#system-context) in the tool's user guide for additional guidance. 
 
 Click on the **2.2 System Context** in the Table of Contents to open up the diagram editor.
 
@@ -52,7 +52,7 @@ Your diagram should look something like the following at this point.
 
 
 
-You will add additional Actors in a bit, but for now, look at Connectors. Start by connecting A_Restricted Account View to the target system. Hover the mouse around the actor.   You should get four (light) arrow arround the actor, when they show, right click and drag to the target system until its border either turns blue or green, then release the mouse.
+You will add additional Actors in a bit, but for now, look at Connectors. Start by connecting A_Restricted Account View to the target system. Hover the mouse around the actor.   You should get four (light) arrows around the actor, when they show, right click and drag to the target system until its border either turns blue or green, then release the mouse.
 
 Do the same, this time starting at the target system and drawing a connector to A_Cusomter Account Services. By default these connectors can remain unnamed.  But often it is a good idea to describe the interaction associated with that connector.   If the description is short, you can just use that for the name.  
 
@@ -77,8 +77,10 @@ Click Save.
 
 ![Named connectors](./images/final_SCD.png)
 
-Continue to explore formatting, moving objects, etc. Save changes when you are happy with things.
+Continue to explore formatting, moving objects, etc. Save changes when you are happy with things. Note there is additional guidance for icon manipulation in the [User Guide](../../ArchVisualization).
 
+It is important to keep the SCD in synch with the rest of the architecture. Each of the Actors should appear on other diagrams and artifacts. And if a new actor gets introduced in some other artifact, it should get added to the SCD.
 
+One note about Actors, particularly in today's world of using Cloud services and SaaS applications as part of a solution. Actors are critical to the complete behavior of the solution being designed. If a service or application is configured such that it is dedicated to the target system, then it generally should not show up as an Actor but instead it will probably be represented as an implementation of a system Logical Component. On the other hand, if you have no control over the configuration of the interacting service/application then it is out of "development scope" and should be modeled as an Actor.
 
 [Next Exercise - Ex2 Use Case Model](./Ex2-UCM)
