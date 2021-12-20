@@ -1,4 +1,4 @@
-# [Solution Design on IBM IT Architect Assistant](../Solution-Design-ITAA)
+# [Solution Design on IBM IT Architect Assistant](./Solution-Design-ITAA)
 
 ## Exercise 1 - System Context Diagram
 
