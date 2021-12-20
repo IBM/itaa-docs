@@ -77,7 +77,7 @@ Click Save.
 
 ![Named connectors](./images/final_SCD.png)
 
-Continue to explore formatting, moving objects, etc. Save changes when you are happy with things. Note there is additional guidance for icon manipulation in the [User Guide](../../ArchVisualization).
+Continue to explore formatting, moving objects, etc. Save changes when you are happy with things. Note there is additional guidance for icon manipulation in the [User Guide](../ArchVisualization).
 
 It is important to keep the SCD in synch with the rest of the architecture. Each of the Actors should appear on other diagrams and artifacts. And if a new actor gets introduced in some other artifact, it should get added to the SCD.
 

@@ -1,4 +1,4 @@
-# Solution Design on IBM IT Architect Assistant
+# [Solution Design on IBM IT Architect Assistant](./Solution-Design-ITAA)
 
 ## Exercise 3 - AOD Services View
 
@@ -14,7 +14,7 @@ Within Architect Assistant the, otherwise freeform, AOD is offered in just three
 - AOD Enterprise View
 - AOD IT System View
 
-This standardization is deliberate to make it easier to reuse and compose content.  See [User Guide](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#aod-services-view) for more details about these different styled AODs. In addition to these three standard styled AODs, Architect Assistant  supports authoring walkthroughs (or Usage Scenarios) as an overlay to  any of the AOD views. This again provides a standard approach to the common practice of describing a Use Case (Usage Scenario) in the context of the solution architecture.
+This standardization is deliberate to make it easier to reuse and compose content.  See [User Guide](../../Artifact-Details-ITAA#aod-services-view) for more details about these different styled AODs. In addition to these three standard styled AODs, Architect Assistant  supports authoring walkthroughs (or Usage Scenarios) as an overlay to  any of the AOD views. This again provides a standard approach to the common practice of describing a Use Case (Usage Scenario) in the context of the solution architecture.
 
 So at this point you will start to describe the shape and decomposition of the solution architecture. The AOD Services View is comprised of *Logical Components*, the primary functional building blocks for the solution, *Subsystems* an organizing and grouping elements, and *Logical Connector* represent interactions between Logical Components.
 
