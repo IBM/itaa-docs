@@ -10,7 +10,7 @@ The Use-Case Model, along with the System Context and Non-Functional Requirement
 
 ## The Use-Case Model
 
-Within IT Architect Assistant, the Use Case model is comprised to two synchronized artifact types, the Use-Case Diagram and the set of Use Cases.  For a high-level description of manipulating these artifact types within the tool refer to the [User's Guide](../../Artifact-Details-ITAA#use-cases-and-use-case-diagrams).  
+Within IT Architect Assistant, the Use Case model is comprised to two synchronized artifact types, the Use-Case Diagram and the set of Use Cases.  For a high-level description of manipulating these artifact types within the tool refer to the [User's Guide](../enterprise/Artifact-Details-ITAA#use-cases-and-use-case-diagrams).  
 
 You can approach development of this model from either the perspective of a UC Diagram or from individual Use Cases (form based artifact).  Either way, a diagram represents (shows) a subset of the Use Cases in the model.  In other words you can have multiple Use Case Diagram each organized around a Theme; Subsystem; or set of Actors.
 
