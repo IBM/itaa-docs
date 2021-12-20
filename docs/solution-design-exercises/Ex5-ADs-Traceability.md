@@ -1,4 +1,4 @@
-# Solution Design on IBM IT Architect Assistant
+# [Solution Design on IBM IT Architect Assistant](./Solution-Design-ITAA)
 
 ## Exercise 5 - Architectural Decision and Traceability
 

@@ -1,4 +1,4 @@
-# Solution Design on IBM IT Architect Assistant
+# [Solution Design on IBM IT Architect Assistant](./Solution-Design-ITAA)
 
 ## Exercise 4 - AOD IT System View
 
@@ -6,7 +6,7 @@
 
 This exercise focuses on building an AOD that focuses more on the distribution and interaction between the workload elements of the solution via the IT System View.
 
-So at this point you will continue to describe the shape and decomposition of the solution architecture. The AOD IT System View is comprised of *Logical Nodes*, the primary functional building blocks for the solution, *Locations* which represent solution zones, *Subsystems* an organizing and grouping elements, and *Logical Connection* representing interactions between Logical Nodes.
+So at this point you will continue to describe the shape and decomposition of the solution architecture. The AOD IT System View is comprised of *Logical Nodes*, the primary functional building blocks for the solution, *Locations* which represent solution zones, *Subsystems* an organizing and grouping element, and *Logical Connections* representing interactions between Logical Nodes (and optionally Subsystems and/or Actors).
 
 Start by selecting **5.1.3 IT System View** in the ToC, then click on **Add Diagram**. Set the name of the diagram to be **MyBank System View**, then click **Create**.
 
@@ -20,7 +20,7 @@ Next add in the available actors, with the Human actors placed in the Office Net
 
 ![Initial IT System View](./images/it_system_view.png)
 
-So consider both the technical implementation choices, such as what technical service(s) will deliver the integration and messaging capability. These you could go ahead and specify these in the **Implementation** attribute for each Logical Node.  In addition, one generally would want to identify, for each Logical Node, which of the Logical Components defined in the Services Views are deployed to these nodes. For the set of exercises, we will defer both of these tasks to the more formal Component and Operational Models. In particular in the Operational Model, you can formalize what gets packaged together and deployed onto physical or virtual resources.
+So consider the technical implementation choices, such as what technical service(s) will deliver the integration and messaging capability. You could go ahead and specify these in the **Implementation** attribute for each Logical Node.  In addition, one generally would want to identify, for each Logical Node, which of the Logical Components, defined in the Services Views, are deployed to these nodes. For the set of exercises, we will defer both of these tasks to the more formal Component and Operational Models. In particular in the Operational Model, you can formalize what gets packaged together and deployed onto physical or virtual resources.
 
 ### Usage Scenario
 
@@ -45,7 +45,7 @@ Next we are going to add the steps to the diagram. First select the connector be
 
 ![Initial Usage Scenario](./images/usage_scenario_1.png)
 
-Given both the flow and the step details, you may want to consolidate steps and clean up the diagram a bit so that the story flows without excess amount of steps.   The other thing you can control in Usage Scenario diagram is being able to *hide* elements (e.g. subsystems, Logical Components, Logial Nodes). Select LC_Online Training Manger, select the Attributes tab on the right side, and change the slider for Node Status to be disabled.  Do the same for LC_Collaboration Services.  After this, your diagram should look like:
+Given both the flow and the step details, you may want to consolidate steps and clean up the diagram a bit so that the story flows without excessive amount of steps.   The other thing you can control in Usage Scenario diagram is being able to *hide* elements (e.g. subsystems, Logical Components, Logial Nodes). Select LC_Online Training Manger, select the Attributes tab on the right side, and change the slider for Node Status to be disabled.  Do the same for LC_Collaboration Services.  After this, your diagram should look like:
 
 ![Final Usage Scenario](./images/usage_scenario_2.png)
 
