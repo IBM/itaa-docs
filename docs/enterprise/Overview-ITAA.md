@@ -20,14 +20,21 @@ The Documentation is organized in the following sections:
 ## Terminology
 Before diving into details about Architect Assistant it is important to understand some key terminology used throughout the documentation.  
 
-**Logical Asset Repositories** -- Today there are 3 logical repositories of architectures: **Public**, this contains curated, read-only architectures that can be discovered via search; **Private**, every user has a set of private assets that they own, that by default are read-write and not discoverable by other users; **As-Is**, any private asset can be set as discoverable (marked As-Is) by the owner. As-Is assets are searchable and anyone following the link to an As-Is asset will be added as a "Viewer" collaborator.  
+**Logical Asset Repositories** -- Today there are 3 logical repositories of architectures: **Public**, this contains curated, read-only architectures that can be discovered via search; **Private**, every user has a set of private assets that they own, that by default are read-write and not discoverable by other users; [**As-Is**,](#as-is) any private asset can be implicitly shared (marked As-Is) by the owner. As-Is assets can be accessed by anyone possessing the As-Is URL.  A user that follows an As-Is asset URL will be add  as a "Viewer" collaborator on that architecture.  
+
+**(Note:** if the architecture you create contains confidential information or personal private information, only share the architecture by explicitly adding collaborators (do not share "As-Is").  Further, make sure any collaborators are aware of the sensitive nature of the architecture content and do not expose to others.) 
 
 **Collaboration Roles** -- All architectures have an **owner**. For private (and thus also As-Is) architectures there can be a set of collaborators. A collaborator is a user that has a set of permissions for the architecture. The roles are:  
 - **Viewer** -- has read-only access to the architecture  
+
 - **Editor** -- can make changes to any content of the architecture  
+
 - **Admin** -- is an editor that can also change the role of any collaborator.  
+
 - **Owner** -- is the only user that can delete the architecture.  
-An owner can explicitly "invite" collaborators and assign corresponding role to each. There also is the ability to create and manage groups of users for purpose of collaboration. (Note for all **Public** assets, all users are implicitly **Viewers** and no one is an Editor or Admin).  
+  An owner can explicitly "invite" collaborators and assign corresponding role to each. There also is the ability to create and manage groups of users for purpose of collaboration. (Note for all **Public** assets, all users are implicitly **Viewers** and no one is an Editor or Admin).  
+
+  (Security consideration： All the collaborators have the privilege to export and upload the architecture and/or copy it.  When you add collaborators to an architecture, make sure the collaborators are aware of any confidential content and protect it following the policy required by your community. Ensure that architecture assets do not expose sensitive information and are only viewed or accessed for their intended business required.)
 
 **Artifact** -- An architecture (asset) is comprised of a set of artifacts that are typed. The standard set of artifacts are displayed in the architecture's Table of Contents (**TOC**). Many of the artifact types can have 0 to n **artifact instances**.  Examples of artifacts include Business Challenge, System Context, Functional Requirement, etc.  Most of the artifacts correspond to a technical work product.
 
@@ -69,6 +76,12 @@ Additional "big picture" tips about the tool can be reviewed in the [Common Tips
 ### Help
 
 Anywhere within IT Architect Assistant you can navigate to the appropriate section of this User Guide via the keyboard short-cut (**F1** or **fn-F1**)!
+
+### Security Considerations
+
+-  Use IBM IT Architect Assistant in a secure network environment
+- Keep your username and password safe.
+- Logout when you are not using it.
 
 ###Usage Intent
 
@@ -478,6 +491,11 @@ In the future, expect to see additional functionality added to the existing impo
 ### Offline Mode
 
 Related to Import and Export is the support for offline editing. The big picture is you can download a Node.js app that you can run on your local machine and then use a local browser connecting to the Node application to let you edit architectures in a nearly exact same way as you would running the Cloud-based IT Architect Assistant. This obviously supports working on an architecture without the need for connectivity. It also means it is possible to work with the tool and an architecture at a client site, even when local network policies may not make it possible to connect to the IBM network. This offline mode application, [IBM IT Architect Assistant, Community Edition](https://www.ibm.com/cloud/architecture/architectures/edit/architect-assistant), is available to use for free.
+
+#### Offline Package Install
+
+- Download [Single-User Community Edition](https://www.ibm.com/cloud/architecture/architectures/edit/architect-assistant) in a secure network environment.
+- Apache Tomcat is required for offline version，Please refer to Apache Tomcat official security report: https://tomcat.apache.org/security.html
 
 The offline mode works with a file system based data store for architectures. The current offline mode support allows you to create a new architecture (offline) and edit that locally.  Also supported is a pre-packaged copy of the IBM Architecture Node Library asset that can be used to copy-and-paste from (see Resource copying). To download the app and  the IBM Architecture Node Library asset, click on the *more information* icon on IT Architect Assistant, and click **Download Single-User Community Edition** or go to the link above.
 
