@@ -1,8 +1,8 @@
-# IBM IT Architect Assistant Privacy Statement Version 1.0
+# IBM IT Architect Assistant Multi-tenant Cloud Service Privacy Statement Version 1.0
 
 
 
-In order to provide access and authorization to the IT Architect Assistant tool, Personal Information, such as name and email address, are collected. This Personal Information is  collected only to:
+The IBM IT Architect Assistant Multi-tenant Cloud Service maintains a privacy statement and data privacy policy in line with IBM's general statements: [IBM Privacy Statement](https://www.ibm.com/privacy) and [IBM Data Privacy Policy](https://www.ibm.org/responsibility/reports-and-policies?_ga=2.61781164.1010051121.1640703209-373155829.1638818877#dataPrivacy). Access and authorization to the IT Architect Assistant Multi-tenant Cloud Service, is via an IBMid (see Your Account in IBM Privacy Statement).  The Personal Information associated with your IBMid is only to:
 
 - Enable communication with individuals who are users of the tool.
 - Enable collaboration between parties that explicitly share or copy assets.
@@ -25,4 +25,4 @@ Individuals can examine and correct their Personal Information at any time.  Per
 
 For any questions or concerns about business personal information in IT Architect Assistant, please contact [cogarch@us.ibm.com.](mailto:cogarch@us.ibm.com)
 
-By clicking on "Accept," you confirm that you have read IBM's IT Architect Assistant Privacy Statement, that you understand it, and that you agree  to it.
+By clicking on "Accept," you confirm that you have read IBM's IT Architect Assistant Multi-tenant Cloud Service Privacy Statement, that you understand it, and that you agree  to it.
