@@ -11,5 +11,5 @@ This repository provides the end-user documentation for each of these offerings.
 
 
 
-You can post issues to this repository for either offering of IBM IT Architect Assistant!
+You can post issues to [this repository](https://github.com/IBM/itaa-docs/issues) for either offering of IBM IT Architect Assistant!
 
