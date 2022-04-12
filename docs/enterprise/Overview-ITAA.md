@@ -20,7 +20,7 @@ The Documentation is organized in the following sections:
 ## Terminology
 Before diving into details about Architect Assistant it is important to understand some key terminology used throughout the documentation.  
 
-**Logical Asset Repositories** -- Today there are 3 logical repositories of architectures: **Public**, this contains curated, read-only architectures that can be discovered via search; **Private**, every user has a set of private assets that they own, that by default are read-write and not discoverable by other users; [**As-Is**,](#as-is) any private asset can be implicitly shared (marked As-Is) by the owner. As-Is assets can be accessed by anyone possessing the As-Is URL.  A user that follows an As-Is asset URL will be add  as a "Viewer" collaborator on that architecture.  
+**Logical Asset Repositories** -- Today there are 3 logical repositories of architectures: **Public**, this contains curated, read-only architectures that can be discovered via search; **Private**, every user has a set of private assets that they own, that by default are read-write and not discoverable by other users; [**As-Is**,](#as-is) any private asset can be set as discoverable (marked As-Is and discoverable) by the owner. As-Is assets are optionally searchable and anyone following the [shared] link to an As-Is asset will be added as a "Viewer" collaborator.  
 
 **(Note:** if the architecture you create contains confidential information or personal private information, only share the architecture by explicitly adding collaborators (do not share "As-Is").  Further, make sure any collaborators are aware of the sensitive nature of the architecture content and do not expose to others.) 
 
@@ -38,25 +38,17 @@ Before diving into details about Architect Assistant it is important to understa
 
 **Artifact** -- An architecture (asset) is comprised of a set of artifacts that are typed. The standard set of artifacts are displayed in the architecture's Table of Contents (**TOC**). Many of the artifact types can have 0 to n **artifact instances**.  Examples of artifacts include Business Challenge, System Context, Functional Requirement, etc.  Most of the artifacts correspond to a technical work product.
 
-**Shared Elements** -- The building blocks of an architecture are a set of **architectural elements**. Each of these elements have a **specific type** along with a **set of attributes**. Many of the architecture elements contribute to and are referenced within multiple artifacts and artifact instances. As such it is important that these elements are shared (i.e., by reference). The implication is that each shared element must have a *unique name* within the architecture. To enforce this constraint the tool will *flag as an error* anytime a new element is created and given a name already in use in the architecture.  This error forces the user to either bind to (reference) the currently existing shared element or if the user needs to reference a different architecture element, supply the new element with a unique name. For example, adding a new Logical Node to an AOD IT System View instance and giving it the name **Customer Service** when a Logical Node with that name already exists (perhaps on a different diagram instance) results in an error (duplicate name error). 
+**Shared Elements** -- The building blocks of an architecture are a set of **architectural elements**. Each of these elements have a **specific type** along with a **set of attributes** (or meta-data). Many of the architecture elements contribute to and are referenced within multiple artifacts and artifact instances. As such it is important that these elements are shared (i.e., by reference). The implication is that each shared element must have a *unique name* within the architecture. To enforce this constraint the tool will *flag as an error* anytime a new element is created and given a name already in use in the architecture.  This error forces the user to either bind to (reference) the currently existing shared element or if the user needs to reference a different architecture element, supply the new element with a unique name. For example, adding a new Logical Node to an AOD IT System View instance and giving it the name **Customer Service** when a Logical Node with that name already exists (perhaps on a different diagram instance) results in an error (duplicate name error). 
 
-##### Visualization Notation
-
-With release 3.3 of the tool, most of the diagram specific element palettes have been updated to reflect the emerging IBM Architecture visualization notation. This IBM Design supported notation specifies graphical element shapes and properties that can be consistently recognized to represent specific architecture elements types, e.g Logical or Prescribed Nodes, Logical or Prescribed Components, Target System, Actors and then various Groups e.g. Locations, Zones, VPC, etc. 
-
-At the time of this release, the diagram specific palettes will contain the new standards as well as the previous (deprecated) notation. The reason for preserving the deprecated notation is to support ongoing editing of diagrams built with the previous default notation.
-
-It should be noted that the code for this standard notation is shared with IBM released palettes for the Draw.io tool.  The full IBM [draw.io] architecture palettes can be found in the Misc Diagram palette.
-
-A draft explaining the notation standard is [available for review](../Archi-diagrs-v3.pdf) (will be updated to point to the ibm.com/design documentation when published).
-
-###### Bind to existing element
+###### **Bind to existing element**
 
 To resolve this the user can select the Logical Node in error and click on the **Select from existing** button (at the bottom of the Attributes tab of the Format panel) and point to the existing Logical Node, indicating you are reusing the same element. 
 
-<img src="../images/Select-from-existing.png" height="244px" alt="Select from existing button" />
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/Select-from-existing.png" height="244px" alt="Select from existing button" />
 
-<img src="../images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
+
+
 
 
 
@@ -67,6 +59,18 @@ Alternatively a different (unique) name can be assigned. Either approach will re
 Additional "big picture" tips about the tool can be reviewed in the [Common Tips](../CATips) document.
 
 ------
+
+##### 
+
+##### Visualization Notation
+
+With release 3.3 of the tool, most of the diagram specific element palettes have been updated to reflect the emerging IBM Architecture visualization notation. This IBM Design supported notation specifies graphical element shapes and properties that can be consistently recognized to represent specific architecture elements types, e.g Logical or Prescribed Nodes, Logical or Prescribed Components, Target System, Actors and then various Groups e.g. Locations, Zones, VPC, etc. 
+
+At the time of this release, the diagram specific palettes will contain the new standards as well as the previous (deprecated) notation. The reason for preserving the deprecated notation is to support ongoing editing of diagrams built with the previous default notation.
+
+It should be noted that the code for this standard notation is shared with IBM released palettes for the Draw.io tool.  The full IBM [draw.io] architecture palettes can be found in the Misc Diagram palette.
+
+A document explaining the notation standard is [available for review](../Archi-diagrs-v3.pdf).
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide-v11))
 
@@ -113,7 +117,7 @@ When a user navigates to the Search page, they are presented with the **top tren
 
 ![Search Page](../images/ITAA-search.png)
 
-Currently the search is made against a set of keywords and tags as well as the text of the Title of the architecture.  Each architecture can have a set of tags associated with them. These include the applicable **Industry(ies), Technology(ies), and Tags**.  
+The default search is made against a set of keywords and tags as well as the text of the Title of the architecture.  Each architecture can have a set of tags associated with them. These include the applicable **Industry(ies), Technology(ies), and Tags** which are part of the architecture meta-data.  (The architecture level meta-data is editable by clicking on the "Information" toolbar icon within the architecture itself.)
 
 
 
@@ -172,7 +176,7 @@ In general, if you choose to open an architecture discovered via search you will
 
 ![Bookmark and Copy toolbar buttons](../images/bookmark-copy-toolbar-buttons-2.1.png)
 
-First, the bookmark button, which allows you to add a link to this architecture to your bookmarks to either locate it more quickly later or to reference the asset for fine-grained copy and paste. Second is the copy button that allows you to create your own **private read-write** copy of the complete architecture. If you choose to create a private copy, you will supply a unique architecture name and optionally provide client name, opportunity number and tags.  Once the copy has been created you will be taken to your Private Workspace view where you can then open this newly created copy.
+First, the bookmark button which is only available for **public curated** assets, allows you to add a link to this architecture to your bookmarks to either locate it more quickly later or to reference the asset for fine-grained copy and paste. Second is the copy button that allows you to create your own **private read-write** copy of the complete architecture. If you choose to create a private copy, you will supply a unique architecture name and optionally provide client name, opportunity number and meta-data.  Once the copy has been created you will be taken to your Private Workspace view where you can then open this newly created copy.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
@@ -237,9 +241,15 @@ With the exception (currently) of Existing Nodes in AOD IT System View, dragging
 
 ![Reuse existing nodes with icons](../images/existing-node-icons.png)
 
-A few diagram types have additional palettes available beyond the diagram specific palette and the annotation palette. Those will be detailed in sections specific to those diagram types.
+In general you add something from a palette onto the drawing canvas via a drag operation. Select a symbol and drag from the palette to where you want to place it on the canvas. If you just click on a symbol, the symbol will get added at a random location on the canvas. 
 
-In general you add something from a palette onto the drawing canvas via a drag operation. Select a symbol and drag from the palette to where you want to place it on the canvas. If you just click on a symbol, the symbol will get added at a random location on the canvas. All non-line/connector symbols have a "bounding box" which includes anchor points where connections can be made by the endpoint of a line/connector symbol. When connecting the end of a connector to a symbol you will want to see a "green" connection dot or green bounding box outline appear before releasing the mouse to make the connection. Otherwise, you will have just moved the line's endpoint without accomplishing making a connection.
+#### Custom [icon] palettes
+
+A user can also create and use a set of custom palettes which are designed to enhance the manipulation of a drawing element's visual icon. These custom palettes behave differently than all other palettes in that they do not add a new element onto the canvas but instead are used to modify the icon displayed on an existing drawing element. (See [document summarizing the visualization style management](./ArchVisualization) for more details.)
+
+#### Drawing Connections
+
+All non-line/connector symbols have a "bounding box" which includes anchor points where connections can be made by the endpoint of a line/connector symbol. When connecting the end of a connector to a symbol you will want to see a "green" connection dot or green bounding box outline appear before releasing the mouse to make the connection. Otherwise, you will have just moved the line's endpoint without accomplishing making a connection.
 
 ![Connecting symbols](../images/making-connection.png)
 
@@ -403,6 +413,12 @@ This will bring up the manage orphan elements panel.  Here you can select all, s
 
 ## Import and Export
 
+There are a set of tools to work with an architecture outside of Cognitive Architect in different forms.  These tools are accessed from the top-level Export/Import toolbar button.
+
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/consolidated_export.png" alt="Export/Import toolbar button" />
+
+
+
 #### Export
 
 There is a lot of value of having everything associated with a Solution Architecture captured within a single asset that can easily be shared with collaborators. However there are many situations in which an architect would like to deliver a snapshot of the architecture in a different format, not requiring either the online or offline tool. IT Architect Assistant provides a set of import and export utilities to address these needs. Let's first take a look at the rich set of Export Utilities available. 
@@ -521,7 +537,9 @@ If you want to perform a selective "update" of an existing architecture via a of
 
 ![Upload an architecture](../images/replace-from-offline.png)
 
-Clicking Next will open a file finder, whereby you can locate the local folder with the updated offline architecture.  You will then be presented with a list of all of the artifact instances available in the offline architecture. You can then select those instances that are to replace their counterpart in (or just add to) the online architecture instance.   **Note - this will overwrite any elements in the online architecture with the content  selected or included via the selection from the offline source. You  need to be careful and very aware of team collaboration activity if working offline on an architecture in which there are multiple collaborating authors.** (Thus the default from the Add Architecture tile is to only support uploading to a new architecture.  Choosing to upload a new architecture allows you to selectively copy-and-paste into the shared collaborative *master* architecture.)
+Clicking Next will open a file finder, whereby you can locate the local *folder* with the updated offline architecture.  (If you are provided an archive file and you want to do this upload, first unzip the archive file to a known directory and then point to that directory/folder when prompted by the upload dialog.)
+
+You will be presented with a list of all of the artifact instances available in the offline architecture. You can then select those instances that are to replace their counterpart in (or just add to) the online architecture instance.   **Note - this will overwrite any elements in the online architecture with the content  selected or included via the selection from the offline source. You  need to be careful and very aware of team collaboration activity if working offline on an architecture in which there are multiple collaborating authors.** (Thus the default from the Add Architecture tile is to only support uploading to a new architecture.  Choosing to upload a new architecture allows you to selectively copy-and-paste into the shared collaborative *master* architecture.)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
@@ -531,7 +549,7 @@ Clicking Next will open a file finder, whereby you can locate the local folder w
 
 Let's take a step back and realize that Solutioning tends to be a team sport.  Even if there is a single architect working on a Solution Design, there are many stakeholders and reviewers.  It is therefore important that the platform (Architect Assistant) effectively support the wide-range of needs for a collaborating team.  Architect Assistant is hosted on a cloud instance. This permits access to all users by their userid. An architecture can be shared with a team (or virtual team) via explicitly adding Collaborators and specifying the access role for each user as well as share implicitly via the ["Share As-Is"](#as-is) making the architecture discoverable (and accessible read-only) via search.  
 
-To explicitly share, click on the share button.
+To explicitly share, click on the **collaborate** button.
 
 ![Share an architecture](../images/share-button.png)
 
@@ -547,9 +565,13 @@ Once a user has been selected, choose the role, and click Invite.
 
 In each of these cases, once the sharing has occurred, the architecture shows up on the users' Workspace > Collaboration tab.
 
-A collaborator that has Editor or higher rights has the ability to modify the architecture.  The platform implicitly "locks" the current artifact instance being worked on by an editor.  When you enter an architecture the "Overview" is locked.  Collaborators can see this lock on the (artifact instance) card view and on the architecture toolbar.
+It is also possible for the owner to transfer ownership of their asset to another of the listed collaborators. This action is initiated by clicking on the "pencil" tool next to the owner's name on the Collaboration panel. The original owner will be added as a collaborator with "Admin" role as a side-effect.
 
-![Artifact Instance locked by peer](../images/currently-edited-instance.png)
+##### Groups
+
+On the main Collaborators panel, next to the Invite button is the **Manage Group** button.  Click it to see any groups you have previously defined. Click on the right arrow next to an existing group to edit (add or remove users). From here you can also delete the group. On the Manage Group page, you can click on the **Add Group** button to define a new group. After adding users, click **Add** to complete the saving of the Collaboration Group in your user profile.
+
+A collaborator that has Editor or higher rights has the ability to modify the architecture.  The platform implicitly "locks" the current artifact instance being worked on by an editor.  When you enter an architecture the "Overview" is locked.  Collaborators can see this lock on the (artifact instance) card view and on the architecture toolbar.
 
 It is the pen icon and collaborator's name that indicates this artifact instance is currently being edited by someone else.  Note from the menu you still have the ability to open the artifact instance read-only via selecting **View**.  This same View menu item is available even when an artifact instance is not currently locked.  This allows you to view the artifact and not lock out any of your peers.
 
