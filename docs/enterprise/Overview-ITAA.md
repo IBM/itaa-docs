@@ -58,9 +58,7 @@ Alternatively a different (unique) name can be assigned. Either approach will re
 
 Additional "big picture" tips about the tool can be reviewed in the [Common Tips](../CATips) document.
 
-------
-
-##### 
+ 
 
 ##### Visualization Notation
 
