@@ -16,6 +16,7 @@ This section will present the details for each of the artifact types, including 
 - [Architectural Decisions](#architectural-decisions)
 - [Component Model - Static View](#component-model---static-view)
 - [Component Model - Dynamic View](#component-model---dynamic-view)
+- [Component Model - Collaboration View](#component-model---collaboration-view)
 - [Logical Operational Model](#operational-model---lom-view)
 - [Physical Operational Model](#operational-model---pom-view)
 - [Viability - Risks](#viability---risks)
