@@ -13,7 +13,7 @@ If you look at the referenced diagram above, the foundation of the visualization
 
 Most of what you can and should alter for these "IBM stencil" drawing elements, can be found in a set of "Shape Style attributes".   Below you see an IT System View (AOD) in IT Architect Assistant with nested - Location, Subsystem and Logical Node being placed on the diagram.  The Logical Node is currently selected and in the format panel, the Style tab is presented and the Shape Style attribute section is highlighted.
 
-<img src="../images/ibm-style-properties.png" alt="Style Attributes" height="543px"/>
+<img src="./images/ibm-style-properties.png" alt="Style Attributes" height="543px"/>
 
 Unlike the document referenced earlier, that presents the draw.io shape properties, IT Architect Assistant generally hides the "Shape" property, which is used to select an element type shape style. In IT Architect Assistant, the element type was selected from the palette and carries along the architecture model's meta-data properties and so the shape selection is enforced.
 
@@ -41,25 +41,25 @@ As noted earlier, IT Architect Assistant has an evolving approach to make it muc
 
 Today, on any diagram in the tool, you will find a '+' sign at the top of the drawing palettes.
 
-<img src="../images/add-custom-palette.png" alt="Add Custom Palette" width="211px"/>
+<img src="./images/add-custom-palette.png" alt="Add Custom Palette" width="211px"/>
 
 Clicking on this allows a user to create a new custom palette. You will give the palette a **name**, so that you can easily distinguish between multiple custom palettes. A custom palette today is defined at the architecture level and will be available on every single diagram within that architeture. 
 
-<img src="../images/set-palette-name.png" alt="Create new palette, set name" width="400px"/>
+<img src="./images/set-palette-name.png" alt="Create new palette, set name" width="400px"/>
 
 [In a subsequent release, these palettes will be defined at the user-level, and you will have the opportunity to load custom palettes (already defined) into an architecture. At that time you will also be able to export these palettes to share with others.]
 
 Once an empty custom palette has been created you then want to be able to quickly add icons to the palette. Eventually, these palettes will support managing both "stencil icons" and "image icons". Also eventually you will be able to import from a file to exchange palettes.
 
-<img src="../images/select-icon-source.png" alt="Select to add from IBM stencils" width="400px"/>
+<img src="./images/select-icon-source.png" alt="Select to add from IBM stencils" width="400px"/>
 
 Stencil icons are managed within the tool itself and are sourced from IBM Design UI Icons. Image icons can be any standard image (.jpg, .png, .svg).  For release 3.5, only "stencil icons" are supported. Thus the UX is to be able to add icons to your palette from the large list of built-in icons. [Note, the built-in icon set will grow significantly and soon will have the icons grouped into categories.]
 
-<img src="../images/pick-icons.png" alt="Select icons to include" width="400px"/>
+<img src="./images/pick-icons.png" alt="Select icons to include" width="400px"/>
 
 Select from the list and click Add, then review before saving.
 
-<img src="../images/review-icons.png" alt="Select icons to include" width="400px"/>
+<img src="./images/review-icons.png" alt="Select icons to include" width="400px"/>
 
 
 
@@ -67,17 +67,17 @@ Select from the list and click Add, then review before saving.
 
 The newly created palette will show up as a new diagram palette.   
 
-<img src="../images/palette-on-left.png" alt="Review icons and save" width="200px"/>
+<img src="./images/palette-on-left.png" alt="Review icons and save" width="200px"/>
 
 Note these custom palettes can not be used to add drawing elements to a diagram, they are only used to alter the applied icon to existing elements on the canvas.
 
 To use, drag an icon onto an element.
 
-<img src="../images/drag-icon.png" alt="Create new palette, set name" width="400px"/>
+<img src="./images/drag-icon.png" alt="Create new palette, set name" width="400px"/>
 
 The result will be to apply that icon to the element.
 
-<img src="../images/applied-icon.png" alt="Create new palette, set name" width="400px"/>
+<img src="./images/applied-icon.png" alt="Create new palette, set name" width="400px"/>
 
 ### Current caveats
 
