@@ -1,6 +1,6 @@
 # Architecture Visualization Best Practices
 
-An IBM AoT Initiative in 2020-2021 produced a set of recommendations for architecture visualization (see [draft document](./IT-Architecture-Visualisation.pdf)). These visualization standards are being rolled out for a number of different tools, including draw.io, IT Architect Assistant, Visio, PowerPoint and others.
+An IBM AoT Initiative in 2020-2021 produced a set of recommendations for architecture visualization (see [draft document](./Archi-diagrs-v4.pdf)). These visualization standards are being rolled out for a number of different tools, including draw.io, IT Architect Assistant, Visio, PowerPoint and others.
 
 In IT Architect Assistant which shares the diagramming engine with draw.io, MxGraph framework, the core set of architecture element styles have been added to the corresponding diagram palettes.  This  document presents the current and future user experience of this vizualization "library" within IT Architect Assistant and provides some best practice guidance in its use.
 

@@ -85,7 +85,7 @@ Anywhere within IT Architect Assistant you can navigate to the appropriate secti
 - Keep your username and password safe.
 - Logout when you are not using it.
 
-###Usage Intent
+### Usage Intent
 
 Getting started with Architect Assistant depends on your usage intent. The most common usage intents are:  
 
@@ -138,7 +138,7 @@ This shareable link has a special format. The URL will be of the form &lt;IT Arc
 
 A second part of this Sharing (supporting search), is the checkbox to set the architecture as **Discoverable**. By default when you turn on "Share As-Is", the Discoverable checkbox is selected.  When Discoverable is checked the architecture is included as an asset that is discoverable by the tool's Search engine. Note, with this secondary selector, it is possible to get a sharable URL to your architecture, without having your asset show up in Search results.  This would be accomplished by having Share As-Is turned on and uncheck (disable) the Discoverable setting.
 
-####Copy Architecture
+#### Copy Architecture
 
 Any architecture returned via search will have a minimum of "Viewer" access for all users. Thus the architecture card's additional menu will include **Copy**.  This permits the user to create a complete copy of the architecture by supplying a new unique name for the resulting Copy.
 
