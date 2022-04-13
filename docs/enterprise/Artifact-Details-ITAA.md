@@ -294,7 +294,7 @@ Here the connectors are typed as Events with 4 core attributes: Number (a value 
 
 ![Collaboration View of Component Model](../images/collab-view.png)
 
-([Back to Top and TOC](#cognitive-architect---detailed-authoring-by-artifact-type-v35))
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
 
 
