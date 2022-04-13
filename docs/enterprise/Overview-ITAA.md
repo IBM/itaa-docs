@@ -243,7 +243,7 @@ In general you add something from a palette onto the drawing canvas via a drag o
 
 #### Custom [icon] palettes
 
-A user can also create and use a set of custom palettes which are designed to enhance the manipulation of a drawing element's visual icon. These custom palettes behave differently than all other palettes in that they do not add a new element onto the canvas but instead are used to modify the icon displayed on an existing drawing element. (See [document summarizing the visualization style management](./ArchVisualization) for more details.)
+A user can also create and use a set of custom palettes which are designed to enhance the manipulation of a drawing element's visual icon. These custom palettes behave differently than all other palettes in that they do not add a new element onto the canvas but instead are used to modify the icon displayed on an existing drawing element. (See [document summarizing the visualization style management](../ArchVisualization) for more details.)
 
 #### Drawing Connections
 

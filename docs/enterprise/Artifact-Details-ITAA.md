@@ -497,7 +497,9 @@ A logical component represents a functional capability or behavior in the system
 
 #### Logical Node
 
-A node at its core is really just a container to show colocated functionality and interacting elements. Similar to a Logical Component it is used to identify the colocated elements without regard for the specific packaging technology or physical placement. A **Prescribed Node** specifies this implementation details indicating if it is physical hardware, a virtual machine, a container as well as attributes like compute, memory, storage and network specification. The **Prescribed Operational Model** show the "hosting" relationships between potentially multiple layers of Prescribed Nodes as well as the Logical Nodes that are deployed to them. A **Logical Node** is represented via a "rounded rectangle", whereas a **Prescribed Node** is represented via a "rectangle". These can can shown either collapsed or expanded.   ![Node Symbols](../images/node-symbols.png)
+A node at its core is really just a container to show colocated functionality and interacting elements. Similar to a Logical Component it is used to identify the colocated elements without regard for the specific packaging technology or physical placement. A **Prescribed Node** specifies this implementation details indicating if it is physical hardware, a virtual machine, a container as well as attributes like compute, memory, storage and network specification. The **Prescribed Operational Model** show the "hosting" relationships between potentially multiple layers of Prescribed Nodes as well as the Logical Nodes that are deployed to them. A **Logical Node** is represented via a "rounded rectangle", whereas a **Prescribed Node** is represented via a "rectangle". These can can shown either collapsed or expanded.
+
+   ![Node Symbols](../images/node-symbols.png)
 
 #### OMLocation
 
