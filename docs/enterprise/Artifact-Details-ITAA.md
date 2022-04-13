@@ -479,11 +479,13 @@ Filters are a set of logical tags that can be associated with each of your Notes
 
 ### Glossary - Shared Core Architectural Elements
 
-The set of architecture artifacts are comprised of core architectural elements. Many of these elements (types) are shared and reused across multiple artifacts (views).  This Glossary provides the intent and meaning for these architecture elements. Along with the intent and meaning, we introduce the [IBM Design architecture visualization notation](../Archi-diagrs-v4.pdf) (**shape)** used to depict these element types.  In addition to the core elements there are a set of elements that get associated (referenced attributes) across the model, these include Use Case, Functional Requirement, Non-Functional Requirement (NFR), and Architectural Decision.  The [style manipulation guide](./ArchVisualization) will help you manipulate the look and feel of these UI elements.
+The set of architecture artifacts are comprised of core architectural elements. Many of these elements (types) are shared and reused across multiple artifacts (views).  This Glossary provides the intent and meaning for these architecture elements. Along with the intent and meaning, we introduce the [IBM Design architecture visualization notation](./Archi-diagrs-v4.pdf) (**shape)** used to depict these element types.  In addition to the core elements there are a set of elements that get associated (referenced attributes) across the model, these include Use Case, Functional Requirement, Non-Functional Requirement (NFR), and Architectural Decision.  The [style manipulation guide](./ArchVisualization) will help you manipulate the look and feel of these UI elements.
 
 #### Actor
 
-An Actor is any entity that interacts with the "Target System". An **Actor** can be of type **Human** or type **IT System**. By being declared an actor, the human or system element is identified to be "external" to the system being documented. Actors appear on System Context diagram, act as initiators and supporter to Use Cases, and they appear at the boundary of solution diagrams, e.g., AODs, Component Model, and Operational Model diagrams.  In the IBM Design standard notation, Actors are depicted as a circle and are always displayed "collapsed".  ![Actor Symbol (/Users/glcraig/Documents/GitHub/CogArch_Docs/images/actor-symbol.png)](./images/actor-symbol.png)
+An Actor is any entity that interacts with the "Target System". An **Actor** can be of type **Human** or type **IT System**. By being declared an actor, the human or system element is identified to be "external" to the system being documented. Actors appear on System Context diagram, act as initiators and supporter to Use Cases, and they appear at the boundary of solution diagrams, e.g., AODs, Component Model, and Operational Model diagrams.  In the IBM Design standard notation, Actors are depicted as a circle and are always displayed "collapsed".
+
+  ![Actor Symbol](../images/actor-symbol.png)
 
 #### Logical Component
 
@@ -491,15 +493,17 @@ A logical component represents a functional capability or behavior in the system
 
  **Note**, there is no current diagram type within the tool that supports placement of a Prescribed Component/Implementation visually on the diagram. Instead, a PC is presented as a reference attribute of a Logical Component or linked transitively from a Logical Node.
 
-![Component Symbols](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/component-symbols.png)
+![Component Symbols](../images/component-symbols.png)
 
 #### Logical Node
 
-A node at its core is really just a container to show colocated functionality and interacting elements. Similar to a Logical Component it is used to identify the colocated elements without regard for the specific packaging technology or physical placement. A **Prescribed Node** specifies this implementation details indicating if it is physical hardware, a virtual machine, a container as well as attributes like compute, memory, storage and network specification. The **Prescribed Operational Model** show the "hosting" relationships between potentially multiple layers of Prescribed Nodes as well as the Logical Nodes that are deployed to them. A **Logical Node** is represented via a "rounded rectangle", whereas a **Prescribed Node** is represented via a "rectangle". These can can shown either collapsed or expanded.   ![Node Symbols](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/node-symbols.png)
+A node at its core is really just a container to show colocated functionality and interacting elements. Similar to a Logical Component it is used to identify the colocated elements without regard for the specific packaging technology or physical placement. A **Prescribed Node** specifies this implementation details indicating if it is physical hardware, a virtual machine, a container as well as attributes like compute, memory, storage and network specification. The **Prescribed Operational Model** show the "hosting" relationships between potentially multiple layers of Prescribed Nodes as well as the Logical Nodes that are deployed to them. A **Logical Node** is represented via a "rounded rectangle", whereas a **Prescribed Node** is represented via a "rectangle". These can can shown either collapsed or expanded.   ![Node Symbols](../images/node-symbols.png)
 
 #### OMLocation
 
-A location in general is a specification for an area or grouping with equivalent set of access capabilities.  In the physical sense it may correspond to a data center, or the set of hosts accessible via an internal network (such as employee workstations on-site), or the mobile network which includes all similarly secured public mobile devices. In Operational Model views, these locations need to be treated consistently across all diagrams and so they are reusable across these. Note that Nodes must appear within some designated location.  This rule is enforced in all diagrams in which Nodes appear (OM views and the AOD IT System view). A Location/OMLocation are represented via a "Group" rectangle within the IBM Design notation.  ![Location Symbols](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/location-symbol.png)
+A location in general is a specification for an area or grouping with equivalent set of access capabilities.  In the physical sense it may correspond to a data center, or the set of hosts accessible via an internal network (such as employee workstations on-site), or the mobile network which includes all similarly secured public mobile devices. In Operational Model views, these locations need to be treated consistently across all diagrams and so they are reusable across these. Note that Nodes must appear within some designated location.  This rule is enforced in all diagrams in which Nodes appear (OM views and the AOD IT System view). A Location/OMLocation are represented via a "Group" rectangle within the IBM Design notation.
+
+  ![Location Symbols](../images/location-symbol.png)
 
 #### Deployment Model
 
@@ -513,6 +517,6 @@ Currently in this tool DUs are represented in the attributes panel as the LOM/PO
 
 A subsystem is NOT a reusable element in the meta-model and represents a logical grouping of things. They may be used to simplify "connections" by being able to connect to the subsystem on the diagram and imply that the connection connects to all elements within the Subsystem. Most of the time, subsystems are used for organizational purposes. A subsystem is represented via a "Group" rectangle within the IBM Design notation. 
 
-  ![Subsystem Symbol](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/subsystem-symbol.png)
+  ![Subsystem Symbol](../images/subsystem-symbol.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))

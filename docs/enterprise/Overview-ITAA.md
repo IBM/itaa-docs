@@ -68,7 +68,7 @@ At the time of this release, the diagram specific palettes will contain the new 
 
 It should be noted that the code for this standard notation is shared with IBM released palettes for the Draw.io tool.  The full IBM [draw.io] architecture palettes can be found in the Misc Diagram palette.
 
-A document explaining the notation standard is [available for review](../Archi-diagrs-v4.pdf). For more detail on the modeling element definitions, see [type glossary](./Artifact-Details-ITAA#glossary---shared-core-architectural-elements).
+A document explaining the notation standard is [available for review](./Archi-diagrs-v4.pdf). For more detail on the modeling element definitions, see [type glossary](./Artifact-Details-ITAA#glossary---shared-core-architectural-elements).
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide-v11))
 
