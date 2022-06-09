@@ -20,7 +20,7 @@ So at this point you will start to describe the shape and decomposition of the s
 
 Start by selecting **5.1.1 Services View** in the ToC, then click on **Add Diagram**. Set the name of the diagram to be **MyBank Functional View**, then click **Create**.
 
-Once the diagram opens, drag a Logical Component from the AOD Service Palette onto the diagram.  Set the component's name to be **LC_Access Manager** and description, "*Responsible for supporting authentication and authorization throughout MyBank infrastructure*".  Set the primary capability to be *Security | IAM*.
+Once the diagram opens, drag a Logical Component from the AOD Service Palette onto the diagram.  Set the component's name to be **LC_Access Manager** and description, "*Responsible for supporting authentication and authorization throughout MyBank infrastructure*".  Set the primary capability to be *Security  - IAM*.
 
 Add a Subsystem, name it **Business Object Management**. Add six additional Logical Components: **LC_Collaboration Services**, **LC_Application and Services Hub**, **LC_Services Manager**, **LC_Online Training Manager**, **LC_Customer Manager**, **LC_Account Manager**.  Arrange and connect them similar to below.
 
@@ -30,7 +30,7 @@ Next, add existing Actors onto the diagram placing the A_Restricted Account View
 
 <img src="./images/service_view_w_actors.png" alt="AOD Services View with actors" style="zoom:150%;" />
 
-Change the "Icon Name" for the LC_Application and Services Hub to be 'application' (Ctrl-m to open Data Attribute panel).  And set the "Icon Name" for the LC_Access Manager to be 'fingerprint-recognition'. Use the regular Style properties to change actors to be 'black', LC_Access Manager to be 'red' and set subsystem to be 'teal'. Additional information about visualization manipulation can be found in the [User's Guide](../ArchVisualization).
+<add information about creating a custom palette and using it as part of these instructions> Change the "Icon Name" for the LC_Application and Services Hub to be 'application' (Ctrl-m to open Data Attribute panel).  And set the "Icon Name" for the LC_Access Manager to be 'fingerprint-recognition'. Use the regular Style properties to change actors to be 'black', LC_Access Manager to be 'red' and set subsystem to be 'teal'. Additional information about visualization manipulation can be found in the [User's Guide](../ArchVisualization).
 
 Note adding in detailed descriptions for all of the components and subsystems is essential to helping a reader understand the solution.
 

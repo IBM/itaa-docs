@@ -38,7 +38,15 @@ Additional "big picture" tips about the tool can be reviewed in the [Common Tips
 
 ------
 
+##### Visualization Notation
 
+With release 3.3 of the tool, most of the diagram specific element palettes have been updated to reflect the emerging IBM Architecture visualization notation. This IBM Design supported notation specifies graphical element shapes and properties that can be consistently recognized to represent specific architecture elements types, e.g Logical or Prescribed Nodes, Logical or Prescribed Components, Target System, Actors and then various Groups e.g. Locations, Zones, VPC, etc. 
+
+At the time of this release, the diagram specific palettes will contain the new standards as well as the previous (original) notation. One reason for preserving the original notation is to support ongoing editing of diagrams built with the previous default notation.
+
+It should be noted that the code for this standard notation is shared with IBM released palettes (pending) for the Draw.io tool.  The full IBM [draw.io] architecture palettes can be found in the Misc Diagram palette.
+
+See the [tool guidance](../ArchVisualization) regarding the UX supporting this notation.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
@@ -152,7 +160,15 @@ With the exception (currently) of Existing Nodes in AOD IT System View, dragging
 
 A few diagram types have additional palettes available beyond the diagram specific palette and the annotation palette. Those will be detailed in sections specific to those diagram types.
 
-In general you add something from a palette onto the drawing canvas via a drag operation. Select a symbol and drag from the palette to where you want to place it on the canvas. If you just click on a symbol, the symbol will get added at a random location on the canvas. All non-line/connector symbols have a "bounding box" which includes anchor points where connections can be made by the endpoint of a line/connector symbol. When connecting the end of a connector to a symbol you will want to see a "green" connection dot or green bounding box outline appear before releasing the mouse to make the connection. Otherwise, you will have just moved the line's endpoint without accomplishing making a connection.
+In general you add something from a palette onto the drawing canvas via a drag operation. Select a symbol and drag from the palette to where you want to place it on the canvas. If you just click on a symbol, the symbol will get added at a random location on the canvas. 
+
+#### Custom [icon] palettes
+
+A user can also create and use a set of custom palettes which are designed to enhance the manipulation of a drawing element's visual icon. These custom palettes behave differently than all other palettes in that they do not add a new element onto the canvas but instead are used to modify the icon displayed on an existing drawing element. (See [document summarizing the visualization style management](../ArchVisualization) for more details.)
+
+#### Drawing Connections
+
+All non-line/connector symbols have a "bounding box" which includes anchor points where connections can be made by the endpoint of a line/connector symbol. When connecting the end of a connector to a symbol you will want to see a "green" connection dot or green bounding box outline appear before releasing the mouse to make the connection. Otherwise, you will have just moved the line's endpoint without accomplishing making a connection.
 
 ![SCD with connector with actor on one end and not connected to target system on the other, error message say connector must have start and end points.](../images/making-connection.png)
 
@@ -327,7 +343,21 @@ When collaborating with a team authoring an architecture, it is valuable to be a
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
+## Co-Relationships
 
+Most of the time, you will be reviewing an architecture from an artifact perspective, i.e., you will be using the Table of Contents as a navigation tool to locate a particular aspect or view of the architecture and then open that artifact instance.  It is however, useful to be able to navigate the architecture from a more bottom up approach.  For instance, you are looking at a diagram and find a particular Logical Component, say **Event Services** and then you want to understand what other diagrams does this Logical Component appear on and what other elements are related to (referenced by) this element?  
+
+A new co-relationship feature allows you to explore the relationships within an architecture from the perspective of the primitive architecture elements.  Open the co-relationship panel via the Co-relationship toolbar button.
+
+![Co-Relationship button](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/co-relationship.png)
+
+The Co-Relationship Table (panel) displays the architecture elements by type. You can then select an element and drill down and see what diagrams that element appears on, and what other elements it is related to via a relationship property.
+
+![Co-Relationship Table](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/co-relationship-table.png)
+
+
+
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition-user-guide)) 
 
 ## Accessibility
 

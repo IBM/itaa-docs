@@ -17,68 +17,78 @@ Most of what you can and should alter for these "IBM stencil" drawing elements, 
 
 Unlike the document referenced earlier, that presents the draw.io shape properties, IT Architect Assistant generally hides the "Shape" property, which is used to select an element type shape style. In IT Architect Assistant, the element type was selected from the palette and carries along the architecture model's meta-data properties and so the shape selection is enforced.
 
-The **Shape (Layout)** property has the two primary options Collapsed and Expanded.  The referenced "Nested" value is just the Expanded style resized. The other entries are used to create Legend entries.
+The **Layout** property has the two primary options Collapsed and Expanded.  The referenced "Nested" value is just the Expanded style resized. The other entries are used to create Legend entries.
 
-The **Shape (Style)** property refers to the use of shape outline, strikethrough etc.  The specific available values are Solid (default), Strikethrough, Double, and Dashed.
+There are specific shape line style values Strikethrough, Double, and Dashed.
 
 **Multiplicity** is an on/off checkbox, which will automatically create the stacked lines to visually signify multiplicity.
 
-**Color**, **Color (Corner)**, and **Color (Background)** - sets the shapes color from a drop-down list of colors from the standard color palette.  **Corner** adjusts the vertical bar in the upper left corner (see SubSystem above), and **Background** handles the "fill color". Note these override the basic Fill and Line color in the main part of the Style panel!
+Color is controlled via the "Line" color setting and for convenience the new Color Theme "picker". The Color Theme, Fill, and Line color controls appear in the main part of the Style panel!  This control presents the IBM "color palette" and the valid combinations of medium or dark line color and either white or light fill.   Also, note that the color picker that appears for both "line" and "fill" show the IBM color palette colors in the separated two top rows. The top row being "medium-weight" color and second row being "dark-weight". You can also use transparent, white, and black from the top row of the main color blocks. To get the solid color for "collapsed" shapes, the "fill" control should be unchecked.
 
-**Icon** determines how the icon is selected. For many this is extremely important and yet is among the most challenging thing to control from a UX perspective. As such this is where IT Architect Assistant has introduced an approach (current and future features) in improve usability. Note there are two diffenent kind of "icons": so called stencil **icons** and **image** icons.  Stencil icons come from a community supported repository, currently, the IBM Design organization (see [UI Icons](https://www.ibm.com/design/language/iconography/ui-icons/library/)). These get specified by having the Icon property set to the value **Yes** and providing the icon "name" in a special data property, Icon-Name. [**Note**: you can click <Ctrl-m> to bring up the data property dialog and edit the properties.] Of  course, remembering icon names, and manually editing the data property is not very user friendly. In a drawing tool like draw.io, this is handled by loading very large "icon palettes" and dragging the corresponding shape+icon onto the canvas. Further in this case, you can change the base shape as this is not tied to any architecture element. 
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/color-palette-picker.png" alt="IBM Color Palette selection"/>
 
-IT Architect Assistant has set out to accomplish a similar approach, but one that is subtly different. First, the tool chooses not to impose a large set of icon palettes on the architecture diagrams, as navigating them becomes difficult. However, a particular user may have a set (or sets) of icons they like to use and apply to different architectural elements. So with release 3.5, IT Architect Assistant let's you define custom palettes, populating them from the "community-wide" superset of stencil icons. These custom palette(s) are then added to the diagram - and presumably much easier to navigate. Important to **note** these palettes are  not used to add drawing elements to the canvas, they are instead used to "set/replace" the icon that appears on a drawing element already on the canvas. The gesture is to drag an icon from your custom palette onto an existing drawing element, and the result is replacement of the displayed icon.
+**Hide Icon** is used to remove the icon element for a selected shape. Note there are two diffenent kind of "icons": so called **stencil** icons and **image** icons.  Stencil icons come from a community supported repository, currently, the IBM Design organization (see [UI Icons](https://www.ibm.com/design/language/iconography/ui-icons/library/)). These get specified by having the Icon property set to the value **Yes** and providing the icon "name" in a special data property, Icon-Name. [**Note**: you can click <Ctrl-m> to bring up the data property dialog and edit the properties.] Of  course, remembering icon names, and manually editing the data property is not very user friendly. In a drawing tool like draw.io, this is handled by loading very large "icon palettes" and dragging the corresponding shape+icon onto the canvas. Further in this case, you can change the base shape as this is not tied to any architecture element. 
 
-So what about **image** icons? This is a way to use any image (.png, .svg, ...) as the 32px icon. In IT Architect Assistant this requires 3 magic values to be set. First, the Icon property should still have the value **Yes**; second, the image must be loaded, this is done via the Edit Image button; and third, the value of the Icon-Name data property must be empty (no text). How is this UX to be improved in IT Architect Assistant? In a post v3.5 release, images can also be added to the custom palettes. And the same gesture will be used to drag an image icon from a custom palette onto a drawing element to update the displayed icon. The tool will manage the loading of the image and clearing the Icon-Name property.
+Cognitive Architect has set out to accomplish a similar approach, but one that is subtly different. First, the tool chooses not to impose a large set of icon palettes on the architecture diagrams, as navigating them becomes difficult. However, a particular user may have a set (or sets) of icons they like to use and apply to different architectural elements. So with release 3.5, Cognitive Architect let's you define custom [icon] palettes, populating them from the "community-wide" superset of stencil icons and/or image icons. These custom palette(s) are then added to the diagram - and presumably much easier to navigate. Important to **note** these palettes are not used to add drawing elements to the canvas, they are instead used to "set/replace" the icon that appears on a drawing element already on the canvas. The gesture is to drag an icon from your custom palette onto an existing drawing element, and the result is replacement of the displayed icon.
 
-What happens when Icon property value is **No**? This removes the icon from the corresponding place in the drawing element. This is used when you don't want an icon displayed.
+What happens when Hide Icon property value is **Yes**? This removes the icon from the corresponding place in the drawing element. This is used when you don't want an icon displayed.
 
-The **Tag**, **Tag (Color)**, and **Tag (Fill)** properties are used to control the "Badge" referenced in the visualization standard document. 
+The **Badge** and **Badge Color** properties are used to control the "Badge" referenced in the visualization standard document. A badge is an annotation placed at the top-right corner of the shape.  You can add "text" to this via the "Edit Data" properties panel opened from the context menu or via keyboard short-cut <Ctrl-m>.  Provide text for the Badge-Text property to have it show up.
+
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/adding-badges.png" alt="Badge annotation"/>
 
 ### Custom Icon Palettes
 
-As noted earlier, IT Architect Assistant has an evolving approach to make it much easier to manage and manipulate icons on diagram. The approach is to make it easy for users to manage and share icon palettes that deliver easy to apply icons.
+As noted earlier, Cognitive Architect has an evolving approach to make it much easier to manage and manipulate icons on diagram. The approach is to make it easy for users to manage and share icon palettes that deliver easy to apply icons.
 
 Today, on any diagram in the tool, you will find a '+' sign at the top of the drawing palettes.
 
-<img src="./images/add-custom-palette.png" alt="Add Custom Palette" width="211px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/add-custom-palette.png" alt="Add Custom Palette" width="211px"/>
 
 Clicking on this allows a user to create a new custom palette. You will give the palette a **name**, so that you can easily distinguish between multiple custom palettes. A custom palette today is defined at the architecture level and will be available on every single diagram within that architeture. 
 
-<img src="./images/set-palette-name.png" alt="Create new palette, set name" width="400px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/set-palette-name.png" alt="Create new palette, set name" width="400px"/>
 
-[In a subsequent release, these palettes will be defined at the user-level, and you will have the opportunity to load custom palettes (already defined) into an architecture. At that time you will also be able to export these palettes to share with others.]
+These palettes can also be exported and imported so that you can share them across architectures and across to "teams".
 
 Once an empty custom palette has been created you then want to be able to quickly add icons to the palette. Eventually, these palettes will support managing both "stencil icons" and "image icons". Also eventually you will be able to import from a file to exchange palettes.
 
-<img src="./images/select-icon-source.png" alt="Select to add from IBM stencils" width="400px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/select-icon-source.png" alt="Select to add from IBM stencils" width="400px"/>
 
-Stencil icons are managed within the tool itself and are sourced from IBM Design UI Icons. Image icons can be any standard image (.jpg, .png, .svg).  For release 3.5, only "stencil icons" are supported. Thus the UX is to be able to add icons to your palette from the large list of built-in icons. [Note, the built-in icon set will grow significantly and soon will have the icons grouped into categories.]
+Stencil icons are managed within the tool itself and are sourced from IBM Design UI Icons. Image icons can be any standard image (.jpg, .png, .svg).  This UX supports adding icons to your palette from the large list of built-in icons. [Note, the built-in icon set will grow significantly and soon will have the icons grouped into categories.]
 
-<img src="./images/pick-icons.png" alt="Select icons to include" width="400px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/pick-icons.png" alt="Select icons to include" width="400px"/>
 
-Select from the list and click Add, then review before saving.
+Select from the list and click Add, then review before saving. Note, that on this review page, there is a toolbar icon in the upper right corner to allow you to select (image) files from your local machine. This is how you then add "image icons" to this palette. This control is also available later from the "edit palette" control.
 
-<img src="./images/review-icons.png" alt="Select icons to include" width="400px"/>
-
-
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/review-icons.png" alt="Select icons to include" width="400px"/>
 
 
+
+For example, here is the edit palette control after adding 3 images from file system. Note, when you add an image, it is unnamed. You can (optional) provide names for the icons to make them easier to recongnize and use.
+
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/edit-palette-with-images.png" alt="Select icons to include" width="400px"/>
 
 The newly created palette will show up as a new diagram palette.   
 
-<img src="./images/palette-on-left.png" alt="Review icons and save" width="200px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/palette-on-left.png" alt="Review icons and save" width="200px"/>
 
 Note these custom palettes can not be used to add drawing elements to a diagram, they are only used to alter the applied icon to existing elements on the canvas.
 
 To use, drag an icon onto an element.
 
-<img src="./images/drag-icon.png" alt="Create new palette, set name" width="400px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/drag-icon.png" alt="Create new palette, set name" width="400px"/>
 
 The result will be to apply that icon to the element.
 
-<img src="./images/applied-icon.png" alt="Create new palette, set name" width="400px"/>
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/applied-icon.png" alt="Create new palette, set name" width="400px"/>
 
-### Current caveats
+### Behavior differences image vs. stencil icons
 
-These icons from custom palettes can only be applied to the new, IBM architecture visualization standard elements on the canvas. Eventually you will be able to drag both stencil and image icons onto these "styled" drawing elements. Also, in the future, you will be able to drag "image icons" onto the old style elements for a similar effect.
+Stencil icons can only be applied to the new, IBM architecture visualization standard elements on the canvas. Image icons can be applied to either the new IBM architecture visualization standard elements (note they will be scaled to be quite small) or to the "original" styled elements. For the original styled elements, the drag-and-drop has the same impact as if you clicked on "Edit Image" and loaded the corresponding image file from your local disk.  
+
+### Managing Custom Palettes
+
+Currently, the custom palettes can be defined within an architect and can be exported and imported as an xml file. This way you can create sets of palettes that you want to consistently use and possibly share with your peers. To export, click on the '...' menu for a custom palette and click Export and then save to disk. The import operation is available both on the create new palette dialog (see earlier image and the Import File option) and from the edit palette dialog by importing a palette .xml file instead of a image file.
+
+<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/export-palette.png" alt="Review icons and save" width="200px"/>
