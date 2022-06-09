@@ -59,7 +59,7 @@ Anywhere within the tool you can navigate to the appropriate section of this Use
 
 Getting started with IBM IT Architect Assistant, Community Edition involves authoring a new or existing architecture.  As a single-user environment, the only available assets are those that you author and those that you download and import.
 
-One source for content to import are the reference architectures and reference solutions published on [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures). You are strongly encouraged to work through the [self-paced tutorial](./Self-Guided%20Tutorial/Getting%20Started%20with%20IT%20Architect%20Assistant.md) which has you download an architecture from this site and install it into your local workspace.
+One source for content to import are the reference architectures and reference solutions published on [IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture/architectures). You are strongly encouraged to work through the [self-paced tutorial](./Self-Guided%20Tutorial/Getting%20Started%20with%20IT%20Architect%20Assistant) which has you download an architecture from this site and install it into your local workspace.
 
 In your local installation of the Community Edition, you will find the **Workspace** folder. Within this folder there are subfolders, each representing a different architecture available locally within the tool.  
 
