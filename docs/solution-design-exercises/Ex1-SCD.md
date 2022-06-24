@@ -32,7 +32,7 @@ Click on the **2.2 System Context** in the Table of Contents to open up the diag
 
 You will be presented with an error stating that any valid System Context Diagram (SCD) must have a ***Target System*** defined.  You can close the Table of Contents, by clicking on the 'X' next to the ToC title. 
 
-Next notice the drawing palettes along the left side of the drawing canvas. The main palette you will be using is the **System Context Palette**. There are 7 drawing elements presented (2 sets of 3 elements + 1 connector). These two sets represent two different notation styles.  You will work with the "blue" version.
+Next notice the drawing palettes along the left side of the drawing canvas. The main palette you will be using is the **System Context Palette**. There are 7 drawing elements presented (2 sets of 3 elements + 1 connector). These two sets represent two different notation styles.  You will work with the "blue" versions.
 
 Start by dragging a Target System onto the drawing canvas. With this element placed on the diagram and highlighted you will see metadata properties of the corresponding architecture element displayed in the Attributes tab in the Format panel on the right.  You will be adding details into this tab for most of the drawing elements you add to the diagram. For now, set the name of the Target System to be **MyBank Customer Service Center Portal** and provide a description as:
 
@@ -56,11 +56,11 @@ You will add additional Actors in a bit, but for now, look at Connectors. Start 
 
 Do the same, this time starting at the target system and drawing a connector to A_Cusomter Account Services. By default these connectors can remain unnamed.  But often it is a good idea to describe the interaction associated with that connector.   If the description is short, you can just use that for the name.  
 
-Select the connector between Restricted Account View and target system and name it *Customer Inquiry*, and similarly name the other connector, *Customer Data Management*.  By selecting a connector, you can grab and drag the "yellow" dot to reposition the text relative to the connector line.
+Select the connector between A_Restricted Account Viewer and target system and name it *Customer Inquiry*, and similarly name the other connector, *Customer Data Management*.  By selecting a connector, you can grab and drag the "yellow" dot to reposition the text relative to the connector line.
 
 ![Named connectors](./images/SCD_first_connectors.png)
 
-To fill this out you can optionally add the following additional actors to the diagram along with connectors.
+To further fill out this diagram, you can optionally add the following additional actors to the diagram along with connectors.
 
 | Actor Type | Actor Name                         | Actor Description                                            | Connector Name            |
 | ---------- | ---------------------------------- | ------------------------------------------------------------ | ------------------------- |
@@ -71,7 +71,7 @@ To fill this out you can optionally add the following additional actors to the d
 | IT System  | A_Marketing Data                   |                                                              | Marketing Info Mgmt       |
 | IT System  | A_Customer Service Ticket Services |                                                              | Online Customer Data Mgmt |
 
-Now for some formatting.  You have lots of options, but let's just focus on the Style properties for now. On the menu, select Edit > Select Vertices. Then deselect just the target system.  Then in the format panel on the right, select the Style tab.  Find toward the bottom, the Property ***Color***. Click on the current Value (Blue) and from the drop-down, select Black.
+Now for some formatting.  You have lots of options, but let's just focus on the Style properties for now. On the menu, select Edit > Select Vertices. Then deselect just the target system.  Then in the format panel on the right, select the Style tab.  Locate the color picker associated with "Line", click on this and select the black color block and click apply. Next, unselect "Fill" if it is selected.
 
 Click Save.
 
@@ -81,6 +81,6 @@ Continue to explore formatting, moving objects, etc. Save changes when you are h
 
 It is important to keep the SCD in synch with the rest of the architecture. Each of the Actors should appear on other diagrams and artifacts. And if a new actor gets introduced in some other artifact, it should get added to the SCD.
 
-One note about Actors, particularly in today's world of using Cloud services and SaaS applications as part of a solution. Actors are critical to the complete behavior of the solution being designed. If a service or application is configured such that it is dedicated to the target system, then it generally should not show up as an Actor but instead it will probably be represented as an implementation of a system Logical Component. On the other hand, if you have no control over the configuration of the interacting service/application then it is out of "development scope" and should be modeled as an Actor.
+One note about Actors, particularly in today's world of using Cloud services and SaaS applications as part of a solution. Actors are critical to the complete behavior of the solution being designed. If a service or application is configured such that it is dedicated to the target system, then it generally should not show up as an Actor but instead it will probably be represented as an implementation of a Logical Component for the Target System. On the other hand, if you have no control over the configuration of the interacting service/application then it is out of "development scope" and should be modeled as an Actor.
 
 [Next Exercise - Ex2 Use Case Model](./Ex2-UCM)

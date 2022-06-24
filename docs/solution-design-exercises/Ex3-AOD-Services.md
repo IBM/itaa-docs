@@ -30,7 +30,11 @@ Next, add existing Actors onto the diagram placing the A_Restricted Account View
 
 <img src="./images/service_view_w_actors.png" alt="AOD Services View with actors" style="zoom:150%;" />
 
-<add information about creating a custom palette and using it as part of these instructions> Change the "Icon Name" for the LC_Application and Services Hub to be 'application' (Ctrl-m to open Data Attribute panel).  And set the "Icon Name" for the LC_Access Manager to be 'fingerprint-recognition'. Use the regular Style properties to change actors to be 'black', LC_Access Manager to be 'red' and set subsystem to be 'teal'. Additional information about visualization manipulation can be found in the [User's Guide](../ArchVisualization).
+Note that each of the elements on the diagram have an associated icon.  The easiest way to change/customize these icons is to use one or more custom icon palettes.  (For extensive details on how to manipulate these custom palettes, see the [Visualization Guide](../ArchVisualization)).  But, to get started, click on the '+' symbol just to the right of the "search shapes" text box (top of the left side drawing palette area).  For a name for your palette, e.g., MyIcons, and click **Next**. Click on the "Add from IBM standard UI icon set".  Scroll down until you find the section labeled "Technology", and check the checkbox for that group. Click **Apply**, then click **Save**.
+
+Next expand the newly added palette, MyIcons.  Next, locate the fingerprint looking icon in the palette and drag it onto the icon area for the component, LC_Access Manager. Release the mouse button, and the icon should be replaced.  Select other icons to change as you see fit.  
+
+Use the regular Style properties to change actors to be 'black', LC_Access Manager to be 'red' and set subsystem to be 'teal'. Additional information about visualization manipulation can be found in the [User's Guide](../ArchVisualization).
 
 Note adding in detailed descriptions for all of the components and subsystems is essential to helping a reader understand the solution.
 

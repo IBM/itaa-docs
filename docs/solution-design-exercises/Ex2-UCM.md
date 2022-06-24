@@ -42,23 +42,23 @@ Connect UC_006 to UC_001-UC_005 using the *Includes* relationship. Authenticatio
 
 ![Includes Use Case](./images/included_uc.png)
 
-Save the Diagram.
+**Save** the Diagram.
 
 Before completing this exercise, you will explore the more detailed Use Case artifact instance. There are two ways to access this content and you will explore both approaches.
 
-Click on UC_005 on the diagram. In the Attributes tab in the Format panel, scroll to the bottom and click on *Go to use case*. A dialog will pop-up with a full set of Use Case attributes. 
+Click on **UC_005** on the diagram. In the Attributes tab in the Format panel, scroll to the bottom and click on *Go to use case*. A dialog will pop-up with a full set of Use Case attributes. 
 
 Add the following: 
 
-- Pre-conditions -   Verify customer's identity for  successful authentication.
+- Pre-conditions -   Verify customer's identity for successful authentication.
 - Successful Outcome - Customer inquiry processed successfully
 - Failure Outcomes - Preconditions not met
 
 ![Adding Use Case detail from pop-up](./images/edit_uc_popup.png)
 
-Click Save (for the Use Case details)
+Click **Save** (for the Use Case details)
 
-Click Save on the diagram
+Click **Save** on the diagram
 
 Next click on the left arrow (upper left) to exit the diagram. Next click on the Table of Contents section 3.2 Use Cases. Locate and Open UC_005.  You should see all of the attributes that you have so far completed for this Use Case.  Add the following for the *Basic Flow*:
 
@@ -76,9 +76,9 @@ Next click on the left arrow (upper left) to exit the diagram. Next click on the
 
 ![Adding Use Case detail from artifact instance](./images/edit_uc_detail.png)
 
-Click Save.
+Click **Save**.
 
-Typically, the Use Case Model is something that gets elaborated throughout the solution design process. It is important to start with those key Use Cases that are important to the solution Stakeholder and collectively help specify the core capabilities delivered by the solution. More detailed Use Cases and/or User Stories will usually be developed further into design. 
+Typically, the Use Case Model is something that gets elaborated throughout the solution design process. It is important to start with those key Use Cases that are important to the solution Stakeholder(s) and collectively help specify the core capabilities delivered by the solution. More detailed Use Cases and/or User Stories will usually be developed further into design. 
 
 
 
