@@ -518,8 +518,16 @@ Currently in this tool DUs are represented in the attributes panel as the LOM/PO
 
 #### Subsystem
 
-A subsystem is NOT a reusable element in the meta-model and represents a logical grouping of things. They may be used to simplify "connections" by being able to connect to the subsystem on the diagram and imply that the connection connects to all elements within the Subsystem. Most of the time, subsystems are used for organizational purposes. A subsystem is represented via a "Group" rectangle within the IBM Design notation. 
+A subsystem is NOT a reusable element in the meta-model and represents a logical grouping of things. They may be used to simplify "connections" by being able to connect to the subsystem on the diagram and imply that the connection connects to all elements within the Subsystem. Most of the time, subsystems are used for organizational purposes. A subsystem is represented via a "sub" shape within the IBM Design notation. 
 
-  ![Subsystem Symbol](../images/subsystem-symbol.png)
+  <img src="../images/subsystem-shape.png" alt="Subsystem Symbol" style="zoom:75%;" />
+
+
+
+#### Zone
+
+A zone is NOT a reusable element in the meta-model and represents a grouping of things based on a common "value" of some NFR. A zone is represented via a "zone" shape within the IBM Design notation. Unlike OMLocation, Location, and Subsystem, the zone shape does not act as a container.  It is an "overlay" grouping.
+
+  ![Subsystem Symbol](../images/zone-shape.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
