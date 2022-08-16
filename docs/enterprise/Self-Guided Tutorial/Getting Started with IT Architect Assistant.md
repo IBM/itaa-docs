@@ -65,7 +65,7 @@ Discovery of both public and As-Is assets if provided via **Search**. (More on [
 
 **Login** to IT Architect Assistant.  If this is the first time you have login to this application you will be prompted to accept a data privacy statement.
 
-Switch to the **Search** page. You can choose to use a combination of Catalog and Keyword search. Click on Magnifying Glass.
+Switch to the **Search** page. Click on Magnifying Glass.
 
 ![Search for Consumer Industry assets](../tutorial-images/search-consumer2.png)
 
