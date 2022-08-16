@@ -10,7 +10,7 @@ This tutorial is intended as a guided tour of using IT Architect Assistant to do
 
 ### What is IT Architect Assistant?
 
-IT Architect Assistant is a hosted architecture design and collaboration platform. This single web page application provides access to a repository of solution architectures along with the ability to author and customize your own architecture solutions or those solutions where you have been added as a collaborator.  For quick pointers see the tool's [User Guide](https://github.com/IBM/itaa-docs/enterprise/Overview-ITAA.md). 
+IT Architect Assistant is a hosted architecture design and collaboration platform. This single web page application provides access to a repository of solution architectures along with the ability to author and customize your own architecture solutions or those solutions where you have been added as a collaborator.  For quick pointers see the tool's [User Guide](https://ibm.github.io/itaa-docs/enterprise/Overview-ITAA). 
 
 The benefits of IT Architect Assistant are improved productivity for a solution architect and improved quality of the solutions created for our customers. These benefits result from a consistent, yet efficient approach to documenting solution designs (based on a subset of the System Design Standard), that enhances the ability to quickly and effectively reuse past solutions to construct new client architectures. 
 
@@ -56,7 +56,7 @@ A majority of architectures found in the asset repository represent "private" ar
 
 There are two other sets (categories) of architecture assets found in the repository.  There are a small set of curated "public" assets, that have gone through a governance review and are made available to search as read-only reusable assets. In addition, any user can opt to make any of their architectures discoverable by publishing them **As-Is**. An As-Is asset can be discovered via search. Openning an As-Is asset will implicitly add the "opener" as a "Viewer" collaborator.
 
-Discovery of both public and As-Is assets if provided via **Search**. (More on [Workspace and Search](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Overview-ITAA.md#workspace-search-and-dashboard))
+Discovery of both public and As-Is assets if provided via **Search**. (More on [Workspace and Search](https://ibm.github.io/itaa-docs/enterprise/Overview-ITAA#workspace-search-and-dashboard))
 
 ------
 
@@ -72,7 +72,7 @@ Switch to the **Search** page. You can choose to use a combination of Catalog an
 
 ##### ___ Review search results
 
-The results from a search is a set of "asset (or architecture)" cards. Each representing an identified architecture. Note there is a lot of summary information provided on this ([*card view* ](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Overview-ITAA.md#architecture-card-elements)). Hovering over a card exposes two buttons: **Open** and **Quick View**.  Clicking on Quick View let's you see the description provided in the Overview artifact as well as an indication of which additional artifacts are populated with at least some content within the architecture. Clicking on Open will let you review the complete content of the corresponding asset.
+The results from a search is a set of "asset (or architecture)" cards. Each representing an identified architecture. Note there is a lot of summary information provided on this ([*card view* ](https://ibm.github.io/itaa-docs/enterprise/Overview-ITAA#architecture-card-elements)). Hovering over a card exposes two buttons: **Open** and **Quick View**.  Clicking on Quick View let's you see the description provided in the Overview artifact as well as an indication of which additional artifacts are populated with at least some content within the architecture. Clicking on Open will let you review the complete content of the corresponding asset.
 
 ![Architecture card - hover view](../tutorial-images/asset-card-hover.png)
 
@@ -86,7 +86,7 @@ When you open an architecture, you will be presented with a structured asset org
 
 ![Architecture with Table of Contents](../tutorial-images/arch-with-TOC.png)
 
-Do your own exploration on each of the search results you review to see the nature of the available architecture content. The [detailed artifact guide](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md) can be reviewed for much greater explanation about each artifact type and what is involved in authoring that kind of content.
+Do your own exploration on each of the search results you review to see the nature of the available architecture content. The [detailed artifact guide](https://ibm.github.io/itaa-docs/enterprise/Artifact-Details-ITAA) can be reviewed for much greater explanation about each artifact type and what is involved in authoring that kind of content.
 
 ### Copy Architecture
 
@@ -138,7 +138,7 @@ For the Business Challenge, you might add in the KPIs that a new solution might 
 
 ___ **First Diagram**
 
-The asset we copied does not provide a System Context diagram. That is not surprising as the source asset was a reference architecture that is applicable for a wide range of solutions.  Our System Context wants to provide the scope for our particular solution.  Before getting started creating a System Context diagram, you may want to review the details provided in the [user guide for SCD](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#system-context).  
+The asset we copied does not provide a System Context diagram. That is not surprising as the source asset was a reference architecture that is applicable for a wide range of solutions.  Our System Context wants to provide the scope for our particular solution.  Before getting started creating a System Context diagram, you may want to review the details provided in the [user guide for SCD](https://ibm.github.io/itaa-docs/enterprise/Artifact-Details-ITAA#system-context).  
 
 **Click on System Content** in the TOC! As noted in the user guide, unlike all other diagram artifact types, an architecture currently is restricted to a single System Context diagram instance. So clicking on System Context will immediately take you into the MxGraph-based diagram editor. (For all other diagram/artifact types, you will need to create/open a named diagram instance.)
 
@@ -152,7 +152,7 @@ The first thing to notice is the **Attributes** panel that is part of the format
 
 In addition to the Target System, a System Context will define the set of interacting elements "external" to the solution itself to indicate *how* the target system integrates into the larger enterprise. **Add two human actors**: *Citizen* and *Case officer*. Again drag human actor icon from palette onto the drawing canvas.
 
-Next, connect these human actors with the target system. The quick connect user guesture starts by hovering over an edge of an element on the canvas, and waiting for a green "connection" dot to appear. Then click and drag to the other element waiting on a similar green dot before "releasing" mouse button. (see [drawing instructions in user guide](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Overview-ITAA.md#quick-connect).)
+Next, connect these human actors with the target system. The quick connect user guesture starts by hovering over an edge of an element on the canvas, and waiting for a green "connection" dot to appear. Then click and drag to the other element waiting on a similar green dot before "releasing" mouse button. (see [drawing instructions in user guide](https://ibm.github.io/itaa-docs/enterprise/Overview-ITAA.html#quick-connect).)
 
 ![Add and connect Human actors](../tutorial-images/scd-connect-human-actors.png)
 
@@ -160,7 +160,7 @@ Let's add a IT System actor, *Utility provider* and connect it to the target sys
 
 ![Add IT System Actor to SCD](../tutorial-images/scd-system-actor.png)
 
-Note before leaving this diagram, review the other **format panel** tabs.  You can change line styles, colors, text font details, and more. So don't contrain yourself to the somewhat blah look to your diagrams.
+Note before leaving this diagram, review the other **format panel** tabs.  You can change line styles, colors, text font details, and more. See architecture [visualization guidance](https://ibm.github.io/itaa-docs/Archi-Visualization) for ideas.
 
 ![Adding some style](../tutorial-images/scd-stylized.png)
 
@@ -194,7 +194,7 @@ Feel free to explore and create a Use Case diagram and reuse the existing Actors
 
 ___ **AOD and other architecture diagrams**
 
-At this point, although we copied an existing architecture - we have not reused any of the content we copied. So the tasks you have performed could just have easily been done on an initially empty new architecture. So let's focus more on the reuse. To do this we will look at the two artifact types that were populated in the asset we copied: **AOD - IT System View** and an associated **AOD - Usage Scenario**. You should take some time to read through the [description of Architecture Overview](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#architecture-overview) within IT Architect Assistant's  User Guide!
+At this point, although we copied an existing architecture - we have not reused any of the content we copied. So the tasks you have performed could just have easily been done on an initially empty new architecture. So let's focus more on the reuse. To do this we will look at the two artifact types that were populated in the asset we copied: **AOD - IT System View** and an associated **AOD - Usage Scenario**. You should take some time to read through the [description of Architecture Overview](https://ibm.github.io/itaa-docs/enterprise/Artifact-Details-ITAA#architecture-overview) within IT Architect Assistant's  User Guide!
 
 One of the reasons for selecting this asset for reuse was the usage scenario text that follows the solution for Insurance claim processing. There are many elements in this usage scenario that align with the scenario we are trying to solve.
 
@@ -212,7 +212,7 @@ With that as background, consider the source of this Usage Scenario?   It is an 
 
 Click on the **blue left arrow** (top-left of the Usage Scenario diagram). Feel free to review the other two Usage Scenarios both for inspiration and also knowledge about whether they should be retained in our solution architecture or later deleted.
 
-Click on **5.1.3 IT System View**.  Click on **Reference Architecture**. You will now be editing the IT System View diagram.  This diagram type is quite distinctive as we decided very much to directly support the diagram style used in the IBM Cloud Architecture center.   There are a set of icons available in palettes on the left, but as you will see we will encourage you to reuse content from another reusable asset instead of using icons from the palette. 
+Click on **5.1.3 IT System View**.  Click on **DBA Reference Architecture**. You will now be editing the IT System View diagram.  This diagram type is quite distinctive as we decided very much to directly support the diagram style used in the IBM Cloud Architecture center.   This is however being replaced by the newer architecture visualiztion style noted earlier.  
 
 ![Initial IT System View](../tutorial-images/orig-itsystem.png)
 
@@ -232,19 +232,11 @@ Slide the top edge of Enterprise Network down a couple of inches (just above the
 
 <img src="../tutorial-images/update-entnetwork.png" alt="Update Enterprise Network" style="zoom:50%;" />
 
-Next, Add a new Location above the Enterprise Network.  Add a Generic Node from main palette and name it Partner Utilities.
+Next, Add a new Location above the Enterprise Network.  Drag *Utility Provider* from existing IT System palette.
 
 <img src="../tutorial-images/add-utilities.png" alt="Add Partner Network" style="zoom:75%;" />
 
-#### Copy icon via style
 
-Now let's explore some of the various ways to reuse icons and standard nodes and update the diagram. Start by selecting **Partner Utilities**. In the Style tab of the format panel, click on **Edit Image**. This will open up the file menu/finder and allow you to select any image you want to use as the icon for this element. For now click **Cancel**.   Next, select the Enterprise Applications node and click **Edit Style** in the same Style tab.  Note the **image=...** section of this style.  **Copy** the "File path" that follows.
-
-![copy style image path](../tutorial-images/edit-style.png)
-
-Next again select **Partner Utilities** node, click **Edit Style**, and replace the image file path by pasting what you copied from the Enterprise Applications node.   You should then see the following:
-
-![replace image icon file path](../tutorial-images/updated-icon.png)
 
 Next we are going to copy a node icon from another diagram in another asset. Click **Save**.  Then on the breadcrumbs at the top of the page, click on the down arrow next to **Workspace**.  Under Quick Link, click on **Search**. In the search box, type **Library** and hit enter or click on the magnifying glass icon.  You should see the following results:
 
@@ -344,9 +336,9 @@ ___ **Explore on your own**
 
 There are many additional artifact types available that this tutorial has not explored: Functional Requirements, Architecture Decisions, Architecture Principles, RAID elements, Logical Data model diagrams, additional AOD types, Component Model view and Operational Model views. 
 
-At a minimum, study the description of a [Usage Scenario](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md#aod-usage-scenario) and start to build a Usage Scenario based on the IT system view diagram you created earlier. If you are successful, delete the Usage Scenarios that you "inherited" when you copied the original architecture.
+At a minimum, study the description of a [Usage Scenario](https://ibm.github.io/itaa-docs/enterprise/Artifact-Details-ITAA#usage-scenarios) and start to build a Usage Scenario based on the IT system view diagram you created earlier. If you are successful, delete the Usage Scenarios that you "inherited" when you copied the original architecture.
 
-Follow the [detailed artifact editing guide](https://github.com/IBM/itaa-docs/blob/master/docs/enterprise/Artifact-Details-ITAA.md) and explore other artifact types.  Also consider exporting to PowerPoint and/or Excel.   Note the Excel export has an analogous Import operation that is useful to bulk load model elements into a new architecture.
+Follow the [detailed artifact editing guide](https://ibm.github.io/itaa-docs/enterprise/Artifact-Details-ITAA) and explore other artifact types.  Also consider exporting to PowerPoint and/or Excel.   Note the Excel export has an analogous Import operation that is useful to bulk load model elements into a new architecture.
 
 
 
