@@ -26,7 +26,6 @@ As noted at the beginning, this tutorial is intended as a quick start on becomin
   - [System Context Diagram](#system-context-diagram)
   - [Reuse Element](#reuse-element)
   - [AOD IT System View](#aod-it-system-view)
-  - [Copy icon via edit style](#copy-icon-via-style)
   - [Copy from resource](#copy-from-resource)
   - [Linking reference attributes](#linking-reference-attributes)
 - Understanding the lightweight architecture meta-model - this is done in conjunction with authoring to help you understand you are building an architecture model, not a set of independent artifacts.
