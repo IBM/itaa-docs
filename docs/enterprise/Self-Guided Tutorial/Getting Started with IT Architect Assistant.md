@@ -161,8 +161,6 @@ Let's add a IT System actor, *Utility provider* and connect it to the target sys
 
 Note before leaving this diagram, review the other **format panel** tabs.  You can change line styles, colors, text font details, and more. See architecture [visualization guidance](https://ibm.github.io/itaa-docs/Archi-Visualization) for ideas.
 
-![Adding some style](../tutorial-images/scd-stylized.png)
-
 Then **click save**! 
 
 Next click on **Use Case** in the ToC. Then click on **Add Use Case**.
