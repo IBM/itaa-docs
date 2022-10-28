@@ -480,7 +480,7 @@ Similar to Notes, Sizing instances have a name, and a rich text block. The rich 
 
 This artifact type is NOT an architectural meta-model type. Its role is to enable users to author diagrams otherwise not supported in the tool's meta model (either type or style). It provides the raw MxGraph (Draw.io foundation) drawing editor and palettes.  There will be no "Attribute" panel appearing for anything about any Misc Diagram created.  
 
-In addition to providing these generic drawing capabilities within the tool to supplement the native rich architecture model diagrams, Misc Diagrams also presents the ability to import a Draw.io (.xml or .drawio) diagram into your architecture asset. Details on the Draw.io import feature is [presented in the companion document](../../master/docs/Overview-2.1.md#drawio) of the User Guide.
+In addition to providing these generic drawing capabilities within the tool to supplement the native rich architecture model diagrams, Misc Diagrams also presents the ability to import a Draw.io (.xml or .drawio) diagram into your architecture asset. Details on the Draw.io import feature is [presented in the companion document](./Overview-ITAA-CE.md#drawio) of the User Guide.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
 
