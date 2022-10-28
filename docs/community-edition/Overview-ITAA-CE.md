@@ -76,7 +76,7 @@ After loading a new architecture into the workspace folder just **refresh** the 
 
 An architecture is comprised of a set of interrelated artifacts many of which share a set of elemental architecture building blocks (or elements). The best way to visualize this structure is through IBM Architect Assistant, Community Edition's Table of Contents for any architecture.
 
-![IBM Architect Assistant, Community Edition - Table of Contents](../images/CA-TOC-2.1.png)
+![IBM Architect Assistant, Community Edition - Table of Contents](./images/../../images/ITAA-TOC-3.13.png)
 
 This standard structure directly supports the details of a specific solution architecture, but can also be used to manage a set architecture building blocks which are described as a **architecture pattern** within the tool.  This may be a library of reusable standard *parts* or a more integrated set of reusable content.  These *architecture patterns* typical get used as a source resource for copying a subset of the pattern asset into a target architecture.  This is useful to be able to consistently use these building blocks in multiple architecture
 
@@ -129,7 +129,13 @@ The first type includes: Use Cases, Functional Requirements, Non-Functional Requ
 ![Form Based Editor - Functional Requirement](../images/fr-editor-form.png)
 
 ### Free form text artifacts
-The second type of artifact from a UI perspective includes **Notes**. Notes are intended to easily allow any miscellaneous content to be attached or associated with an architecture that otherwise doesn't have a structured artifact prescribed. Each Note is a standalone entity which includes Rich Text (including embedded images) along with file attachments. Here the editor is a specialized rich text editor. There is an option to create (manage) a set of labels or tags that can then be added to Notes. The visible Note instances can then be filtered based on the applied labels.
+The second type of artifact from a UI perspective includes **Notes, RACI and Sizing**. 
+
+*Notes* are intended to easily allow any miscellaneous content to be attached or associated with an architecture that otherwise doesn't have a structured artifact prescribed. Each Note is a standalone entity which includes Rich Text (including embedded images) along with file attachments. Here the editor is a specialized rich text editor. There is an option to create (manage) a set of labels or tags that can then be added to Notes. The visible Notes instances can then be filtered based on the applied labels.
+
+Similarly, *RACI* and *Sizing* operates in the same way, except that they are targeted for specific content. 
+- RACI (Responsible, Accountable, Consulted, Informed) focuses on capturing and tracking the various parties and their respective responsibilities.
+- Sizing includes any information related to the size estimate of the various components of the solution architecture. 
 
 ### Diagrams
 The third type of artifact provides the richest user experience. These are specialized diagram types all of which are delivered by a custom *MxGraph-based* diagram editor. MxGraph is an open source framework that delivers client side JavaScript diagramming capabilities.
@@ -349,11 +355,11 @@ Most of the time, you will be reviewing an architecture from an artifact perspec
 
 A new co-relationship feature allows you to explore the relationships within an architecture from the perspective of the primitive architecture elements.  Open the co-relationship panel via the Co-relationship toolbar button.
 
-![Co-Relationship button](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/co-relationship.png)
+![Co-Relationship button](./images/../../images/co-relationship.png)
 
 The Co-Relationship Table (panel) displays the architecture elements by type. You can then select an element and drill down and see what diagrams that element appears on, and what other elements it is related to via a relationship property.
 
-![Co-Relationship Table](/Users/glcraig/Documents/GitHub/CogArch_Docs/images/co-relationship-table.png)
+![Co-Relationship Table](./images/../../images/co-relationship-table.png)
 
 
 

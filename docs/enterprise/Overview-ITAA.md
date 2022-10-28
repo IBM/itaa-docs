@@ -14,13 +14,17 @@ The Documentation is organized in the following sections:
 - [Reuse, Copy and Paste](#copy-and-paste)
 - [Import and Export](#import-and-export)
 - [Collaboration](#collaboration)
+- [Backup and Versioning](#backup-and-versioning)
+- [Comments](#comments)
+- [Change Log](#change-log)
+- [Co-Relationships](#co-relationships)
 - [Detailed authoring - by artifact type](./Artifact-Details-ITAA) 
 
 
 ## Terminology
-Before diving into details about Architect Assistant it is important to understand some key terminology used throughout the documentation.  
+Before diving into details about Architect Assistant, it is important to understand some key terminology used throughout the documentation.  
 
-**Logical Asset Repositories** -- Today there are 3 logical repositories of architectures: **Public**, this contains curated, read-only architectures that can be discovered via search; **Private**, every user has a set of private assets that they own, that by default are read-write and not discoverable by other users; [**As-Is**,](#as-is) any private asset can be set as discoverable (marked As-Is and discoverable) by the owner. As-Is assets are optionally searchable and anyone following the [shared] link to an As-Is asset will be added as a "Viewer" collaborator.  
+**Logical Asset Repositories** -- There are 3 logical repositories of architectures: **Public**, this contains curated, read-only architectures that can be discovered via search; **Private**, every user has a set of private assets that they own, that by default are read-write and not discoverable by other users; [**As-Is**,](#as-is) any private asset can be set as discoverable (marked As-Is and discoverable) by the owner. As-Is assets are optionally searchable and anyone following the [shared] link to an As-Is asset will be added as a "Viewer" collaborator.  
 
 **(Note:** if the architecture you create contains confidential information or personal private information, only share the architecture by explicitly adding collaborators (do not share "As-Is").  Further, make sure any collaborators are aware of the sensitive nature of the architecture content and do not expose to others.) 
 
@@ -44,9 +48,9 @@ Before diving into details about Architect Assistant it is important to understa
 
 To resolve this the user can select the Logical Node in error and click on the **Select from existing** button (at the bottom of the Attributes tab of the Format panel) and point to the existing Logical Node, indicating you are reusing the same element. 
 
-<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/Select-from-existing.png" height="244px" alt="Select from existing button" />
+<img src="./../images/Select-from-existing.png" height="244px" alt="Select from existing button" />
 
-<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
+<img src="./../images/Select-from-existing-picklist.png" height="519px" alt="Select existing element" />
 
 
 
@@ -94,7 +98,7 @@ Getting started with Architect Assistant depends on your usage intent. The most 
 
 In each case the fundamental construct is an architecture. An architecture is comprised of a set of interrelated artifacts many of which share a set of elemental architecture building blocks (or elements). The best way to visualize this structure is through Architect Assistant's Table of Contents for any architecture.
 
-![Architect Assistant - Table of Contents](../images/CA-TOC-2.1.png)
+![Architect Assistant - Table of Contents](./../images/ITAA-TOC-3.13.png)
 
 The ToC, shown above, is the default for architectures created in the tool. This standard structure directly supports the details of a specific solution architecture, but can also be used to manage a set architecture building blocks which are described as a **architecture pattern** within the tool.  This may be a library of reusable standard *parts* or a more integrated set of reusable content.  These *architecture patterns* typical get used as a source resource for copying a subset of the pattern asset into a target architecture.  This is useful to be able to consistently use these building blocks in multiple architecture.
 
@@ -210,7 +214,13 @@ The first type includes: Use Cases, Functional Requirements, Non-Functional Requ
 ![Form Based Editor - Functional Requirement](../images/fr-editor-form.png)
 
 ### Free form text artifacts
-The second type of artifact from a UI perspective includes **Notes**. Notes are intended to easily allow any miscellaneous content to be attached or associated with an architecture that otherwise doesn't have a structured artifact prescribed. Each Note is a standalone entity which includes Rich Text (including embedded images) along with file attachments. Here the editor is a specialized rich text editor. There is an option to create (manage) a set of labels or tags that can then be added to Notes. The visible Note instances can then be filtered based on the applied labels.
+The second type of artifact from a UI perspective includes **Notes, RACI and Sizing**. 
+
+*Notes* are intended to easily allow any miscellaneous content to be attached or associated with an architecture that otherwise doesn't have a structured artifact prescribed. Each Note is a standalone entity which includes Rich Text (including embedded images) along with file attachments. Here the editor is a specialized rich text editor. There is an option to create (manage) a set of labels or tags that can then be added to Notes. The visible Notes instances can then be filtered based on the applied labels.
+
+Similarly, *RACI* and *Sizing* operates in the same way, except that they are targeted for specific content. 
+- RACI (Responsible, Accountable, Consulted, Informed) focuses on capturing and tracking the various parties and their respective responsibilities.
+- Sizing includes any information related to the size estimate of the various components of the solution architecture. 
 
 ### Diagrams
 The third type of artifact provides the richest user experience. These are specialized diagram types all of which are delivered by a custom *MxGraph-based* diagram editor. MxGraph is an open source framework that delivers client side JavaScript diagramming capabilities.
@@ -411,9 +421,9 @@ This will bring up the manage orphan elements panel.  Here you can select all, s
 
 ## Import and Export
 
-There are a set of tools to work with an architecture outside of Cognitive Architect in different forms.  These tools are accessed from the top-level Export/Import toolbar button.
+There are a set of tools to work with an architecture outside of IBM IT Architect Assistant in different forms.  These tools are accessed from the top-level Export/Import toolbar button.
 
-<img src="/Users/glcraig/Documents/GitHub/CogArch_Docs/images/consolidated_export.png" alt="Export/Import toolbar button" />
+<img src="./../images/consolidated-export-3.13.png" alt="Export/Import toolbar button" />
 
 
 
@@ -425,9 +435,9 @@ There is a lot of value of having everything associated with a Solution Architec
 
 - Above you see the toolbar button to access the import and export utilities. First you select if you want to export or import.  Note there is also a link to an *import template* file to download and modify in order to be able to import from an Excel spreadsheet. Selecting Export and clicking Next will take you to a dialog where you can choose the type of export. 
 
-   ![Export Options](../images/export-options.png)
+   ![Export Options](../images/export-options-3.13.png)
 
-   There are three* choices presented:
+   There are *four* choices presented:
 
    - **Microsoft PowerPoint** - This produces a summary PPTX document containing the major sections of the architecture. This is a good way to quickly get content out in this format to share with others.  Clicking Next will generate the file and then prompt you with a Browser open/save dialog. 
 
@@ -455,7 +465,15 @@ There is a lot of value of having everything associated with a Solution Architec
 
      **Note**, when you open the downloaded .docx file you will be asked if you want MS Word to update external references during open.  Respond yes to this request to make sure the TOC, List of Figures and List of Tables gets populated. You will also then want to "Update table" for each of this lists after the fact to make sure all of the figure numbers and table numbers are updated correctly.
 
-     #### GitHub Export
+  - **GitHub Pages (online only)** - This export provides the architecture in web pages for easy viewing and sharing. A default theme is used but you can customize it.
+
+    Provide the GitHub repository URL (& token) where you want the web pages generated and click **Export**.
+
+     *Note:* If you are using this utility for the first time, refer to the Setup instructions [here.](https://github.com/IBM/itaa-markdown/)
+
+
+
+  #### GitHub Export (Archive)
 
    - **GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
 

@@ -24,6 +24,9 @@ This section will present the details for each of the artifact types, including 
 - [Viability - Issues](#viability---issues)
 - [Viability - Dependencies](#viability---dependencies)
 - [Architectural Principles](#architectural-principles)
+- [RACI](#raci)
+- [Sizing](#sizing)
+- [Misc Diagrams](#misc-diagrams)
 - [Notes](#notes)
 - [Glossary](#glossary---shared-core-architectural-elements)
 
@@ -460,6 +463,30 @@ Architectural Principles represent an external set of guidelines or constraints.
 - **Metrics** - Details about the measures and metrics that are impacted by applying this principle.
 
 Architectural Principles are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of Architect Assistant are extremely useful when working with Architectural Principles. 
+
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
+
+### RACI
+
+This artifact type is NOT an architectural meta-model type. Its role is to enable users to author RACI (Responsible, Accountable, Consulted, Informed) matrices for tracking various parties and their respective responsibilities.
+
+Similar to Notes, RACI instances have a name, and a rich text block. You can attach a RACI matrix spreadsheet or use the table feature in the rich text block to capture the RACI information. Labels can also be associated with each instance.
+
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
+
+### Sizing
+
+This artifact type is NOT an architectural meta-model type. Its role is to enable users to include any information related to the size estimate of the various components of the solution architecture. 
+
+Similar to Notes, Sizing instances have a name, and a rich text block. The rich text block supports inserting images and attaching documents/files. Labels can also be associated with each instance.
+
+([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
+
+### Misc Diagrams
+
+This artifact type is NOT an architectural meta-model type. Its role is to enable users to author diagrams otherwise not supported in the tool's meta model (either type or style). It provides the raw MxGraph (Draw.io foundation) drawing editor and palettes.  There will be no "Attribute" panel appearing for anything about any Misc Diagram created.  
+
+In addition to providing these generic drawing capabilities within the tool to supplement the native rich architecture model diagrams, Misc Diagrams also presents the ability to import a Draw.io (.xml or .drawio) diagram into your architecture asset. Details on the Draw.io import feature is [presented in the companion document](./Overview-ITAA#drawio) of the User Guide.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant---detailed-authoring-by-artifact-type))
 
