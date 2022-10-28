@@ -23,6 +23,8 @@ This section will present the details for each of the artifact types, including 
 - [Viability - Issues](#viability---issues)
 - [Viability - Dependencies](#viability---dependencies)
 - [Architectural Principles](#architectural-principles)
+- [RACI](#raci)
+- [Sizing](#sizing)
 - [Misc Diagrams](#misc-diagrams)
 - [Notes](#notes)
 
@@ -453,6 +455,24 @@ Architectural Principles represent an external set of guidelines or constraints.
 - **Metrics** - Details about the measures and metrics that are impacted by applying this principle.
 
 Architectural Principles are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of IBM Architect Assistant, Community Edition are extremely useful when working with Architectural Principles. 
+
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
+
+
+### RACI
+
+This artifact type is NOT an architectural meta-model type. Its role is to enable users to author RACI (Responsible, Accountable, Consulted, Informed) matrices for tracking various parties and their respective responsibilities.
+
+Similar to Notes, RACI instances have a name, and a rich text block. You can attach a RACI matrix spreadsheet or use the table feature in the rich text block to capture the RACI information. Labels can also be associated with each instance.
+
+([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
+
+
+### Sizing
+
+This artifact type is NOT an architectural meta-model type. Its role is to enable users to include any information related to the size estimate of the various components of the solution architecture. 
+
+Similar to Notes, Sizing instances have a name, and a rich text block. The rich text block supports inserting images and attaching documents/files. Labels can also be associated with each instance.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-community-edition---detailed-authoring-by-artifact-type))
 
