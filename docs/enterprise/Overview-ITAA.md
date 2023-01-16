@@ -18,6 +18,7 @@ The Documentation is organized in the following sections:
 - [Comments](#comments)
 - [Change Log](#change-log)
 - [Co-Relationships](#co-relationships)
+- [Managing Architecture Diagrams (<sup>***new</sup>)](#managing-architecture-diagrams)
 - [Detailed authoring - by artifact type](./Artifact-Details-ITAA) 
 
 
@@ -419,6 +420,9 @@ This will bring up the manage orphan elements panel.  Here you can select all, s
 
 ![Manage Orphan Element panel](../images/manage-orphan-panel.png)
 
+
+<hr>
+
 ## Import and Export
 
 There are a set of tools to work with an architecture outside of IBM IT Architect Assistant in different forms.  These tools are accessed from the top-level Export/Import toolbar button.
@@ -560,6 +564,7 @@ You will be presented with a list of all of the artifact instances available in 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
 
+<hr>
 
 ## Collaboration
 
@@ -606,6 +611,7 @@ In addition to manipulating a shared asset directly one can author content offli
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
 
+<hr>
 
 ## Backup and Versioning
 
@@ -625,6 +631,9 @@ It should also be pointed out that this archive file also serves as an *intercha
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
+
+<hr>
+
 ## Comments
 
 The comment feature supports architecture reviews. In an open architecture, you will find the comment tool bar button, that will open the comment panel.   
@@ -634,6 +643,9 @@ The comment feature supports architecture reviews. In an open architecture, you 
 This panel let's you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …). Given the nature of the single page web app, while you have the comment pane open, you will not see incoming comments (in real-time) without an explicit refresh.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
+
+
+<hr>
 
 ## Change Log
 
@@ -646,6 +658,9 @@ When collaborating with a team authoring an architecture, it is valuable to be a
 ![Show Change Log panel](../images/change-log-panel.png)
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
+
+
+<hr>
 
 ## Co-Relationships
 
@@ -663,3 +678,60 @@ The Co-Relationship Table (panel) displays the architecture elements by type. Yo
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 
+
+<hr>
+
+## Managing Architecture Diagrams
+Architectures can be complex, involving many architectural elements. Modeling them on a single vast "page" would make it hard to manage as well as to understand.
+
+The ability to create sub-level diagrams will facilitate the modeling of architectures, allowing one to go from a high-level view to one with more architectural details as needed.
+
+Sub-level diagrams can now be created for the following architectural elements:
+- Logical Component
+- Subsystem
+- Logical Node
+
+Some notes about a sub-level diagram:
+- it is drawn the same way as a normal diagram
+- it can be retrofitted to a normal diagram (see [How to retrofit a sub-level diagram](#how-to-delete--retrofit-a-sub-level-diagram)); and vice versa, i.e. a normal diagram can be set as a sub-level diagram (see [How to create a sub-level diagram](#how-to-create-a-sub-level-diagram))
+- it is annotated with a "L" badge
+![Sub-level diagram annotation on architectural element](images/../../images/sublevel-dgm-display.png  )
+- its name in the navigation breadcrumb includes a prefix of the architectural element it is related to, i.e. "[arch-element name] : [sub-level diagram name]"
+![Sub-level diagram navigation](images/../../images/sublevel-dgm-navigation.png)
+- to traverse back one level, there are 2 options:
+  - use the **browser back arrow**; do NOT use the app's blue back arrow 
+  ![Blue back arrow](images/../../images/dgm-blue-back-arrow.png)
+  - or use the Quick Link in the app
+  ![Quick Link](images/../../images/sublevel-dgm-quick-link.png)
+
+Current Limitations:
+- Only 1 sub-level diagram is allowed per architectural element
+- Only 1 level is allowed
+  
+--
+
+### How to create a sub-level diagram
+
+- Right-click on an architectural element and select "Create Sub-level Diagram"
+![Create sub-level diagram menu](images/../../images/sublevel-dgm-create-menu.png)
+
+- You can choose to create a new diagram from scratch
+![Create sub-level diagram](images/../../images/sublevel-dgm-create-new.png)
+
+- or from an existing normal diagram
+![Create sub-level diagram](images/../../images/sublevel-dgm-create-from-existing.png)
+
+
+--
+
+### How to delete / retrofit a sub-level diagram
+
+- Right-click on an architectural element that has a sub-level diagram and select "Delete / Retrofit Sub-level Diagram"
+![Edit sub-level diagram menu](images/../../images/sublevel-dgm-create-menu-2.png)
+
+- Select action to take - delete or retrofit and confirm selection. 
+![Confirm](images/../../images/sublevel-dgm-delete-retrofit-select.png)
+  - If retrofit was selected, the sub-level diagram will become a normal diagram, visible from the card view. 
+  - If delete was selected, the sub-level diagram will no longer exist. Note that only the diagram is deleted; any architectural elements in the sub-level diagram will NOT be deleted.
+
+([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
