@@ -162,11 +162,12 @@ Each Subsystem is a container.  The tool will maintain information about which S
 Logical Component - this element type is crucial to the information communicated through this diagram type. As noted, it can be reused in the Component Model (and indirectly via Deployment Units in the Operational Model). A Logical Component can be referenced by a Functional Requirement. This provides the traceability between the FR and which component(s) deliver that requirement. This "relationship attribute" is managed and viewed through the FR editor. A similar attribute can link a Logical Component to a collection of NFRs.  This is directly managed in the attribute panel for the Logical Component. And similarly a Logical Component can be linked to Architecture Decisions (see below). The user experience for these two relationship attributes is: 
 
 
-- if an NFR or Architecture Decision is associated with the LC, then it will appear in the corresponding attribute field (e.g., NFR02 - ...)
-- if there is a defined Architecture Decision / NFR there will always be a link to **Associate ...**.  Clicking this list brings up a list of all of the corresponding element of the association type available in the solution architecture with checkboxes allowing you to select or deselect an element to associate.
-- you cannot create either an Architecture Decision or NFR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
+- if an Architecture Decision and/or NFR and/or FR is associated with the LC, then it will appear in the corresponding attribute field
+- if there is a defined Architecture Decision / NFR / FR, there will always be a link to **Associate ...**.  Clicking this list brings up a list of all of the corresponding element of the association type available in the solution architecture with checkboxes allowing you to select or deselect an element to associate.
+- you cannot create either an Architecture Decision or NFR or FR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
 
-![Logical Component Attributes](../images/lc-attributes.png)
+![Logical Component Attributes](../images/lc-attributes1.png)
+![](../images/lc-attributes2.png)
 
 Logical Component Primary capability property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
 
@@ -305,7 +306,7 @@ Here the connectors are typed as Events with 4 core attributes: Number (a value 
 ## Operational Model
 The Operational Model is probably the most involved set of artifacts we create as architects. The focus of this model is to describe the placement of the workloads onto a operational environment insuring that the required service levels are met.
 
-Within Architect Assistant the Operational Model can be described at a logical level, at the prescribed level, or both. There is a natural layering of the placement or *hosting* relationships. For simple cases Architect Assistant provides synchronization between a Logical Operational Model view and its *linked* Prescribed Operational Model view.
+Within Architect Assistant the Operational Model can be described at a logical level, at the prescribed level, or both. There is a natural layering of the placement or *hosting* relationships.
 
 ### Operational Model - LOM View
 There are 4 key modeling elements front and center in a LOM view: OMLocations, Actors, Logical Nodes, and Logical Connections. In addition the diagram palette includes element representing different Border types.
@@ -369,15 +370,6 @@ The second control, is whether to show Prescribed Connections on the diagram. Wi
 
 Prescribed Nodes have a rich set of attributes that one might like to document, including numbers/type of CPU/Cores, amount of memory, available network ports, and the associated OS/Hypervisor. Also included in information about the Deployment Offering (Managed, Hosted, on-prem, ...) as well as Deployment Provisioning (org responsible for provisioning). Obviously you can easily include other noteworthy attributes/characteristics as part of the Prescribed Node's description.
 
-#### Linked (Synchronized) LOM/POM
-For most basic solution architectures, one will likely create a LOM view to establish the OMLocations as well as the basic logical packaging of functionality, i.e., define the Logical Nodes along with the DUs that are hosted by these nodes. Then you will create the physical topology in at least one POM view. Architect Assistant provides a productivity enhancement for these simple cases. When you create a POM view and there is at least one LOM view defined, you will get a dialog like the one shown below.
-
-![Linking LOM to POM](../images/linked-LOM-POM.png)
-
-By selecting a LOM view to link to the POM view being created, a number of things happen. First all of the OMLocations and Actors from the LOM view are copied into the new POM view. Further, going forward, the tool will synchronize changes between these views. For instance when you drag a Logical Node onto a Prescribed Node in the POM that also in turn specifies a relationship between the Logical Node and the enclosing OMLocation. This will be synchronized back to the LOM, potentially moving the Logical Node to the "new" OMLocation or remove it from the LOM if the target OMLocation doesn't exist in the LOM.
-
-The set of synchronization rules become very complex were the tool to try and support it across more than a single pair of diagrams. As a result, only a single linked pair of LOM-POM is supported. Also note, you do not need to use this feature at all although it does a lot of validation and consistency checking for you when you do use it.
-
 As implied earlier, other than defining the topology of OMLocations, Prescribed Nodes and Prescribed  Connections (networks) within a POM View, the other major task is then placing the Logical Nodes onto this deployment topology. Here is where having the "Existing Element" palettes become particularly useful. Here you can just open up the list of available Logical Nodes and drag each one onto the hosting Physical Node. Once you add a Logical Node to the diagram, the *Logical Overlay* toggle switch will get turned on.  Thus you should be able to verify that the Physical Connections are available to support the specified set of Logical Connections. Again you can toggle this off at any time to simplify the view. The list of Logical Nodes hosted by a Physical Node are always visible in the Physical Nodes' attribute panel.
 
 From a style perspective, Prescribed and Logical Nodes are simple rectangles that are containers. This is to make it easy to create the nesting (*hosting*) relationships via drag into. 
@@ -396,7 +388,6 @@ Risks are identified for a project and need to be addressed. Like other text bas
 - **BU / Department / Competency** - Which group owns the risk?
 - **Owner** - Who is responsible for the risk? Enter as a name or email address of the responsible party for making sure this risk is managed.
 - **Probability** - [Low, Medium, High] An indication of the likelihood of the risk to manifest.
-- **Effort/Cost** -  This describes the effort or cost associated with managing the risk.
 - **Impact** - [Low, Medium, High] An indication on level of impact on project success.
 - **Effort / Cost** -  This describes the effort or cost associated with managing the risk.
 - **Contingency/Mitigation recommendation** - What is the recommended approach for managing the risk.
@@ -437,7 +428,7 @@ Assumptions are generally managed and reviewed as a table or spreadsheet. As suc
 Issues document anything along the way that is identified as needing further tracking.  Issues may get promoted to Risks.  Each Issue has a set of attributes:
 
 - **Name** - This is a text name which should provide an indication of what the risk is about
-- **Issue Description** - This is text that should provide the details of the Risk.
+- **Issue Description** - This is text that should provide the details of the issue.
 - **BU / Department / Competency** - Which group owns the issue?
 - **Raised by** - Who raised the issue?
 - **Owner** - Who is responsible for the issue? Enter as a name or email address of the responsible party for tracking the issue.

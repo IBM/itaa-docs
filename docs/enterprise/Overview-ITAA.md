@@ -1,4 +1,6 @@
 # IBM IT Architect Assistant User Guide
+[V3.16.5]
+
 **IBM IT Architect Assistant** (Architect Assistant) is a simple web-based tool to assist an Architect in designing a solution by finding the best/relevant/potential architectural solutions and/or patterns and customizing them for specific needs.
 
 At its core, **Architect Assistant** is both a solution model authoring tool as well as a searchable repository of authored solution architectures/models.
@@ -18,7 +20,7 @@ The Documentation is organized in the following sections:
 - [Comments](#comments)
 - [Change Log](#change-log)
 - [Co-Relationships](#co-relationships)
-- [Managing Architecture Diagrams (<sup>***new</sup>)](#managing-architecture-diagrams)
+- [Managing Architecture Diagrams](#managing-architecture-diagrams)
 - [Detailed authoring - by artifact type](./Artifact-Details-ITAA) 
 
 
@@ -65,7 +67,7 @@ Additional "big picture" tips about the tool can be reviewed in the [Common Tips
 
  
 
-##### Visualization Notation
+### Visualization Notation
 
 With release 3.3 of the tool, most of the diagram specific element palettes have been updated to reflect the emerging IBM Architecture visualization notation. This IBM Design supported notation specifies graphical element shapes and properties that can be consistently recognized to represent specific architecture elements types, e.g Logical or Prescribed Nodes, Logical or Prescribed Components, Target System, Actors and then various Groups e.g. Locations, Zones, VPC, etc. 
 
@@ -270,7 +272,7 @@ In the case of the System Context diagram (and many more of the diagram types), 
 #### Style and more
 The MxGraph framework provides a rich set of formatting tools to help you make the diagram look however you would like. Many of these are self explanatory and are available directly in the 3 separate tabs of the **format panel**: Style, Text, and Arrange.  
 
-The Style panel let's you apply style to whatever element is selected.  So if it is a line, the choice of line style (dash, solid), endpoint style (arrow type), thickness, color, etc.  You can also adjust whether the line is straight, curved, orthogonal jogs, etc.  Also if two lines are selected (which cross), you can set the style for the line crossing.  If the symbol is a shape then things like fill and outline color, etc are available to be changed. 
+The Style panel lets you apply style to whatever element is selected.  So if it is a line, the choice of line style (dash, solid), endpoint style (arrow type), thickness, color, etc.  You can also adjust whether the line is straight, curved, orthogonal jogs, etc.  Also if two lines are selected (which cross), you can set the style for the line crossing.  If the symbol is a shape then things like fill and outline color, etc are available to be changed. 
 
 The style panel also includes an Edit Style button which provides access to the basic properties of the shape for instance the base shape type, whether it is a container, whether the shape is represented by an image (icon) - thus exposing an "edit image" control, etc. Knowledge of the "Edit Style" and the corresponding style commands are most important to be able to replace the style of one symbol with the basic style of some other symbol in the system. 
 
@@ -285,7 +287,7 @@ Today there are two major element styles within each architecture diagram specif
 **Tip:** For instance, you might want to have your Target System represented by an image in the System Context diagram. One way to do this is copy the style from a Logical Node from an AOD IT System View and paste that into the Style for the Target System and then edit its image. This approach of identifying and applying a style from a symbol from any diagram to a different symbol in the same or different diagram type can universally be applied. 
 
 
-The Text panel let's you modify the text properties for the selected item.  This includes things like positional alignment (vertical and horizontal), font family and size, bold, italics, and underline, word wrap, font color and background color.
+The Text panel lets you modify the text properties for the selected item.  This includes things like positional alignment (vertical and horizontal), font family and size, bold, italics, and underline, word wrap, font color and background color.
 
 The Arrange panel allows you to position the layering of stacked items (to front, to back), the size of symbols and the position relative to the canvas, and flip and rotate symbols. Of perhaps most value is being able to select multiple symbols and align and space them.
 
@@ -481,7 +483,7 @@ There is a lot of value of having everything associated with a Solution Architec
 
    - **GitHub** - This export format has a different purpose and a different toolbar icon to trigger. (**Like the "clean-up orphan" function, Export to GitHub is only available if you have exclusive write access to the architecture!**)  
 
-     ![Export to Github Toolbar button](../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export let's you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any IT Architect Assistant or IBM IT Architect Assistant hosted system.
+     ![Export to Github Toolbar button](../images/export-to-github.png)                                   Export to Github is designed to provide user controlled archival and versioning. The export lets you connect to either a public or enterprise Git repository and will push a single .zip (archive) file of the current architecture asset to Git along with commit comment. This archive can then be downloaded for use with Offline (Single User community edition) application or can be uploaded to any IT Architect Assistant or IBM IT Architect Assistant hosted system.
 
      - When you select this Export format you will provide the repository URL and access token per instructions below.  **[A SSH URL with a mandatory access token is the only supported configuration for accessing an Enterprise Git repository.  In general the access token is required for the export (write to repository). You can supply an HTTPS repository URL for a public Git repository.  This allows for such sites to host architectures for download without the need for an access token.]**  Note, if you saved the access token when you generated it, you can just copy from whereever you saved it!  Otherwise you will need to generate a new access token.
      - A sample (SSH) URL is git@github.ibm.com:glcraig/Cognitive-Architect-Enablement.git. You can retrieve this by clicking on the **Clone/Download** button for your repository and copying the **ssh URL**. (A sample HTTPS URL for a public Git repository is: https://github.com/IBM/itaa-docs.git.)
@@ -497,7 +499,7 @@ If you choose Import you are presented are two* choices:
 
   Import by default supports *Add*, *Update*, and *Rename*. The parser checks the "Name" and "Previous Name" columns. Typically the Previous Name entry will be blank, in which case if a row name matches an existing element, all attributes are overwritten with the values found in the import spreadsheet. If name  does not match any existing elements, a new element is created. If Previous Name matches an existing element then that element is renamed and updated. 
 
-- **GitHub** - The support to import from GitHub is to create an architecture from an archive file available on a GitHub repository. The import let's you connect to either a public or enterprise GitHub repository and will upload a new architecture from the selected archive file. 
+- **GitHub** - The support to import from GitHub is to create an architecture from an archive file available on a GitHub repository. The import lets you connect to either a public or enterprise GitHub repository and will upload a new architecture from the selected archive file. 
 
   - When you select this Import format you will be prompted for a (SSH) URL to the repository and an access token.  You will then get to select from the available archive files the one you wish to upload.
 
@@ -640,7 +642,7 @@ The comment feature supports architecture reviews. In an open architecture, you 
 
 ![Comments panel](../images/comments-panel.png)
 
-This panel let's you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …). Given the nature of the single page web app, while you have the comment pane open, you will not see incoming comments (in real-time) without an explicit refresh.
+This panel lets you select an artifact type (section) within the architecture and review any comments/replies attached to that artifact type. The same panel lets the user create new comments/replies.   The comments are visible to all persons that have access to the architecture (Viewer, Editor, …). Given the nature of the single page web app, while you have the comment pane open, you will not see incoming comments (in real-time) without an explicit refresh.
 
 ([Back to Top and TOC](#ibm-it-architect-assistant-user-guide))
 

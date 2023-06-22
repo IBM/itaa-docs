@@ -162,9 +162,9 @@ Each Subsystem is a container.  The tool will maintain information about which S
 Logical Component - this element type is crucial to the information communicated through this diagram type. As noted, it can be reused in the Component Model (and indirectly via Deployment Units in the Operational Model). A Logical Component can be referenced by a Functional Requirement. This provides the traceability between the FR and which component(s) deliver that requirement. This "relationship attribute" is managed and viewed through the FR editor. A similar attribute can link a Logical Component to a collection of NFRs.  This is directly managed in the attribute panel for the Logical Component. And similarly a Logical Component can be linked to Architecture Decisions (see below). The user experience for these two relationship attributes is: 
 
 
-- if an NFR or Architecture Decision is associated with the LC, then it will appear in the corresponding attribute field (e.g., NFR02 - ...)
-- if there is a defined Architecture Decision / NFR there will always be a link to **Associate ...**.  Clicking this list brings up a list of all of the corresponding element of the association type available in the solution architecture with checkboxes allowing you to select or deselect an element to associate.
-- you cannot create either an Architecture Decision or NFR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
+- if an Architecture Decision and/or NFR and/or FR is associated with the LC, then it will appear in the corresponding attribute field
+- if there is a defined Architecture Decision / NFR / FR, there will always be a link to **Associate ...**.  Clicking this list brings up a list of all of the corresponding element of the association type available in the solution architecture with checkboxes allowing you to select or deselect an element to associate.
+- you cannot create either an Architecture Decision or NFR or FR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
 
 ![Logical Component Attributes](../images/lc-attributes.png)
 
@@ -304,7 +304,7 @@ Here the connectors are typed as Events with 4 core attributes: Number (a value 
 ## Operational Model
 The Operational Model is probably the most involved set of artifacts we create as architects. The focus of this model is to describe the placement of the workloads onto a operational environment insuring that the required service levels are met.
 
-Within IBM Architect Assistant, Community Edition the Operational Model can be described at a logical level, at the physical level, or both. There is a natural layering of the placement or *hosting* relationships. For simple cases IBM Architect Assistant, Community Edition provides synchronization between a Logical Operational Model view and its *linked* Physical Operational Model view.
+Within IBM Architect Assistant, Community Edition the Operational Model can be described at a logical level, at the physical level, or both. There is a natural layering of the placement or *hosting* relationships.
 
 ### Operational Model - LOM View
 There are 4 key modeling elements front and center in a LOM view: OMLocations, Actors, Logical Nodes, and Logical Connections. In addition the diagram palette includes element representing different Border types.
@@ -332,7 +332,7 @@ In IBM Architect Assistant, Community Edition, DUs get *Added to* (placed on/wit
 
 In the above diagram, note the nested relationship graphic. A Logical Node can have multiple DUs placed within it and a given DUs can package up elements of multiple Logical Components. This graphic provides navigation within this nested hierarchy, once you start drilling down.
 
-The Deployment Unit attribute is intended to all the user to select which of the currently defined DUs are to be placed within the currently selected node.  In the example from above, LN_Gateway currently has DU, E_07, placed within it.  Clicking on the right arrow, to the right of E_07, let's you drill down and see the attributes of that particular DU.
+The Deployment Unit attribute is intended to all the user to select which of the currently defined DUs are to be placed within the currently selected node.  In the example from above, LN_Gateway currently has DU, E_07, placed within it.  Clicking on the right arrow, to the right of E_07, lets you drill down and see the attributes of that particular DU.
 
 ![DU attributes](../images/DU-attributes.png)
 
@@ -384,12 +384,19 @@ Risks are identified for a project and need to be addressed. Like other text bas
 
 - **Name** - This is a text name which should provide an indication of what the risk is.
 - **Risk Description** - This is text that should provide the details of the risk
+- **BU / Department / Competency** - Which group owns the risk?
+- **Owner** - Who is responsible for the risk? Enter as a name or email address of the responsible party for making sure this risk is managed.
 - **Probability** - [Low, Medium, High] An indication of the likelihood of the risk to manifest.
-- **Effort/Cost** -  This describes the effort or cost associated with managing the risk.
 - **Impact** - [Low, Medium, High] An indication on level of impact on project success.
+- **Effort / Cost** -  This describes the effort or cost associated with managing the risk.
 - **Contingency/Mitigation recommendation** - What is the recommended approach for managing the risk.
-- **Person Responsible** - Entered as a name or email address of the responsible party for making sure this risk is managed.
+- **Date Raised** - Date when the risk was identified.
 - **Review Date** - Ability to schedule a review.
+- **Date Closed** - Date when the risk has been resolved and closed.
+- **Comments** - For additional info related to the risk, where appropriate.
+
+- **Is a Key Risk?** - Check to call out significant risk.
+- **External** - Check to indicate if the risk is external.
 
 Risks are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of IBM Architect Assistant, Community Edition are extremely useful when working with Risks. 
 
@@ -401,12 +408,17 @@ Assumptions can be made at any level within Solutioning. The text based Assumpti
 
 - **Name** - This is a text name which should provide an indication of what the system needs to provide
 - **Assumption Description** - This is text that should provide the details for the assumption.
-- **Impact** - [Low, Medium, High] An explanation of the significance or impact of  this assumption.
-- **Confidence Level** - [Low, Medium, High] used to indicate confidence in the validity of the assumption.
+- **BU / Department / Competency** - Which group owns the assumption?
 - **Assumption identified by** - Entered as a name or email address of the responsible party for making sure this requirement is addressed by the system.
+- **Confidence Level** - [Low, Medium, High] used to indicate confidence in the validity of the assumption.
+- **Impact** - [Low, Medium, High] An explanation of the significance or impact of  this assumption.
+- **Date Raised** - Date when the assumption was identified.
 - **Review Date** - Ability to schedule a review.
-- **Close Date** - Date Assumption is verified (if applicable).
-- **Is a Key Assumption** - Yes/No
+- **Date Closed** - Date when the Assumption is verified.
+- **Comments** - For additional info related to the assumption, where appropriate.
+  
+- **Is a Key Assumption** - Check to call out significant assumption.
+- **External** - Check to indicate if the assumption is external.
 
 Assumptions are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of IBM Architect Assistant, Community Edition are extremely useful when working with Assumptions. 
 
@@ -416,13 +428,19 @@ Assumptions are generally managed and reviewed as a table or spreadsheet. As suc
 Functional Requirements (FRs) are a complementary (or alternative) way to describe what the target system is expected to be able to do. Like the text based Use Cases, FRs can be edited via a "web form" style editor. Each FR has a set of attributes:
 
 - **Name** - This is a text name which should provide an indication of what the risk is about
-- **Issue Description** - This is text that should provide the details of the Risk.
+- **Issue Description** - This is text that should provide the details of the issue.
+- **BU / Department / Competency** - Which group owns the issue?
+- **Raised by** - Who raised the issue?
+- **Owner** - Who is responsible for the issue? Enter as a name or email address of the responsible party for tracking the issue.
 - **Priority** - [Low, Medium, High] used to prioritize across Issues.  Note High Priority issues may get elevated to risks.
-- **Raise by** - Entered as a name or email address of the party raising the issue.
-- **Issue Responsibility** - or owner; the name or email address of the party responsible for tracking the issue.
-- **Review Date** - Ability to schedule a review.
 - **Action** - [Closed, Risk Change Reference]
-- **Is a Key Issue** - Yes/No
+- **Date Raised** - Date when the assumption was identified.
+- **Review Date** - Ability to schedule a review.
+- **Date Closed** - Date when the Issue is resolved and closed.
+- **Comments** - For additional info related to the issue, where appropriate.
+
+- **Is a Key Issue** - Check to call out significant Issue.
+- **External** - Check to indicate if the issue is external.
 
 Issues are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of IBM Architect Assistant, Community Edition are extremely useful when working with Issues. 
 
@@ -433,12 +451,17 @@ Dependencies document those items outside of the direct control of this solution
 
 - **Name** - This is a text name which should provide an indication of what the Dependency is about
 - **Dependency Description** - This is text that should provide details on the Dependency
+- **BU / Department / Competency** - Which group owns the dependency?
+- **Owner** - Who is responsible for the dependency? Enter as a name or email address of the responsible party for making sure the dependency is tracked.
 - **Effect on Plan** - An explanation of how this dependency effects this project.
-- **Owner** - Entered as a name or email address of the responsible party for making sure this dependency is tracked.
 - **Required by Date** - When must the dependency get complete (or otherwise impacts project).
-- **Associated Risk** - A Risk name that results from the Dependency not being fulfilled.
-- **Closed Date** - When the Dependency is fulfilled.
-- **Is a Key Dependency** - Yes/No
+- **Associated Risk ID** - A Risk name that results from the Dependency not being fulfilled.
+- **Date Raised** - Date when the dependency was identified. 
+- **Date Closed** - When the Dependency is fulfilled.
+- **Comments** - For additional info related to the Dependency, where appropriate.
+
+- **Is a Key Dependency** - Check to call out significant dependency.
+- **External** - Check to indicate if the dependency is external.
 
 Dependencies are generally managed and reviewed as a table or spreadsheet. As such the Excel import and Excel export utilities of IBM Architect Assistant, Community Edition are extremely useful when working with Dependencies. 
 
