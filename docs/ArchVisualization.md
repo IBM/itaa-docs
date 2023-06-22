@@ -53,7 +53,7 @@ These palettes can also be exported and imported so that you can share them acro
 
 Once an empty custom palette has been created you then want to be able to quickly add icons to the palette. Eventually, these palettes will support managing both "stencil icons" and "image icons". Also eventually you will be able to import from a file to exchange palettes.
 
-<img src="./images/select-icon-source.png" alt="Select to add from IBM stencils" width="400px"/>
+<img src="./images/select-icon-source2.png" alt="Select to add from pre-defined sets" width="400px"/>
 
 Stencil icons are managed within the tool itself and are sourced from IBM Design UI Icons. Image icons can be any standard image (.jpg, .png, .svg).  This UX supports adding icons to your palette from the large list of built-in icons. [Note, the built-in icon set will grow significantly and soon will have the icons grouped into categories.]
 
