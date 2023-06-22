@@ -57,7 +57,8 @@ Once an empty custom palette has been created you then want to be able to quickl
 
 Stencil icons are managed within the tool itself and are sourced from IBM Design UI Icons. Image icons can be any standard image (.jpg, .png, .svg).  This UX supports adding icons to your palette from the large list of built-in icons. [Note, the built-in icon set will grow significantly and soon will have the icons grouped into categories.]
 
-<img src="./images/pick-icons.png" alt="Select icons to include" width="400px"/>
+<img src="./images/pick-icon-set.png" alt="Select icon set to choose from" width="400px"/>
+<img src="./images/pick-icons2.png" alt="Select icons to include" width="400px"/>
 
 Select from the list and click Add, then review before saving. Note, that on this review page, there is a toolbar icon in the upper right corner to allow you to select (image) files from your local machine. This is how you then add "image icons" to this palette. This control is also available later from the "edit palette" control.
 
