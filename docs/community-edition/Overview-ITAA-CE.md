@@ -38,7 +38,7 @@ Additional "big picture" tips about the tool can be reviewed in the [Common Tips
 
 ------
 
-##### Visualization Notation
+### Visualization Notation
 
 With release 3.3 of the tool, most of the diagram specific element palettes have been updated to reflect the emerging IBM Architecture visualization notation. This IBM Design supported notation specifies graphical element shapes and properties that can be consistently recognized to represent specific architecture elements types, e.g Logical or Prescribed Nodes, Logical or Prescribed Components, Target System, Actors and then various Groups e.g. Locations, Zones, VPC, etc. 
 

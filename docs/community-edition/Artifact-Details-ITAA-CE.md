@@ -166,7 +166,8 @@ Logical Component - this element type is crucial to the information communicated
 - if there is a defined Architecture Decision / NFR / FR, there will always be a link to **Associate ...**.  Clicking this list brings up a list of all of the corresponding element of the association type available in the solution architecture with checkboxes allowing you to select or deselect an element to associate.
 - you cannot create either an Architecture Decision or NFR or FR through this attribute field, so no *Associate ...* link will be available if no such element currently exists.
 
-![Logical Component Attributes](../images/lc-attributes.png)
+![Logical Component Attributes](../images/lc-attributes1.png)
+![](../images/lc-attributes2.png)
 
 Logical Component Primary capability.  This property is used to provide a high-level categorization of the capabilities delivered by the functional component.  This is intended to be used in  intelligent search scenarios that will mine the architecture elements used in an architecture to derive the collective set of capabilities derived.  
 
